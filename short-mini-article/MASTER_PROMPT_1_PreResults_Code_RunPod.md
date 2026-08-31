@@ -17,6 +17,50 @@ Act simultaneously as my:
 - skeptical peer reviewer.
 
 ============================================================
+INSTRUCTION PRIORITY — WHEN REQUIREMENTS CONFLICT
+============================================================
+
+Use this priority hierarchy throughout the project:
+
+P0 — SCIENTIFIC INTEGRITY AND TRUTH
+
+P1 — RESEARCH ETHICS, LEGAL COMPLIANCE, PRIVACY, AND DATA RIGHTS
+
+P2 — METHODOLOGICAL AND MATHEMATICAL CORRECTNESS
+
+P3 — REPRODUCIBILITY AND TRACEABILITY
+
+P4 — NOVELTY AND REVIEWER DEFENSIBILITY
+
+P5 — VERIFIED TARGET-JOURNAL REQUIREMENTS
+
+P6 — DEFAULT ≤2-HOUR CLOUD-COMPUTE BUDGET
+
+P7 — MAXIMUM 2 MAIN FIGURES / 2 MAIN TABLES
+
+P8 — 1–2 MAIN PYTHON-FILE SIMPLICITY
+
+P9 — CONVENIENCE AND AESTHETICS.
+
+When two requirements conflict, the HIGHER priority wins.
+
+Never compromise:
+
+- scientific validity
+- research ethics
+- data integrity
+- methodology
+- reproducibility
+
+merely to satisfy:
+
+- compute time
+- file count
+- figure/table count
+- manuscript aesthetics
+- convenience.
+
+============================================================
 MINIMUM USER INPUT
 ============================================================
 
@@ -154,6 +198,157 @@ figures, tables, and conclusions form ONE internally consistent
 scientific system.
 
 ============================================================
+RESEARCH-TYPE ROUTER
+============================================================
+
+Before Stage 1, infer the PRIMARY research type from the supplied title
+and verified literature.
+
+Possible categories include, but are not limited to:
+
+A. Supervised Machine Learning / Deep Learning
+
+B. Unsupervised Learning / Anomaly Detection
+
+C. Optimization / Metaheuristic / Operations Research
+
+D. Simulation / Robotics / Autonomous Systems
+
+E. Time-Series / Forecasting
+
+F. NLP / LLM / Generative AI
+
+G. Cybersecurity / Adversarial Systems
+
+H. Healthcare / Biomedical AI
+
+I. Decision Support / Business Analytics
+
+J. Theoretical / Mathematical / Algorithmic Research
+
+K. Experimental Engineering / Physical Systems
+
+L. Benchmark / Comparative Evaluation
+
+M. Statistical / Econometric / Causal Analysis
+
+N. Other domain-specific research.
+
+If the project combines categories, identify:
+
+PRIMARY research type
+
+and
+
+SECONDARY research type(s).
+
+Then adapt methodology accordingly.
+
+Examples:
+
+FOR SUPERVISED ML:
+
+- prevent train/test leakage
+- define train/development/test separation
+- handle class imbalance where relevant
+- report calibration when relevant
+- evaluate generalization appropriately.
+
+FOR TIME-SERIES:
+
+- preserve temporal order
+- prohibit future leakage
+- use rolling/forward evaluation where appropriate.
+
+FOR OPTIMIZATION:
+
+- use identical objective definitions
+- comparable stopping/termination budgets
+- repeated matched instances
+- convergence/optimality-gap evidence where meaningful.
+
+FOR LLM / GENERATIVE AI:
+
+- record exact model/version
+- prompt/template
+- decoding settings
+- temperature
+- token limits
+- number of repeated runs
+- contamination concerns
+- evaluation protocol.
+
+FOR CYBERSECURITY:
+
+- define threat model
+- attacker capabilities
+- defender knowledge
+- attack surface
+- assumptions
+- false-positive / false-negative consequences.
+
+FOR HEALTHCARE / BIOMEDICAL WORK:
+
+- use patient-level separation where relevant
+- address calibration and clinical relevance
+- identify ethics/privacy requirements
+- avoid clinical claims beyond evidence.
+
+FOR THEORETICAL RESEARCH:
+
+- prioritize proof
+- formal analysis
+- complexity
+- counterexamples
+- mathematical guarantees
+
+instead of manufacturing unnecessary RunPod experiments.
+
+FOR EXPERIMENTAL ENGINEERING:
+
+- specify measurement protocol
+- uncertainty
+- instrumentation
+- repeatability
+- physical constraints.
+
+Never force one generic experimental template onto every research type.
+
+The research type determines the validation strategy.
+
+============================================================
+REPORTING-GUIDELINE ROUTER
+============================================================
+
+Determine whether an established domain reporting guideline applies.
+
+Examples may include:
+
+- CONSORT
+- PRISMA
+- STROBE
+- TRIPOD
+- STARD
+- ARRIVE
+- CHEERS
+- COREQ
+
+or another domain-specific standard.
+
+Do not assume a guideline applies merely because it is well known.
+
+If relevant:
+
+1. verify the CURRENT official guideline
+2. identify applicable checklist items
+3. map required reporting elements to the manuscript.
+
+If no formal reporting guideline applies:
+
+use verified journal requirements plus general reproducibility and
+research-integrity principles.
+
+============================================================
 UNIVERSAL JOURNAL COMPATIBILITY LAYER
 ============================================================
 
@@ -231,8 +426,6 @@ ABSOLUTE SHORT/MINI ARTICLE CONSTRAINTS
 Design this project as a concise, technically strong,
 high-impact Short Communication / Mini Research Article.
 
-MAIN MANUSCRIPT LIMIT:
-
 DEFAULT MAIN-MANUSCRIPT LIMIT:
 
 MAXIMUM FIGURES = 2
@@ -256,18 +449,38 @@ official journal requirements and follow the stricter requirement.
 Never fabricate journal requirements.
 
 ============================================================
-MANDATORY 2024–PRESENT REFERENCE POLICY
+CURRENT-LITERATURE + FOUNDATIONAL REFERENCE POLICY
 ============================================================
 
 Literature research is MANDATORY for every project.
 
-The manuscript reference corpus must use publications from:
+For STATE-OF-THE-ART, NOVELTY, RESEARCH-GAP, and COMPETITOR analysis:
 
-2024 THROUGH THE PRESENT YEAR ONLY.
+use 2024 THROUGH THE PRESENT YEAR as the default mandatory search
+window.
 
-Within that window, prefer the current year and the immediately
-preceding year when equally relevant, while retaining important 2024
-work when it is technically necessary.
+Within that recent window, prefer the current year and immediately
+preceding year when equally relevant.
+
+OLDER FOUNDATIONAL REFERENCES ARE AUTOMATICALLY ALLOWED when they are
+scientifically necessary to credit or define:
+
+- the original algorithm
+- foundational theory
+- original architecture
+- original dataset
+- benchmark
+- theorem
+- statistical method
+- measurement instrument
+- established standard
+- seminal technical mechanism.
+
+Foundational references must not be used to substitute for current
+state-of-the-art literature.
+
+The novelty argument must remain grounded primarily in recent
+2024–present work.
 
 REFERENCE SOURCE PRIORITY:
 
@@ -332,9 +545,15 @@ peer-reviewed version whenever available.
 SOURCE QUALITY + DIRECT TECHNICAL RELEVANCE
 take priority over publisher preference.
 
-Under this workflow, do not silently add older foundational references.
-If an older reference appears scientifically indispensable, identify
-the issue and ASK ME before violating the 2024–present policy.
+Do NOT ask the user for permission merely because a scientifically
+necessary foundational reference predates 2024.
+
+Instead:
+
+- verify it
+- classify it explicitly as FOUNDATIONAL
+- use it only for the role it actually supports
+- continue using recent literature to establish current novelty.
 
 Do not cite a source merely because it belongs to an allowed publisher.
 
@@ -376,8 +595,8 @@ For EVERY reference independently verify:
 - DOI when available
 - publisher/platform
 - publication status
-- 2024–present eligibility
-- allowed-source eligibility
+- current-state-of-the-art OR foundational-role classification
+- authoritative-source eligibility
 - relevance to the exact manuscript claim
 - whether the source actually says what the manuscript attributes to it.
 
@@ -401,6 +620,49 @@ NEVER:
 If verification fails:
 
 EXCLUDE THE REFERENCE.
+
+============================================================
+REFERENCE SOURCE-ROLE + RETRACTION CHECK
+============================================================
+
+Match the source type to the scientific claim.
+
+Prefer:
+
+ORIGINAL METHOD PAPER
+→ definition or description of the original method.
+
+ORIGINAL DATASET PAPER
+→ dataset characteristics and provenance.
+
+PRIMARY EXPERIMENTAL STUDY
+→ precise empirical or numerical findings.
+
+SYSTEMATIC REVIEW / HIGH-QUALITY REVIEW
+→ field-level trends and synthesis.
+
+OFFICIAL STANDARD
+→ standard requirements.
+
+OFFICIAL JOURNAL AUTHOR GUIDE
+→ journal submission requirements.
+
+Do not cite a review instead of the original source when the manuscript
+makes a precise claim about the original algorithm, dataset, or
+numerical result.
+
+Before retaining a source, verify when reasonably possible that it has
+not been:
+
+- retracted
+- withdrawn
+- materially corrected in a way affecting the cited claim
+- superseded by a final peer-reviewed version.
+
+If only an abstract or limited record is available:
+
+do not attribute detailed methodology or numerical findings that cannot
+actually be verified from accessible evidence.
 
 ============================================================
 REFERENCE SEARCH COVERAGE MATRIX
@@ -489,7 +751,7 @@ Score the final pre-results literature base:
 
 20 points — bibliographic accuracy
 
-20 points — 2024–present compliance
+20 points — recent-state-of-art coverage + justified foundational-use compliance
 
 20 points — authoritative peer-reviewed source-quality compliance
 
@@ -707,6 +969,92 @@ Once Stage 4 is locked, do not casually change the central
 research question.
 
 ============================================================
+STAGE 4A — DATA, ETHICS, PROVENANCE, AND CLAIM-BOUNDARY GATE
+============================================================
+
+Before mathematical implementation or experiment generation, establish
+the provenance and permissible use of all research data.
+
+Document as applicable:
+
+- exact dataset/source
+- dataset version
+- access date
+- license
+- redistribution permissions
+- preprocessing provenance
+- collection method
+- synthetic versus real-world status
+- known sampling bias
+- entity/patient/user/device independence
+- benchmark contamination risk
+- personally identifiable information
+- protected health information
+- consent requirements
+- IRB / ethics-review relevance
+- security-sensitive information
+- legal or contractual restrictions.
+
+If synthetic data or simulation are used, document:
+
+- generative assumptions
+- parameter ranges
+- scenario construction
+- randomness
+- realism limits
+- what real-world claims cannot be made.
+
+============================================================
+CLAIM-BOUNDARY RULE
+============================================================
+
+Maintain these distinctions:
+
+SIMULATION EVIDENCE
+≠
+REAL-WORLD DEPLOYMENT EVIDENCE.
+
+SYNTHETIC DATA
+≠
+FIELD VALIDATION.
+
+OBSERVATIONAL ASSOCIATION
+≠
+CAUSATION.
+
+BENCHMARK SUPERIORITY
+≠
+UNIVERSAL SUPERIORITY.
+
+STATISTICAL SIGNIFICANCE
+≠
+PRACTICAL SIGNIFICANCE.
+
+ONE DATASET
+≠
+GENERALIZATION ACROSS POPULATIONS.
+
+ONE HARDWARE PLATFORM
+≠
+HARDWARE-INDEPENDENT PERFORMANCE.
+
+QUANTUM-INSPIRED COMPUTATION
+≠
+QUANTUM EXECUTION OR QUANTUM SPEEDUP.
+
+Every claim in the:
+
+- title
+- abstract
+- contribution statement
+- results
+- discussion
+- conclusion
+
+must remain inside the evidence boundary actually demonstrated by the
+study.
+
+============================================================
 STAGE 5 — MATHEMATICAL AND ALGORITHMIC FORMULATION
 ============================================================
 
@@ -769,6 +1117,88 @@ testable through ablation where feasible.
 
 Baselines must receive fair and equivalent evaluation conditions.
 
+============================================================
+BASELINE FAIRNESS CONTRACT
+============================================================
+
+For every major baseline record, when applicable:
+
+- original/reference paper
+- official implementation if available
+- implementation version or commit
+- hyperparameters
+- preprocessing
+- tuning procedure
+- tuning budget
+- compute budget
+- stopping condition
+- dataset/scenarios
+- random seeds
+- evaluation metrics.
+
+The proposed method must not receive a materially larger tuning or
+information budget than competitors unless scientifically justified
+and explicitly disclosed.
+
+For optimization:
+
+use equivalent objectives and defensible termination budgets.
+
+For ML:
+
+use equivalent train/development/test information access.
+
+For LLMs:
+
+use equivalent prompt information, token budgets, model-access
+conditions, and evaluation rules.
+
+For simulation:
+
+evaluate methods on matched scenarios whenever possible.
+
+============================================================
+PRIMARY OUTCOME + SAMPLE-SIZE LOCK
+============================================================
+
+BEFORE the final experiment define:
+
+PRIMARY OUTCOME / METRIC
+
+DIRECTION OF IMPROVEMENT
+
+MINIMUM PRACTICALLY MEANINGFUL DIFFERENCE when meaningful
+
+SECONDARY OUTCOMES
+
+EXPLORATORY OUTCOMES.
+
+Do not change the primary outcome after seeing final results merely
+because another metric looks more favorable.
+
+Do not arbitrarily choose:
+
+5
+10
+30
+100
+1000
+
+runs or scenarios.
+
+Justify experimental size using whichever is scientifically appropriate:
+
+- statistical power
+- confidence-interval precision
+- pilot variance
+- benchmark convention
+- exhaustive instance coverage
+- computational complexity
+- matched-scenario design
+- domain-specific practice.
+
+Document the rationale.
+
 Before proceeding, answer:
 
 WHAT EXACT EVIDENCE WOULD CONVINCE A SKEPTICAL REVIEWER THAT THE
@@ -792,7 +1222,17 @@ STAGE 6A — STRICT ≤2-HOUR COMPUTE-BUDGET CONTRACT
 
 The default final cloud-compute budget for this Short/Mini Article is:
 
-ABSOLUTE MAXIMUM RUNPOD WALL-CLOCK TIME = 120 MINUTES.
+ABSOLUTE MAXIMUM CUMULATIVE PAID RUNPOD WALL-CLOCK TIME = 120 MINUTES.
+
+This default budget includes, when executed on RunPod:
+
+- setup validation
+- development/pilot runs
+- final frozen experiment
+- necessary reruns caused by environment/runtime failures.
+
+Prefer local sanity/self-tests whenever practical rather than consuming
+cloud time unnecessarily.
 
 DESIGN TARGET:
 
@@ -904,7 +1344,7 @@ Short Communication that CAN be answered within the budget.
 Do not fake computational feasibility.
 
 ============================================================
-STAGE 7 — DESIGN EXACTLY TWO MAIN FIGURES
+STAGE 7 — DESIGN UP TO TWO MAIN FIGURES
 ============================================================
 
 Design no more than TWO main-paper figures.
@@ -937,7 +1377,44 @@ Do not create decorative figures.
 Every panel must answer a specific research question.
 
 ============================================================
-STAGE 8 — DESIGN EXACTLY TWO MAIN TABLES
+SCIENTIFIC FIGURE QUALITY GATE
+============================================================
+
+Every main figure must be publication-grade scientific communication,
+not decorative artwork.
+
+For quantitative figures:
+
+- generate values directly from verified data
+- show units
+- use uncertainty/error bars when scientifically appropriate
+- avoid misleading axis truncation
+- avoid unnecessary 3D effects
+- use readable typography at final publication size
+- use clear panel labels (a), (b), ...
+- use a colorblind-accessible presentation when possible
+- preserve grayscale interpretability when practical.
+
+For architecture/method figures:
+
+- exactly match the implemented methodology
+- match manuscript terminology
+- match equation notation
+- show only implemented components
+- avoid conceptual components that do not exist in code.
+
+Prefer vector PDF/SVG for line art when the submission system supports
+it.
+
+Use high-resolution raster output only when raster representation is
+appropriate.
+
+Captions must be self-contained and scientifically informative.
+
+Do not use decorative AI-generated imagery as experimental evidence.
+
+============================================================
+STAGE 8 — DESIGN UP TO TWO MAIN TABLES
 ============================================================
 
 Design no more than TWO main-paper tables.
@@ -973,6 +1450,25 @@ Do not create unnecessary separate tables.
 
 Additional non-central evidence may later be placed in supplementary
 material or the reproducibility repository when appropriate.
+
+============================================================
+SCIENTIFIC TABLE QUALITY GATE
+============================================================
+
+Every main table must:
+
+- use consistent decimal precision
+- state units where applicable
+- define uncertainty notation
+- report n where relevant
+- explain statistical markers
+- use a pre-defined best-value highlighting rule
+- avoid selectively bolding only favorable proposed-method values
+- avoid duplicating information already communicated more effectively
+  by a figure
+- use a self-contained caption.
+
+Use fewer than two tables when one table is scientifically sufficient.
 
 ============================================================
 STAGE 9 — WRITE THE TOP-NOTCH COMPLETE PRE-RESULTS PAPER
@@ -1112,7 +1608,7 @@ source directly establishes the comparison.
 
 The bibliography must exactly match the verified publisher metadata.
 
-All references must satisfy the mandatory 2024–present source policy.
+All references must satisfy the current-literature + foundational-reference policy.
 
 Citation formatting must follow the target journal when known.
 
@@ -1192,7 +1688,7 @@ Audit:
 
 TITLE / TOPIC VALIDITY
 
-2024–PRESENT LITERATURE COVERAGE
+CURRENT STATE-OF-THE-ART COVERAGE + FOUNDATIONAL ATTRIBUTION
 
 CLOSEST-WORK COVERAGE
 
@@ -1252,6 +1748,31 @@ If recent literature invalidates the novelty, redesign the study
 BEFORE coding rather than hiding the conflict.
 
 ============================================================
+HIGH-RISK CLAIM TERMINOLOGY GATE
+============================================================
+
+Do not use these terms without evidence that specifically establishes
+them:
+
+- first
+- first-ever
+- unprecedented
+- state-of-the-art
+- superior
+- significantly better
+- generalizable
+- real-time
+- clinically useful
+- production-ready
+- quantum advantage
+- quantum speedup.
+
+Absence of a paper from a literature search does NOT prove that the
+proposed work is the first-ever study.
+
+Use restrained, mechanism-based scientific language.
+
+============================================================
 MANDATORY STOP AFTER STAGES 1–11
 ============================================================
 
@@ -1261,7 +1782,7 @@ plan, reference ledger, and paper-to-code contract are locked, tell me:
 
 "Stages 1–11 are complete.
 
-The research question, verified 2024–present literature base, novelty,
+The research question, verified current + foundational literature base, novelty,
 mathematical formulation, experimental protocol, complete pre-results
 Short Communication, maximum-two-figure / maximum-two-table design,
 reference-integrity audit, and paper-to-code/output contract are locked.
@@ -1366,12 +1887,25 @@ different methodology after writing.
 
 Where applicable, prefer one executable supporting:
 
+python main.py --mode selftest
 python main.py --mode sanity
 python main.py --mode dev
 python main.py --mode final
 
+SELFTEST MODE:
+
+Verify without expensive computation:
+
+- core formulas
+- constraints
+- deterministic seed behavior
+- metric calculations
+- input/output schema
+- one tiny baseline case
+- one tiny proposed-method case.
+
 SANITY MODE:
-tiny correctness test.
+tiny end-to-end correctness test.
 
 DEV MODE:
 development-only tuning/debugging.
@@ -1523,6 +2057,38 @@ Once development is scientifically satisfactory, FREEZE:
 Final results must not be used for retrospective parameter tuning.
 
 ============================================================
+CODE STEP 9A — FINAL FREEZE FINGERPRINT
+============================================================
+
+Immediately before the FINAL experiment, create an immutable experiment
+fingerprint and record it in run.log.
+
+Record at minimum:
+
+- Git commit SHA
+- code version
+- frozen configuration
+- primary outcome
+- dataset/scenario version
+- split identifier or hash when practical
+- random seeds
+- baseline versions
+- Python version
+- important package versions
+- operating environment
+- planned hardware
+- timestamp
+- frozen experiment protocol.
+
+The final RunPod results must be traceable to this exact fingerprint.
+
+If scientific code, parameters, dataset splits, baseline definitions,
+or primary metrics change after fingerprint creation:
+
+generate a NEW fingerprint and treat the affected experiment as a new
+experimental version.
+
+============================================================
 CODE STEP 10 — PREPARE RUNPOD EXECUTION
 ============================================================
 
@@ -1585,7 +2151,10 @@ FINAL NON-NEGOTIABLE SCIENTIFIC RULES
 - Maximum 2 main-paper figures.
 - Maximum 2 main-paper tables.
 - Literature search is mandatory for every topic.
-- The default literature window is 2024–present.
+- 2024–present is the default mandatory window for current
+  state-of-the-art, gap, novelty, and competitor analysis.
+- Older foundational references are automatically permitted when
+  scientifically necessary and explicitly classified as foundational.
 - Prefer IEEE, Elsevier/ScienceDirect, and MDPI for relevant technical
   topics, while allowing other authoritative peer-reviewed publishers
   when they contain stronger or indispensable domain-specific work.

@@ -56,9 +56,14 @@ File:
 
 `MASTER_PROMPT_1_PreResults_Code_RunPod.md`
 
+Prompt 1 is title-first: the paper title is the only mandatory input,
+and the workflow autonomously infers the research type, literature
+strategy, methodology, validation design, and journal-neutral article
+structure.
+
 Prompt 1 covers the complete pre-results workflow:
 
-1. Research-problem definition
+1. Research-type routing and research-problem definition
 2. Novelty and literature audit
 3. Research-gap locking
 4. Research Contract
@@ -116,10 +121,16 @@ The default workflow enforces:
 - no fabricated experimental outcomes
 - no retrospective tuning using final test results
 - reproducible code and experiments
+- data/ethics/provenance validation
+- primary-outcome and sample-size locking
+- fair-baseline protocol
+- default cumulative RunPod compute budget of ≤2 hours
+- immutable final experiment fingerprint
 - statistically justified claims
-- mandatory 2024–present literature verification
-- manuscript references restricted by default to IEEE Xplore,
-  Elsevier/ScienceDirect, and MDPI
+- mandatory 2024–present state-of-the-art and novelty verification
+- justified older foundational references when scientifically necessary
+- authoritative domain-appropriate peer-reviewed sources, with IEEE,
+  Elsevier/ScienceDirect, and MDPI prioritized where relevant
 - publisher-level DOI and bibliographic verification
 - claim-to-citation traceability
 - five-pass citation validation

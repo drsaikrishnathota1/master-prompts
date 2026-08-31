@@ -62,7 +62,9 @@ FINAL REFERENCE POLICY
 The final manuscript must continue to obey the MASTER PROMPT 1
 reference policy:
 
-- default publication window: 2024–present
+- use 2024–present as the default state-of-the-art / novelty window
+- allow older foundational references when scientifically necessary
+- classify older references explicitly by foundational role
 - prioritize authoritative, directly relevant peer-reviewed literature
 - prefer IEEE, Elsevier/ScienceDirect, and MDPI for applicable
   technical topics
@@ -104,9 +106,29 @@ Determine:
 - peak memory/VRAM where available
 - whether the final execution stayed within the locked two-hour budget
 - whether any planned experiment was skipped because of compute limits
-- whether early termination affected scientific completeness.
+- whether early termination affected scientific completeness
+- Git commit SHA from the final freeze fingerprint
+- code/configuration version
+- dataset/split fingerprint
+- frozen random seeds
+- baseline versions
+- primary metric
+- Python/package environment
+- whether the returned outputs correspond to the exact frozen
+  experiment fingerprint.
 
 Create a concise PASS/FAIL verification report.
+
+Never silently discard failed runs.
+
+Explicitly report:
+
+- number attempted
+- number completed
+- number failed
+- failure reasons
+- whether failure rate differs by method
+- whether exclusions could bias the comparison.
 
 If critical evidence is missing:
 
@@ -351,10 +373,10 @@ before the manuscript can receive SUBMISSION READY status.
 This internal matrix does not count against the two-table limit.
 
 ============================================================
-STEP 8 — BUILD EXACTLY TWO MAIN TABLES
+STEP 8 — BUILD UP TO TWO MAIN TABLES
 ============================================================
 
-Create exactly TWO main-paper tables.
+Use no more than TWO main-paper tables. Use only ONE when one is scientifically sufficient.
 
 TABLE 1:
 
@@ -394,7 +416,7 @@ Secondary evidence can remain in:
 when appropriate.
 
 ============================================================
-STEP 9 — BUILD EXACTLY TWO MAIN FIGURES
+STEP 9 — BUILD UP TO TWO MAIN FIGURES
 ============================================================
 
 FIGURE 1:
@@ -428,6 +450,34 @@ No decorative graphics.
 Every numerical plot must be generated from verified final data.
 
 ============================================================
+FINAL FIGURE + TABLE QUALITY GATE
+============================================================
+
+Before accepting the final 1–2 figures and 1–2 tables verify:
+
+FIGURES:
+
+- all quantitative values originate from verified outputs
+- axes and units are correct
+- uncertainty is shown where applicable
+- panel labels are consistent
+- fonts remain readable at publication size
+- no misleading axis manipulation
+- architecture exactly matches implemented code
+- captions are self-contained.
+
+TABLES:
+
+- numeric precision is consistent
+- units are explicit
+- uncertainty notation is defined
+- n is shown where appropriate
+- statistical markers are explained
+- highlighting follows a pre-defined rule
+- no favorable-value cherry-picking
+- no unnecessary duplication with figures.
+
+============================================================
 STEP 10 — DETERMINE WHETHER CODE CHANGES ARE PERMITTED
 ============================================================
 
@@ -442,7 +492,8 @@ Examples:
 - README improvement
 - comments
 - documentation
-- output parsing
+- formatting-only output parsing that cannot alter numeric values,
+  exclusions, aggregation, or statistical conclusions
 - manuscript formatting
 - table formatting.
 
@@ -458,7 +509,14 @@ Examples:
 - changed final dataset
 - changed seed selection
 - changed metric definition
-- changed experimental protocol.
+- changed experimental protocol
+- any parsing/aggregation correction that changes numeric values,
+  excluded observations, run inclusion, metric aggregation, rankings,
+  p-values, effect sizes, or scientific conclusions.
+
+A post-processing correction that changes the numerical interpretation
+requires complete re-analysis of affected outputs and may require
+rerunning the experiment if raw evidence is no longer trustworthy.
 
 If a Category B scientific problem is discovered, tell me clearly:
 
@@ -466,6 +524,34 @@ If a Category B scientific problem is discovered, tell me clearly:
 rerunning the affected experiment."
 
 Never silently change frozen methodology.
+
+============================================================
+STEP 10A — FINAL CLAIM-BOUNDARY AUDIT
+============================================================
+
+Before rewriting the manuscript, verify that final claims do not exceed
+the evidence.
+
+Explicitly prevent:
+
+simulation → deployment claims
+
+synthetic data → real-world validation claims
+
+association → causation claims
+
+one benchmark → universal-superiority claims
+
+statistical significance → practical-significance claims
+
+one dataset → population-generalization claims
+
+quantum-inspired → quantum-speedup claims.
+
+If the pre-results title or contribution wording exceeds the final
+evidence:
+
+downgrade or rewrite it.
 
 ============================================================
 STEP 11 — FINALIZE THE ABSTRACT
@@ -704,6 +790,20 @@ STEP 20 — JOURNAL-SPECIFIC FINAL EDIT + REFERENCE LOCK
 If a target journal is specified, verify CURRENT official author
 instructions using the journal/publisher's official guidance.
 
+When useful, inspect approximately 3–5 recent papers from the SAME or
+closest article type in that journal to understand:
+
+- manuscript density
+- section conventions
+- typical technical depth
+- figure/table density
+- Results/Discussion style
+- expected validation strength.
+
+Do NOT copy their wording, structure mechanically, or citations.
+
+Official author instructions override observed conventions.
+
 Adapt:
 
 - article type
@@ -762,7 +862,7 @@ Provide:
 
 10. FINAL CONCLUSION
 
-11. VERIFIED 2024–PRESENT REFERENCE LIST
+11. VERIFIED REFERENCE LIST — current state-of-the-art + justified foundational sources
 
 12. REFERENCE INTEGRITY SUMMARY
     - five-pass status
