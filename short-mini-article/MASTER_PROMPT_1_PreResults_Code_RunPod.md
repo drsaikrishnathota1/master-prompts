@@ -440,8 +440,8 @@ and use fewer when sufficient.
 
 Do not create unnecessary figures or tables.
 
-The two figures and two tables should carry nearly all experimental
-evidence required to justify the article.
+The selected figures and tables should communicate the strongest
+scientific evidence required to justify the article.
 
 If the target journal has stricter current requirements, verify the
 official journal requirements and follow the stricter requirement.
@@ -972,8 +972,9 @@ research question.
 STAGE 4A — DATA, ETHICS, PROVENANCE, AND CLAIM-BOUNDARY GATE
 ============================================================
 
-Before mathematical implementation or experiment generation, establish
-the provenance and permissible use of all research data.
+Before implementation or final evidence generation, establish the
+provenance and permissible use of all research data or evidence
+sources, when applicable.
 
 Document as applicable:
 
@@ -1020,7 +1021,7 @@ If the proposed research requires any of the following:
 
 and the required authorization is NOT available:
 
-STOP that experimental route.
+STOP that research/evidence route.
 
 Never:
 
@@ -1229,9 +1230,9 @@ evaluate methods on matched scenarios whenever possible.
 PRIMARY OUTCOME + SAMPLE-SIZE LOCK
 ============================================================
 
-BEFORE the final experiment define:
+BEFORE final evidence generation define, when applicable:
 
-PRIMARY OUTCOME / METRIC
+PRIMARY OUTCOME / EVIDENCE CRITERION
 
 DIRECTION OF IMPROVEMENT
 
@@ -1241,8 +1242,9 @@ SECONDARY OUTCOMES
 
 EXPLORATORY OUTCOMES.
 
-Do not change the primary outcome after seeing final results merely
-because another metric looks more favorable.
+Do not change the primary outcome/evidence criterion after seeing
+final evidence merely because another measure or interpretation looks
+more favorable.
 
 Do not arbitrarily choose:
 
@@ -1275,14 +1277,20 @@ PROPOSED CONTRIBUTION IS REAL?
 Use that answer to determine the minimum scientifically sufficient
 experiment.
 
-The experiment should be compact enough for a concise article but
-strong enough to distinguish:
+The validation/evidence package should be compact enough for a
+concise article but strong enough to distinguish the central claim from
+plausible competing explanations.
+
+For computational/empirical studies this may include distinguishing:
 
 - genuine improvement
 - random variation
-- parameter tuning artifact
-- baseline weakness
+- parameter-tuning artifact
+- comparator weakness
 - component interaction.
+
+For theoretical/non-computational studies use the corresponding
+proof-, derivation-, measurement-, or validity-based criteria.
 
 ============================================================
 STAGE 6A — STRICT ≤2-HOUR COMPUTE-BUDGET CONTRACT
@@ -1607,13 +1615,15 @@ Provide:
 - novelty mechanism
 - implementation-level detail sufficient to justify the later code.
 
-4. EXPERIMENTAL METHODOLOGY
+4. VALIDATION / EVIDENCE METHODOLOGY
 
-Predefine:
+Predefine the evidence protocol appropriate to the research type.
+
+For computational/empirical studies include, as applicable:
 
 - data/scenarios
 - development/final split
-- baselines
+- comparators
 - parameters
 - seeds
 - metrics
@@ -1622,19 +1632,22 @@ Predefine:
 - statistics
 - computational protocol.
 
+For theoretical/non-computational studies include the corresponding
+proof, derivation, measurement, observation, or validation protocol.
+
 5. RESULTS AND DISCUSSION
 
 Write the complete STRUCTURE and interpretation framework but mark
 all numerical findings clearly as:
 
-AWAITING FROZEN FINAL EXPERIMENT
+AWAITING FROZEN FINAL EVIDENCE
 
 Never insert expected results as observed results.
 
 6. LIMITATIONS
 
 Include known methodological limitations that exist even before the
-final experiment.
+final evidence is generated.
 
 7. CONCLUSION
 
@@ -1726,7 +1739,8 @@ evidence.
 Every future numerical claim must be reproducible from a stored
 machine-readable result.
 
-Define the OUTPUT CONTRACT before coding.
+Define the EVIDENCE / OUTPUT CONTRACT before implementation or final
+evidence generation.
 
 Prefer a minimal final output package such as:
 
@@ -1768,7 +1782,8 @@ calculation.
 STAGE 11 — PRE-IMPLEMENTATION / PRE-FINAL-EVIDENCE ADVERSARIAL AUDIT
 ============================================================
 
-Before code generation, review the project simultaneously as:
+Before implementation or final evidence generation, review the
+project simultaneously as:
 
 - Reviewer #2
 - domain expert
@@ -1798,27 +1813,27 @@ NOVELTY
 
 MATHEMATICS
 
-EXPERIMENT DESIGN
+VALIDATION / EVIDENCE DESIGN
 
-BASELINE FAIRNESS
+COMPARATOR / BASELINE FAIRNESS when applicable
 
-DATA LEAKAGE
+DATA LEAKAGE when applicable
 
-METRIC DEFINITIONS
+OUTCOME / METRIC DEFINITIONS when applicable
 
-STATISTICAL DESIGN
+STATISTICAL DESIGN when applicable
 
-ABLATION SUFFICIENCY
+ABLATION / CONTRIBUTION-ISOLATION SUFFICIENCY when applicable
 
-ROBUSTNESS DESIGN
+ROBUSTNESS / BOUNDARY DESIGN
 
-FAILURE ANALYSIS
+FAILURE / LIMITATION ANALYSIS
 
 REPRODUCIBILITY
 
 COMPUTATIONAL FEASIBILITY
 
-PAPER ↔ CODE TRACEABILITY
+PAPER ↔ EVIDENCE / IMPLEMENTATION TRACEABILITY
 
 OUTPUT CONTRACT
 
@@ -1834,12 +1849,14 @@ CRITICAL
 MAJOR
 MINOR.
 
-Resolve ALL critical issues before code generation.
+Resolve ALL critical issues before implementation or final evidence
+generation.
 
 Resolve all scientifically feasible major issues.
 
 If recent literature invalidates the novelty, redesign the study
-BEFORE coding rather than hiding the conflict.
+BEFORE implementation/final evidence generation rather than hiding
+the conflict.
 
 ============================================================
 HIGH-RISK CLAIM TERMINOLOGY GATE

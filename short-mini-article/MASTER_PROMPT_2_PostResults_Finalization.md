@@ -31,7 +31,8 @@ I am providing, as applicable:
 - generated plots
 - supplementary outputs.
 
-The methodology was frozen BEFORE observing these final results.
+The methodology and evidence protocol were frozen BEFORE observing
+the final evidence.
 
 Do NOT alter:
 
@@ -738,18 +739,24 @@ Do not merely repeat Results.
 STEP 16 — WRITE HONEST LIMITATIONS
 ============================================================
 
-Use actual evidence to discuss limitations involving:
+Use actual evidence to discuss limitations appropriate to the
+research type, including where relevant:
 
-- simulation realism
-- dataset limitations
 - assumptions
+- theoretical boundaries
+- proof limitations
+- simulation realism
+- dataset/sample limitations
+- measurement uncertainty
+- instrumentation limitations
+- methodological validity
 - scalability
 - computational demand
-- generalization
 - statistical uncertainty
-- stress-test failures
+- generalization
+- robustness/failure boundaries
 - hardware restrictions
-- deployment limitations.
+- deployment or external-validity limitations.
 
 Do not hide known weaknesses.
 
@@ -775,7 +782,7 @@ Do not introduce new findings.
 STEP 18 — FORENSIC NUMERICAL + CITATION CONSISTENCY AUDIT
 ============================================================
 
-Cross-check EVERY:
+Cross-check EVERY applicable:
 
 - number
 - percentage
@@ -813,9 +820,9 @@ METHOD ↔ EVIDENCE / IMPLEMENTATION
 
 EQUATIONS ↔ CODE / DERIVATION / PROOF, as applicable
 
-TABLES ↔ RAW OUTPUTS
+TABLES ↔ VERIFIED SOURCE EVIDENCE / RAW OUTPUTS
 
-FIGURES ↔ RAW OUTPUTS
+FIGURES ↔ VERIFIED SOURCE EVIDENCE / RAW OUTPUTS
 
 DISCUSSION ↔ RESULTS + VERIFIED LITERATURE
 
@@ -982,7 +989,7 @@ Provide:
 
 NOT READY
 
-NEEDS ANOTHER EXPERIMENT
+NEEDS ADDITIONAL EVIDENCE / REVALIDATION
 
 MINOR EDITING ONLY
 
