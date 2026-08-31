@@ -451,11 +451,12 @@ This internal matrix does not count against the two-table limit.
 STEP 8 — BUILD UP TO TWO MAIN TABLES
 ============================================================
 
-Use no more than TWO main-paper tables. Use only ONE when one is scientifically sufficient.
+Use no more than TWO main-paper tables. Use only ONE when one is
+scientifically sufficient.
 
-TABLE 1:
+TABLE 1, when justified:
 
-PRIMARY PERFORMANCE COMPARISON
+PRIMARY COMPARISON / EVIDENCE SUMMARY
 
 Include:
 
@@ -467,9 +468,9 @@ Include:
 
 Do not create excessive columns.
 
-TABLE 2:
+TABLE 2, when justified:
 
-SUPPORTING EVIDENCE
+SUPPORTING / VALIDATION EVIDENCE
 
 Combine scientifically appropriate:
 
@@ -494,11 +495,12 @@ when appropriate.
 STEP 9 — BUILD UP TO TWO MAIN FIGURES
 ============================================================
 
-FIGURE 1:
+FIGURE 1, when justified:
 
-Methodology / architecture figure.
+Methodology / architecture / theory / process figure.
 
-Verify that it exactly represents the FINAL implemented method.
+Verify that it exactly represents the FINAL method or conceptual
+mechanism.
 
 Correct any mismatch between:
 
@@ -507,9 +509,10 @@ Correct any mismatch between:
 - pseudocode
 - implementation.
 
-FIGURE 2:
+FIGURE 2, when justified:
 
-ONE information-dense experimental figure.
+ONE information-dense evidence figure appropriate to the research
+type.
 
 Use scientifically appropriate panels if useful, such as:
 
@@ -553,12 +556,13 @@ TABLES:
 - no unnecessary duplication with figures.
 
 ============================================================
-STEP 10 — DETERMINE WHETHER CODE CHANGES ARE PERMITTED
+STEP 10 — DETERMINE WHETHER POST-FREEZE CHANGES ARE PERMITTED
 ============================================================
 
 Separate discovered changes into:
 
-CATEGORY A — ALLOWED WITHOUT REPEATING FINAL EXPERIMENT
+CATEGORY A — ALLOWED WITHOUT REGENERATING THE FROZEN SCIENTIFIC
+EVIDENCE
 
 Examples:
 
@@ -572,7 +576,7 @@ Examples:
 - manuscript formatting
 - table formatting.
 
-CATEGORY B — REQUIRES NEW EXPERIMENT
+CATEGORY B — REQUIRES NEW OR REVALIDATED SCIENTIFIC EVIDENCE
 
 Examples:
 
@@ -639,9 +643,10 @@ Include concisely:
 - problem
 - gap
 - proposed method
-- evaluation setup
-- strongest observed numerical result(s)
-- important trade-off if relevant
+- validation/evidence setup
+- strongest verified finding(s)
+- key numerical result(s) only when applicable
+- important trade-off or boundary condition if relevant
 - conclusion.
 
 Do not overload the Short Communication abstract with many numbers.
@@ -717,13 +722,13 @@ Highlight only findings central to the research question.
 STEP 15 — WRITE FINAL DISCUSSION
 ============================================================
 
-Explain:
+Explain, as applicable:
 
-- why results behaved as observed
-- what mechanism generated improvements
-- which component mattered most
+- why the findings behaved as observed
+- what mechanism/theory explains them
+- which component, assumption, or mechanism mattered most
 - why trade-offs occurred
-- where baselines were stronger
+- where comparators or alternative explanations were stronger
 - practical/scientific meaning
 - generalizability boundaries.
 
@@ -756,7 +761,7 @@ The Conclusion should answer:
 
 What was proposed?
 
-What was experimentally demonstrated?
+What was actually demonstrated by the frozen evidence?
 
 What was NOT demonstrated?
 
@@ -842,22 +847,26 @@ STEP 19 — REVIEWER #2 ATTACK
 
 Review the completed Short Communication as if attempting to reject it.
 
-Evaluate:
+Evaluate, as applicable:
 
 - novelty
 - technical correctness
-- mathematical correctness
-- experimental rigor
-- baseline fairness
-- statistical rigor
-- ablation quality
-- robustness
+- methodological correctness
+- mathematical/proof correctness
+- empirical/experimental rigor
+- comparator/baseline fairness
+- statistical/evidence-analysis rigor
+- ablation or contribution-isolation quality
+- robustness/boundary analysis
 - reproducibility
 - writing clarity
 - figure sufficiency
 - table sufficiency
 - limitations
 - claim accuracy.
+
+Mark non-applicable criteria as NOT APPLICABLE rather than forcing them
+onto the study.
 
 Classify issues:
 
@@ -868,8 +877,8 @@ MINOR.
 Fix all scientifically legitimate issues that can be corrected without
 manipulating final experimental evidence.
 
-If a problem genuinely requires another experiment, explicitly
-say so.
+If a problem genuinely requires new scientific evidence, explicitly
+say so and identify the required evidence type.
 
 ============================================================
 STEP 20 — JOURNAL-SPECIFIC FINAL EDIT + REFERENCE LOCK

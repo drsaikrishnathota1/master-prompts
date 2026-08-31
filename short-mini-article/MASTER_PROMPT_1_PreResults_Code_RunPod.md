@@ -193,9 +193,9 @@ requires it.
 The methodology must follow from the verified gap.
 
 The objective is a top-quality, concise, reproducible Short
-Communication whose title, literature, mathematics, code, experiments,
-figures, tables, and conclusions form ONE internally consistent
-scientific system.
+Communication whose title, literature, methodology, evidence,
+implementation when applicable, figures/tables when useful, and
+conclusions form ONE internally consistent scientific system.
 
 ============================================================
 RESEARCH-TYPE ROUTER
@@ -915,39 +915,39 @@ Inherited/non-novel components
 
 Scientific assumptions
 
-Dataset or simulation environment
+Evidence/data/source or theoretical foundation, as applicable
 
-Development/tuning conditions
+Development/tuning conditions, when applicable
 
-Final independent evaluation conditions
+Final independent evaluation/evidence conditions
 
-Random seeds where applicable
+Random seeds, when applicable
 
-Baselines
+Baselines/comparators, when applicable
 
-Strongest baseline
+Strongest comparator, when applicable
 
-Reason each baseline is included
+Reason each comparator is included
 
-Primary metrics
+Primary outcome/evidence criterion
 
-Secondary metrics
+Secondary outcome/evidence criteria
 
-Required ablations
+Ablations, when scientifically applicable
 
-Sensitivity analysis
+Sensitivity analysis, when scientifically applicable
 
-Stress/failure test
+Stress/failure/boundary analysis, when applicable
 
-Runtime/scalability analysis when relevant
+Runtime/scalability analysis, when relevant
 
-Statistical tests
+Statistical tests, when applicable
 
-Effect-size method
+Effect-size method, when applicable
 
-Confidence intervals
+Confidence intervals/uncertainty characterization, when applicable
 
-Multiple-comparison correction where required
+Multiple-comparison correction, when required
 
 Success criteria
 
@@ -957,13 +957,13 @@ Failure criteria
 
 Threats to validity
 
-Expected Figure 1
+Expected Figure 1, if justified
 
-Expected Figure 2
+Expected Figure 2, if justified
 
-Expected Table 1
+Expected Table 1, if justified
 
-Expected Table 2
+Expected Table 2, if justified
 
 Once Stage 4 is locked, do not casually change the central
 research question.
@@ -1092,12 +1092,14 @@ must remain inside the evidence boundary actually demonstrated by the
 study.
 
 ============================================================
-STAGE 5 — MATHEMATICAL AND ALGORITHMIC FORMULATION
+STAGE 5 — METHODOLOGICAL / MATHEMATICAL / ALGORITHMIC FORMULATION
 ============================================================
 
-Develop the proposed method rigorously.
+Develop the proposed method rigorously using the form of reasoning
+appropriate to the research type.
 
-For every important equation provide:
+When mathematical equations are required, for every important equation
+provide:
 
 - scientific purpose
 - every variable definition
@@ -1108,11 +1110,18 @@ For every important equation provide:
 - optimization direction
 - computational interpretation.
 
-Ensure every equation has an actual implementation role.
+Every equation must have a genuine scientific role.
+
+For computational work, equations should map to implementation where
+appropriate.
+
+For theoretical work, equations may instead map to derivation, proof,
+bounds, or formal reasoning.
 
 Do not add decorative mathematics.
 
-Create concise pseudocode for the proposed method.
+Create pseudocode only when an algorithmic process exists and
+pseudocode materially improves reproducibility.
 
 Audit for:
 
@@ -1126,33 +1135,55 @@ Audit for:
 - leakage between development and final evaluation.
 
 ============================================================
-STAGE 6 — DESIGN EXPERIMENTS BEFORE FINAL CODING
+STAGE 6 — DESIGN THE VALIDATION / EVIDENCE PROTOCOL BEFORE IMPLEMENTATION
 ============================================================
 
-Specify exactly:
+Define exactly the evidence required to answer the research question.
+
+For computational/empirical studies, specify as applicable:
 
 - dataset/scenario source
 - sample size
-- development/tuning split if required
+- development/tuning split
 - final evaluation split
-- baselines
-- number of runs/seeds
-- allowed hyperparameter tuning
-- primary metrics
-- secondary metrics
+- comparators/baselines
+- runs/seeds
+- allowed tuning
+- primary/secondary metrics
 - ablations
-- sensitivity experiment
-- robustness/stress experiment
-- runtime/scalability experiment
+- sensitivity
+- robustness/stress testing
+- runtime/scalability
 - statistical analysis.
 
-Every major proposed contribution must have corresponding
-experimental evidence.
+For theoretical/mathematical studies, specify as applicable:
 
-Every important algorithmic component should be independently
-testable through ablation where feasible.
+- assumptions
+- propositions/theorems
+- proof strategy
+- bounds
+- counterexamples
+- limiting cases
+- complexity analysis
+- numerical verification.
 
-Baselines must receive fair and equivalent evaluation conditions.
+For engineering/physical studies, specify as applicable:
+
+- measurement setup
+- instruments
+- calibration
+- repetitions
+- controls
+- uncertainty
+- physical constraints.
+
+Every major contribution must have corresponding verifiable evidence.
+
+Use ablation only where removing a component is scientifically
+meaningful.
+
+Comparators/baselines must receive fair and equivalent conditions when
+comparative evaluation is part of the research design.
 
 ============================================================
 BASELINE FAIRNESS CONTRACT
@@ -1390,15 +1421,14 @@ STAGE 7 — DESIGN UP TO TWO MAIN FIGURES
 
 Design no more than TWO main-paper figures.
 
-FIGURE 1 should normally be:
+FIGURE 1 should normally communicate the CENTRAL METHOD, THEORY,
+ARCHITECTURE, PROCESS, OR CONCEPTUAL MECHANISM.
 
-PROPOSED ARCHITECTURE / METHODOLOGY / ALGORITHM FLOW
+It must visually explain the central innovation when a figure improves
+understanding.
 
-It must visually explain the central innovation.
-
-FIGURE 2 should normally be:
-
-THE MOST INFORMATION-DENSE FINAL EXPERIMENTAL FIGURE.
+FIGURE 2 should normally contain the MOST INFORMATION-DENSE FINAL
+EVIDENCE appropriate to the research type.
 
 Depending on the research topic, Figure 2 may contain scientifically
 appropriate panels showing combinations of:
@@ -1460,9 +1490,9 @@ STAGE 8 — DESIGN UP TO TWO MAIN TABLES
 
 Design no more than TWO main-paper tables.
 
-TABLE 1:
+TABLE 1, when justified:
 
-PRIMARY QUANTITATIVE PERFORMANCE COMPARISON
+PRIMARY COMPARISON / EVIDENCE SUMMARY
 
 Possible columns where relevant:
 
@@ -1474,9 +1504,9 @@ Efficiency/resource metric
 Runtime
 Uncertainty/statistical notation.
 
-TABLE 2:
+TABLE 2, when justified:
 
-STRONGEST SUPPORTING EVIDENCE
+STRONGEST SUPPORTING / VALIDATION EVIDENCE
 
 Efficiently combine scientifically relevant:
 
@@ -1658,19 +1688,31 @@ If the target journal is unknown, use one internally consistent
 citation scheme until journal formatting is selected.
 
 ============================================================
-STAGE 10 — PAPER ↔ CODE ↔ OUTPUT CONTRACT
+STAGE 10 — PAPER ↔ EVIDENCE ↔ IMPLEMENTATION TRACEABILITY CONTRACT
 ============================================================
 
-Before generating code, build strict traceability:
+Before implementation/final evidence generation, build strict
+traceability.
+
+For computational studies:
 
 MANUSCRIPT CLAIM
 → VERIFIED CITATION OR ORIGINAL CONTRIBUTION
-→ EQUATION
+→ EQUATION/METHOD
 → ALGORITHM STEP
 → CODE FUNCTION
-→ RAW OUTPUT FIELD
+→ RAW OUTPUT
 → METRIC
 → FIGURE/TABLE.
+
+For theoretical/non-computational studies:
+
+MANUSCRIPT CLAIM
+→ VERIFIED CITATION OR ORIGINAL CONTRIBUTION
+→ METHOD / ASSUMPTION
+→ PROOF / DERIVATION / MEASUREMENT / OBSERVATION
+→ VERIFIED EVIDENCE
+→ FIGURE/TABLE when useful.
 
 Every original methodological statement must be operationally
 verifiable.
@@ -1723,7 +1765,7 @@ No final manuscript number should depend on undocumented manual
 calculation.
 
 ============================================================
-STAGE 11 — PRE-CODE ADVERSARIAL + REFERENCE AUDIT
+STAGE 11 — PRE-IMPLEMENTATION / PRE-FINAL-EVIDENCE ADVERSARIAL AUDIT
 ============================================================
 
 Before code generation, review the project simultaneously as:
