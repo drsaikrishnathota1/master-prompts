@@ -1,5 +1,5 @@
 # MASTER PROMPT 2
-## Final RunPod Results → Verification → Statistics → 2 Figures + 2 Tables → Final Short Communication
+## Final Results → Verification → Statistics → Up to 2 Figures + Up to 2 Tables → Final Short Communication
 
 The FINAL frozen experiment has now been completed.
 
@@ -53,7 +53,10 @@ MAXIMUM TABLES = 2
 Do not exceed this unless the target journal has a stricter
 requirement or I explicitly approve a justified exception.
 
-Compress the strongest scientific evidence into these four objects.
+Compress the strongest scientific evidence into no more than these
+four objects.
+
+Use fewer when scientifically sufficient.
 
 ============================================================
 FINAL REFERENCE POLICY
@@ -850,13 +853,17 @@ Provide:
 
 4. FINAL SHORT COMMUNICATION
 
-5. EXACT FIGURE 1 specification + caption
+5. FINAL FIGURE SET
+   - provide Figure 1 only if scientifically justified
+   - provide Figure 2 only if scientifically justified
+   - maximum = 2 figures
+   - never create filler merely to reach two.
 
-6. EXACT FIGURE 2 specification + caption
-
-7. EXACT TABLE 1
-
-8. EXACT TABLE 2
+6. FINAL TABLE SET
+   - provide Table 1 only if scientifically justified
+   - provide Table 2 only if scientifically justified
+   - maximum = 2 tables
+   - never create filler merely to reach two.
 
 9. FINAL LIMITATIONS
 

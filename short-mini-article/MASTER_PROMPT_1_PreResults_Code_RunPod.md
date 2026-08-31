@@ -1005,6 +1005,43 @@ If synthetic data or simulation are used, document:
 - what real-world claims cannot be made.
 
 ============================================================
+ETHICS / AUTHORIZATION HARD STOP
+============================================================
+
+If the proposed research requires any of the following:
+
+- IRB / ethics approval
+- informed consent
+- institutional authorization
+- protected-data authorization
+- contractual permission
+- dataset licensing permission
+- security-sensitive access approval
+
+and the required authorization is NOT available:
+
+STOP that experimental route.
+
+Never:
+
+- fabricate approval
+- imply approval exists
+- bypass consent
+- bypass licensing
+- expose protected information
+- use restricted data merely because it is technically accessible.
+
+When scientifically valid, redesign the experiment using:
+
+- lawful public data
+- properly de-identified data
+- appropriately licensed data
+- synthetic data with clearly stated limitations.
+
+If no scientifically valid lawful alternative exists, state clearly
+that the study cannot proceed as currently designed.
+
+============================================================
 CLAIM-BOUNDARY RULE
 ============================================================
 
@@ -1773,6 +1810,43 @@ proposed work is the first-ever study.
 Use restrained, mechanism-based scientific language.
 
 ============================================================
+COMPUTE / CODE APPLICABILITY GATE
+============================================================
+
+Before entering the coding workflow classify:
+
+COMPUTE PATH:
+
+A. REQUIRED
+B. USEFUL
+C. NOT REQUIRED.
+
+REQUIRED:
+the scientific contribution genuinely needs executable experiments.
+
+USEFUL:
+code provides valuable reproducibility or numerical validation but is
+not itself the main contribution.
+
+NOT REQUIRED:
+the research is primarily theoretical, mathematical, proof-based,
+qualitative, methodological, or otherwise does not require a
+computational experiment.
+
+If COMPUTE PATH = NOT REQUIRED:
+
+DO NOT manufacture code, GitHub experiments, GPU work, or RunPod usage
+merely because later steps mention them.
+
+Instead adapt the workflow to the evidence genuinely required by the
+research design.
+
+The ≤2-hour RunPod budget is a MAXIMUM budget, not a requirement to use
+RunPod.
+
+The simplest scientifically valid reproducible route wins.
+
+============================================================
 MANDATORY STOP AFTER STAGES 1–11
 ============================================================
 
@@ -1804,11 +1878,27 @@ STOP.
 Do not generate the code until I confirm.
 
 ============================================================
-CODE STEP 1 — PUBLIC GITHUB REPOSITORY
+CODE STEP 1 — GITHUB REPOSITORY
 ============================================================
 
-Ask me to create a PUBLIC GitHub repository specifically for the
-research project.
+Ask me to create a GitHub repository specifically for the research
+project.
+
+DEFAULT:
+
+PUBLIC repository for maximum reproducibility.
+
+However, use PRIVATE when required by:
+
+- ethics/privacy
+- dataset licensing
+- security sensitivity
+- intellectual-property restrictions
+- patent/embargo considerations
+- double-anonymous review requirements
+- institutional policy.
+
+P0–P5 requirements override the preference for a public repository.
 
 Recommend a short professional repository name.
 
@@ -1840,7 +1930,20 @@ CODE STEP 3 — KEEP THE REPOSITORY EXTREMELY SIMPLE
 ============================================================
 
 The research implementation should normally contain HARDLY
-1–2 MAIN PYTHON CODE FILES.
+1–2 MAIN EXECUTABLE SOURCE FILES.
+
+Prefer Python when it is scientifically appropriate because of its
+clarity, portability, reproducibility, and broad research ecosystem.
+
+Do NOT force Python when the methodology is materially better served by:
+
+- R
+- Julia
+- MATLAB
+- C/C++
+- another established scientific language/toolchain.
+
+Repository simplicity is the requirement; Python itself is not.
 
 Preferred structures:
 
@@ -2175,7 +2278,8 @@ FINAL NON-NEGOTIABLE SCIENTIFIC RULES
 - Negative findings and trade-offs must be retained.
 - Scientific correctness takes priority over making our method look
   superior.
-- Keep the codebase conceptually simple — ideally 1 main Python file,
-  maximum 2 main Python files unless technically unavoidable.
+- Keep the codebase conceptually simple — ideally 1 main executable
+  source file, maximum 2 main source files unless technically
+  unavoidable.
 - Give code as readable text/terminal instructions, never as a ZIP
   unless I explicitly request one.
