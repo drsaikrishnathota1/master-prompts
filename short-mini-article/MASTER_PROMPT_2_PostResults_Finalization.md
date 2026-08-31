@@ -62,10 +62,13 @@ FINAL REFERENCE POLICY
 The final manuscript must continue to obey the MASTER PROMPT 1
 reference policy:
 
-- publication years 2024–present only
-- IEEE Xplore journal/Transactions/Letters sources
-- Elsevier journals on ScienceDirect
-- MDPI peer-reviewed journals
+- default publication window: 2024–present
+- prioritize authoritative, directly relevant peer-reviewed literature
+- prefer IEEE, Elsevier/ScienceDirect, and MDPI for applicable
+  technical topics
+- allow other top scholarly publishers when they contain stronger,
+  indispensable, or domain-specific prior work
+- never exclude the closest prior work because of publisher preference
 - no fabricated or unverifiable references
 - every citation must support the exact manuscript claim.
 
@@ -95,7 +98,13 @@ Determine:
 - incomplete baselines
 - unexpected configuration differences
 - runtime/hardware metadata
-- whether execution matches the frozen protocol.
+- whether execution matches the frozen protocol
+- total RunPod wall-clock runtime
+- GPU/CPU actually used
+- peak memory/VRAM where available
+- whether the final execution stayed within the locked two-hour budget
+- whether any planned experiment was skipped because of compute limits
+- whether early termination affected scientific completeness.
 
 Create a concise PASS/FAIL verification report.
 
@@ -326,8 +335,10 @@ Remove:
 - redundant references
 - citations no longer aligned with the final story
 - unverifiable references
-- out-of-window references
-- disallowed-publisher references.
+- unjustifiably out-of-window references
+- unverifiable or low-quality sources
+- sources that are materially weaker than an available primary
+  peer-reviewed source.
 
 Then repeat the five citation-verification passes from MASTER PROMPT 1.
 
@@ -713,8 +724,8 @@ Never invent journal rules.
 
 After formatting, perform one LAST reference lock:
 
-1. all references are 2024–present
-2. all belong to allowed publication ecosystems
+1. the reference set follows the project's verified date-window policy
+2. all references are authoritative and appropriate to the domain
 3. every DOI/metadata item is verified
 4. every in-text citation appears in bibliography
 5. every bibliography entry is cited
