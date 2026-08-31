@@ -117,6 +117,13 @@ The default workflow enforces:
 - no retrospective tuning using final test results
 - reproducible code and experiments
 - statistically justified claims
+- mandatory 2024–present literature verification
+- manuscript references restricted by default to IEEE Xplore,
+  Elsevier/ScienceDirect, and MDPI
+- publisher-level DOI and bibliographic verification
+- claim-to-citation traceability
+- five-pass citation validation
+- mandatory 100/100 Reference Integrity Gate
 - transparent reporting of negative results and trade-offs
 
 The central research principle is:
@@ -143,4 +150,8 @@ The methodology may vary by domain, but the scientific principles remain consist
 - preserve negative results and trade-offs
 - maintain direct traceability between manuscript equations, code, raw results, tables, and figures
 - never fabricate citations, results, datasets, benchmarks, or journal requirements
+- verify every Short/Mini Article reference at the publisher level
+- prefer recent, directly relevant literature rather than citation padding
+- preserve exact traceability from literature claim → citation and
+  manuscript claim → code → raw output → table/figure
 

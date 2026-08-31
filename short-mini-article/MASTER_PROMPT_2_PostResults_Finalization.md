@@ -56,6 +56,26 @@ requirement or I explicitly approve a justified exception.
 Compress the strongest scientific evidence into these four objects.
 
 ============================================================
+FINAL REFERENCE POLICY
+============================================================
+
+The final manuscript must continue to obey the MASTER PROMPT 1
+reference policy:
+
+- publication years 2024–present only
+- IEEE Xplore journal/Transactions/Letters sources
+- Elsevier journals on ScienceDirect
+- MDPI peer-reviewed journals
+- no fabricated or unverifiable references
+- every citation must support the exact manuscript claim.
+
+Because final findings may change the scientific story, the literature
+and citation mapping MUST be revalidated after the RunPod results are
+known.
+
+Do not assume the pre-results reference set remains sufficient.
+
+============================================================
 STEP 1 — VERIFY FINAL EXPERIMENT OUTPUTS
 ============================================================
 
@@ -203,6 +223,11 @@ but poorer computational efficiency.
 
 Use the evidence to determine the manuscript story.
 
+If the final findings materially change the scientific positioning,
+revise the TITLE, ABSTRACT, CONTRIBUTION STATEMENTS, and DISCUSSION so
+that they describe the observed evidence rather than the original
+expectation.
+
 ============================================================
 STEP 6 — VERIFY NOVEL COMPONENTS THROUGH ABLATION
 ============================================================
@@ -256,6 +281,63 @@ Classify whether the limitation is caused by:
 - experimental design.
 
 Use this evidence in the final Limitations section.
+
+============================================================
+STEP 7A — FINAL REFERENCE REVALIDATION
+============================================================
+
+Now repeat targeted literature searching using the FINAL observed
+findings.
+
+Search specifically for recent 2024–present permitted literature
+related to:
+
+- the actual strongest result
+- unexpected findings
+- trade-offs
+- failure modes
+- the strongest baseline
+- any mechanism used to explain the results
+- any final claim that was not anticipated in the pre-results paper.
+
+For every retained or newly added reference reverify:
+
+- title
+- authors
+- year
+- journal
+- article number/pages
+- DOI
+- allowed publisher ecosystem
+- exact relevance
+- exact claim supported.
+
+Build a FINAL CLAIM ↔ CITATION MATRIX:
+
+Manuscript Claim
+| Citation
+| Source Type
+| Exact Evidence Supported
+| Verification Status.
+
+Remove:
+
+- irrelevant references
+- redundant references
+- citations no longer aligned with the final story
+- unverifiable references
+- out-of-window references
+- disallowed-publisher references.
+
+Then repeat the five citation-verification passes from MASTER PROMPT 1.
+
+The final Reference Integrity Gate must again score:
+
+100 / 100
+
+before the manuscript can receive SUBMISSION READY status.
+
+This internal matrix does not count against the two-table limit.
 
 ============================================================
 STEP 8 — BUILD EXACTLY TWO MAIN TABLES
@@ -500,7 +582,7 @@ What is the logical next research step?
 Do not introduce new findings.
 
 ============================================================
-STEP 18 — FORENSIC NUMERICAL CONSISTENCY AUDIT
+STEP 18 — FORENSIC NUMERICAL + CITATION CONSISTENCY AUDIT
 ============================================================
 
 Cross-check EVERY:
@@ -521,13 +603,21 @@ Cross-check EVERY:
 - confidence interval
 - runtime
 - baseline name
-- dataset/scenario description.
+- dataset/scenario description
+- in-text citation
+- bibliography entry
+- DOI
+- publication year
+- journal
+- claim-to-citation mapping.
 
 Verify:
 
 ABSTRACT ↔ RESULTS
 
-INTRODUCTION ↔ RESULTS
+INTRODUCTION ↔ VERIFIED LITERATURE + RESULTS
+
+RELATED WORK ↔ VERIFIED PUBLISHER SOURCES
 
 METHOD ↔ CODE
 
@@ -537,24 +627,29 @@ TABLES ↔ RAW OUTPUTS
 
 FIGURES ↔ RAW OUTPUTS
 
-DISCUSSION ↔ EVIDENCE
+DISCUSSION ↔ RESULTS + VERIFIED LITERATURE
 
 CONCLUSION ↔ EVIDENCE
 
+IN-TEXT CITATIONS ↔ BIBLIOGRAPHY
+
+BIBLIOGRAPHY ↔ PUBLISHER METADATA
+
 SUPPLEMENT ↔ MAIN MANUSCRIPT.
 
-Create a discrepancy table:
+Create a discrepancy report:
 
 Location
-Current statement
+Current statement/value
 Verified source
 Problem
 Severity
 Required correction.
 
-Fix verified editorial inconsistencies.
+No CRITICAL discrepancy may remain.
 
-Do not silently hide scientific contradictions.
+No reference may remain unless it passes the final source/year/metadata/
+claim-support verification.
 
 ============================================================
 STEP 19 — REVIEWER #2 ATTACK
@@ -592,27 +687,43 @@ If a problem genuinely requires another experiment, explicitly
 say so.
 
 ============================================================
-STEP 20 — JOURNAL-SPECIFIC FINAL EDIT
+STEP 20 — JOURNAL-SPECIFIC FINAL EDIT + REFERENCE LOCK
 ============================================================
 
 If a target journal is specified, verify CURRENT official author
-requirements.
+instructions using the journal/publisher's official guidance.
 
-Adapt as applicable:
+Adapt:
 
 - article type
-- word/page length
+- word/page limits
 - abstract limit
 - keywords
 - section structure
 - reference style
-- figure specifications
-- table specifications
+- citation style
+- figure requirements
+- table requirements
+- graphical abstract/highlights if applicable
 - declarations
 - data/code availability
-- supplementary requirements.
+- supplementary-material requirements.
 
 Never invent journal rules.
+
+After formatting, perform one LAST reference lock:
+
+1. all references are 2024–present
+2. all belong to allowed publication ecosystems
+3. every DOI/metadata item is verified
+4. every in-text citation appears in bibliography
+5. every bibliography entry is cited
+6. every citation supports the associated claim
+7. citation order/style follows the target journal
+8. 100-point Reference Integrity Gate remains 100/100.
+
+If formatting changes break citation numbering or mapping, repair them
+before submission.
 
 ============================================================
 FINAL OUTPUT
@@ -628,9 +739,9 @@ Provide:
 
 4. FINAL SHORT COMMUNICATION
 
-5. EXACT FIGURE 1 specification and caption
+5. EXACT FIGURE 1 specification + caption
 
-6. EXACT FIGURE 2 specification and caption
+6. EXACT FIGURE 2 specification + caption
 
 7. EXACT TABLE 1
 
@@ -640,15 +751,22 @@ Provide:
 
 10. FINAL CONCLUSION
 
-11. SUPPLEMENTARY-MATERIAL recommendations only if genuinely needed
+11. VERIFIED 2024–PRESENT REFERENCE LIST
 
-12. FINAL CODE AVAILABILITY statement
+12. REFERENCE INTEGRITY SUMMARY
+    - five-pass status
+    - 100-point score
+    - confirmation of allowed-source compliance.
 
-13. FINAL DATA AVAILABILITY statement
+13. SUPPLEMENTARY-MATERIAL recommendations only when genuinely needed
 
-14. REVIEWER-AUDIT SUMMARY
+14. FINAL CODE AVAILABILITY statement
 
-15. FINAL VERDICT:
+15. FINAL DATA AVAILABILITY statement
+
+16. REVIEWER-AUDIT SUMMARY
+
+17. FINAL VERDICT:
 
 NOT READY
 
@@ -658,12 +776,38 @@ MINOR EDITING ONLY
 
 SUBMISSION READY.
 
+SUBMISSION READY is forbidden unless:
+
+- the frozen experiment is valid
+- all central hypotheses have honest verdicts
+- statistics are correct
+- code and manuscript agree
+- no critical reviewer issue remains
+- maximum 2 figures / 2 tables is satisfied
+- final Reference Integrity Gate = 100/100.
+
 ============================================================
 MOST IMPORTANT RULE
 ============================================================
 
-The final manuscript must report what the frozen experiment
-actually discovered.
+The final paper must describe what the frozen experiment ACTUALLY
+discovered.
 
-Never change what the experiment discovered merely to match what
-the pre-results manuscript expected.
+The literature must describe what the VERIFIED sources ACTUALLY
+reported.
+
+Never alter experimental evidence to match the original expectation.
+
+Never alter or misattribute a citation to make a novelty argument
+appear stronger.
+
+FINAL PRINCIPLE:
+
+VERIFIED LITERATURE
+→ DEFENSIBLE GAP
+→ LOCKED METHOD
+→ REPRODUCIBLE CODE
+→ FROZEN EXPERIMENT
+→ VERIFIED FINDINGS
+→ ACCURATE CLAIMS
+→ SUBMISSION.

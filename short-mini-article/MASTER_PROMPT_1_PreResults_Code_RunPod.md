@@ -31,6 +31,49 @@ EXISTING RELATED WORK OF MINE, IF ANY:
 [INSERT OR LEAVE BLANK]
 
 ============================================================
+UNIVERSALITY RULE — IRRESPECTIVE OF THE TITLE
+============================================================
+
+This workflow must work irrespective of the supplied research title,
+topic, application area, dataset, or technical domain.
+
+Treat the title as a STARTING HYPOTHESIS, not as a predetermined
+scientific conclusion.
+
+Before designing the method:
+
+- infer the actual research domain from the title/topic
+- determine whether the title is technically coherent
+- determine whether recent literature has already solved the idea
+- determine whether the proposed novelty is real or only apparent
+- improve the title when necessary
+- select the methodology that is scientifically justified by the gap.
+
+DO NOT automatically force:
+
+- artificial intelligence
+- machine learning
+- deep learning
+- transformers
+- quantum computing
+- quantum-inspired optimization
+- blockchain
+- reinforcement learning
+- simulation
+- optimization
+- statistical modeling
+
+or any other familiar method unless the research problem genuinely
+requires it.
+
+The methodology must follow from the verified gap.
+
+The objective is a top-quality, concise, reproducible Short
+Communication whose title, literature, mathematics, code, experiments,
+figures, tables, and conclusions form ONE internally consistent
+scientific system.
+
+============================================================
 ABSOLUTE SHORT/MINI ARTICLE CONSTRAINTS
 ============================================================
 
@@ -51,6 +94,221 @@ If the target journal has stricter current requirements, verify the
 official journal requirements and follow the stricter requirement.
 
 Never fabricate journal requirements.
+
+============================================================
+MANDATORY 2024–PRESENT REFERENCE POLICY
+============================================================
+
+Literature research is MANDATORY for every project.
+
+The manuscript reference corpus must use publications from:
+
+2024 THROUGH THE PRESENT YEAR ONLY.
+
+Within that window, prefer the current year and the immediately
+preceding year when equally relevant, while retaining important 2024
+work when it is technically necessary.
+
+ALLOWED MANUSCRIPT REFERENCE ECOSYSTEMS:
+
+1. IEEE Xplore
+   - prioritize IEEE Transactions
+   - IEEE Journals
+   - IEEE Letters
+   - other strong peer-reviewed IEEE periodicals.
+
+2. Elsevier journals hosted on ScienceDirect.
+
+3. MDPI peer-reviewed journals.
+
+Do NOT cite manuscript references from:
+
+- preprint servers
+- blogs
+- Wikipedia
+- ResearchGate
+- commercial websites
+- random repositories
+- unverifiable PDFs
+- other publishers
+
+unless I explicitly change this rule.
+
+Under this workflow, do not silently add older foundational references.
+If an older reference appears scientifically indispensable, identify
+the issue and ASK ME before violating the 2024–present policy.
+
+Do not cite a source merely because it belongs to an allowed publisher.
+
+The source must be DIRECTLY relevant to:
+
+- the research problem
+- proposed methodology
+- competing method
+- dataset/benchmark
+- evaluation metric
+- ablation
+- limitation
+- or a factual claim appearing in the manuscript.
+
+Prefer established, field-relevant, technically strong journals over
+weakly related papers.
+
+For a typical Short Communication, approximately 12–25 strong,
+non-redundant references are normally sufficient, but relevance and
+quality are more important than hitting a fixed count.
+
+Do not pad the reference list.
+
+============================================================
+MANDATORY REFERENCE VERIFICATION PROTOCOL
+============================================================
+
+Never accept bibliographic information from a search-result snippet
+alone.
+
+For EVERY reference independently verify:
+
+- exact article title
+- author information
+- publication year
+- exact journal/periodical
+- volume and issue when applicable
+- page range or article number when applicable
+- DOI when available
+- publisher/platform
+- publication status
+- 2024–present eligibility
+- allowed-source eligibility
+- relevance to the exact manuscript claim
+- whether the source actually says what the manuscript attributes to it.
+
+The authoritative publisher landing page must be the primary
+verification source.
+
+A DOI may be cross-checked using authoritative DOI metadata when
+necessary.
+
+NEVER:
+
+- fabricate a DOI
+- guess a DOI
+- invent an author
+- invent a journal
+- invent publication metadata
+- cite a paper based only on its title
+- cite a paper that does not support the associated sentence
+- keep a reference whose metadata cannot be verified.
+
+If verification fails:
+
+EXCLUDE THE REFERENCE.
+
+============================================================
+REFERENCE SEARCH COVERAGE MATRIX
+============================================================
+
+Before locking the literature review, search separately for recent
+2024–present literature covering:
+
+A. the core research problem
+
+B. the proposed methodological family
+
+C. the closest competing methods
+
+D. datasets / simulation environments / benchmarks when applicable
+
+E. the primary evaluation metrics
+
+F. known limitations or failure conditions
+
+G. each claimed novel component
+
+H. the strongest recent alternative capable of challenging novelty.
+
+This prevents a paper from appearing novel only because the closest
+literature was not searched.
+
+============================================================
+INTERNAL REFERENCE VERIFICATION LEDGER
+============================================================
+
+Maintain an INTERNAL ledger containing:
+
+Reference ID
+
+Exact title
+
+Year
+
+Journal
+
+Publisher ecosystem
+
+DOI
+
+Verified publisher record
+
+Study type
+
+Specific role in our paper
+
+Exact manuscript statement(s) supported
+
+Verification status.
+
+This ledger is an internal research-control artifact.
+
+It DOES NOT count against the maximum-two-table manuscript limit.
+
+============================================================
+5-PASS CITATION VERIFICATION
+============================================================
+
+PASS 1 — DISCOVERY CHECK
+Have the closest and strongest 2024–present studies been located?
+
+PASS 2 — BIBLIOGRAPHIC CHECK
+Are title, authors, year, venue, article number/pages and DOI correct?
+
+PASS 3 — CLAIM-SUPPORT CHECK
+Does the paper actually support the sentence where it is cited?
+
+PASS 4 — NOVELTY CHECK
+Does any verified reference invalidate or materially weaken our
+claimed contribution?
+
+PASS 5 — MANUSCRIPT CONSISTENCY CHECK
+Does every in-text citation map to exactly one correct bibliography
+entry and vice versa?
+
+============================================================
+100-POINT REFERENCE INTEGRITY GATE
+============================================================
+
+Score the final pre-results literature base:
+
+20 points — bibliographic accuracy
+
+20 points — 2024–present compliance
+
+20 points — IEEE / Elsevier-ScienceDirect / MDPI compliance
+
+20 points — exact claim-to-citation relevance
+
+10 points — closest competing literature coverage
+
+10 points — in-text citation ↔ bibliography consistency.
+
+REQUIRED SCORE:
+
+100 / 100
+
+A single fabricated, unverifiable, out-of-range, wrong-publisher,
+misattributed, duplicate, or unsupported citation means the gate FAILS.
+
+Correct the problem before proceeding.
 
 ============================================================
 CORE SCIENTIFIC PRINCIPLE
@@ -94,42 +352,60 @@ Determine:
 Avoid vague research problems.
 
 ============================================================
-STAGE 2 — NOVELTY AND LITERATURE AUDIT
+STAGE 2 — MANDATORY 2024–PRESENT LITERATURE + NOVELTY AUDIT
 ============================================================
 
-Investigate current literature when necessary.
+This stage is REQUIRED for every title.
+
+Search the allowed 2024–present literature ecosystems before claiming
+novelty.
+
+Prioritize the closest and strongest recent work rather than collecting
+large numbers of loosely related articles.
 
 Determine:
 
-- closest existing methods
-- strongest competing approaches
-- foundational methods
-- recent related research
-- whether the idea already exists
-- what reviewers may call incremental
-- what actually appears genuinely novel.
+- closest existing method
+- strongest recent competing method
+- current methodological direction
+- relevant recent reviews when useful
+- relevant datasets/benchmarks
+- what has already been demonstrated
+- what remains unresolved
+- whether our proposed title duplicates recent work
+- whether our proposed method is merely incremental
+- whether a stronger competing approach exists
+- what reviewers are most likely to challenge.
 
-Separate clearly:
+Create an INTERNAL NOVELTY MATRIX:
+
+Recent Work
+| Year
+| Method
+| Data/Setting
+| Main Contribution
+| Main Limitation
+| Exact Difference from Proposed Work.
+
+The novelty matrix does not count against the two-table manuscript
+limit.
+
+Every row must use a verified 2024–present IEEE,
+Elsevier/ScienceDirect, or MDPI source.
+
+Explicitly separate:
 
 KNOWN LITERATURE
 
 from
 
-OUR PROPOSED CONTRIBUTION.
+OUR ORIGINAL CONTRIBUTION.
 
-Never invent:
+Novelty must be demonstrated by comparison with the closest current
+work, not asserted using promotional language.
 
-- papers
-- references
-- citations
-- authors
-- DOIs
-- datasets
-- benchmarks
-- journal facts.
-
-If current literature verification is required, perform it before
-locking novelty.
+Do not proceed to Stage 3 until the literature search passes the
+reference-verification protocol.
 
 ============================================================
 STAGE 3 — LOCK THE RESEARCH GAP
@@ -363,88 +639,234 @@ Additional non-central evidence may later be placed in supplementary
 material or the reproducibility repository when appropriate.
 
 ============================================================
-STAGE 9 — WRITE THE PRE-RESULTS SHORT COMMUNICATION
+STAGE 9 — WRITE THE TOP-NOTCH COMPLETE PRE-RESULTS PAPER
 ============================================================
 
-Now write a publication-quality PRE-RESULTS manuscript.
+Using Stages 1–8 and the fully verified reference corpus, write the
+strongest scientifically defensible PRE-RESULTS Short Communication
+possible.
 
-It should include:
+The document must be polished enough that MASTER PROMPT 2 can finalize
+it after RunPod without reconstructing the entire paper.
 
-Title
+Required manuscript:
 
-Abstract
+TITLE
+
+- technically accurate
+- concise
+- aligned with the actual novelty
+- no unsupported superiority language.
+
+ABSTRACT
+
+Include:
+
 - problem
-- gap
-- method
-- experiment plan
-- NO fabricated numerical findings.
+- verified gap
+- proposed method
+- intended evaluation
+- principal hypothesis.
 
-Keywords
+DO NOT fabricate numerical outcomes.
 
-1. Introduction
+KEYWORDS
 
-2. Concise Related Work / Background
+1. INTRODUCTION
 
-3. Proposed Method
+The Introduction must:
 
-4. Experimental Methodology
+- establish the current 2024–present research context
+- use verified citations
+- explain the precise gap
+- distinguish our work from the closest recent work
+- motivate the method
+- end with approximately 2–4 concise, testable contributions.
 
-5. Results and Discussion
-- structure/placeholders only
-- DO NOT invent final results.
+2. CONCISE RELATED WORK / TECHNICAL CONTEXT
 
-6. Limitations
-- methodological/pre-experimental limitations only.
+Organize literature by technical themes rather than producing a
+paper-by-paper list.
 
-7. Conclusion
-- explain intended contribution
-- do not pretend hypotheses are confirmed.
+Every literature statement must be supported by an exact verified
+citation.
+
+3. PROPOSED METHOD
+
+Provide:
+
+- architecture
+- mathematics
+- algorithm/pseudocode
+- assumptions
+- constraints
+- novelty mechanism
+- implementation-level detail sufficient to justify the later code.
+
+4. EXPERIMENTAL METHODOLOGY
+
+Predefine:
+
+- data/scenarios
+- development/final split
+- baselines
+- parameters
+- seeds
+- metrics
+- ablations
+- robustness
+- statistics
+- computational protocol.
+
+5. RESULTS AND DISCUSSION
+
+Write the complete STRUCTURE and interpretation framework but mark
+all numerical findings clearly as:
+
+AWAITING FROZEN FINAL EXPERIMENT
+
+Never insert expected results as observed results.
+
+6. LIMITATIONS
+
+Include known methodological limitations that exist even before the
+final experiment.
+
+7. CONCLUSION
+
+State:
+
+- what is proposed
+- what will be tested
+- what the work does NOT yet demonstrate.
+
+Do not claim that hypotheses are already confirmed.
+
+Also include where applicable:
 
 Data Availability
 
 Code Availability
 
-Funding / Conflict / Generative-AI declaration when applicable.
+Funding
 
-Use concise journal-quality scientific English.
+Competing Interest
 
-Do not overfill a Short Communication.
+Generative-AI / AI-Assisted Technology declaration
+
+VERIFIED REFERENCES.
 
 ============================================================
-STAGE 10 — PAPER ↔ CODE TRACEABILITY
+CITATION WRITING STANDARD
 ============================================================
 
-Create an explicit traceability map:
+Every factual literature claim must have an appropriate citation.
+
+Place citations as close as possible to the statement they support.
+
+Do not place one broad citation at the end of a long paragraph when it
+is unclear which claim it supports.
+
+Do not cite irrelevant papers merely to increase reference count.
+
+Do not use citation clusters when one or two direct sources are enough.
+
+Do not attribute comparative superiority to a source unless that
+source directly establishes the comparison.
+
+The bibliography must exactly match the verified publisher metadata.
+
+All references must satisfy the mandatory 2024–present source policy.
+
+Citation formatting must follow the target journal when known.
+
+If the target journal is unknown, use one internally consistent
+citation scheme until journal formatting is selected.
+
+============================================================
+STAGE 10 — PAPER ↔ CODE ↔ OUTPUT CONTRACT
+============================================================
+
+Before generating code, build strict traceability:
 
 MANUSCRIPT CLAIM
+→ VERIFIED CITATION OR ORIGINAL CONTRIBUTION
 → EQUATION
 → ALGORITHM STEP
 → CODE FUNCTION
-→ RAW OUTPUT
+→ RAW OUTPUT FIELD
 → METRIC
-→ TABLE/FIGURE.
+→ FIGURE/TABLE.
 
-Every technical statement must be implementable.
+Every original methodological statement must be implementable.
 
-Every future numerical result must originate from a reproducible
-experimental output.
+Every future numerical claim must be reproducible from a stored
+machine-readable result.
 
-Avoid manually typing final experimental values into the code or
-manuscript.
+Define the OUTPUT CONTRACT before coding.
+
+Prefer a minimal final output package such as:
+
+results.csv
+- raw run-level / scenario-level results
+
+statistics.csv
+- aggregate statistics, effect sizes, confidence intervals and tests
+
+figure2.png or figure2.pdf
+- generated from verified final data only
+
+run.log
+- configuration
+- software environment
+- hardware
+- random seeds
+- timing
+- failed runs
+- warnings.
+
+Add another output file only when scientifically necessary.
+
+The code must generate the exact data needed for:
+
+Table 1
+Table 2
+Figure 2
+final Results
+final statistical claims.
+
+No final manuscript number should depend on undocumented manual
+calculation.
 
 ============================================================
-STAGE 11 — PRE-CODE ADVERSARIAL AUDIT
+STAGE 11 — PRE-CODE ADVERSARIAL + REFERENCE AUDIT
 ============================================================
 
-Before releasing final code, audit the study as:
+Before code generation, review the project simultaneously as:
 
 - Reviewer #2
-- scientific programmer
+- domain expert
+- recent-literature reviewer
+- mathematical reviewer
 - statistician
-- methodologist
+- scientific programmer
 - reproducibility engineer.
 
-Check:
+Audit:
+
+TITLE / TOPIC VALIDITY
+
+2024–PRESENT LITERATURE COVERAGE
+
+CLOSEST-WORK COVERAGE
+
+REFERENCE METADATA
+
+DOI ACCURACY
+
+CLAIM ↔ CITATION ACCURACY
+
+100-POINT REFERENCE INTEGRITY GATE
 
 NOVELTY
 
@@ -468,43 +890,61 @@ FAILURE ANALYSIS
 
 REPRODUCIBILITY
 
-COMPUTATIONAL COST
+COMPUTATIONAL FEASIBILITY
 
-PAPER ↔ CODE CONSISTENCY
+PAPER ↔ CODE TRACEABILITY
+
+OUTPUT CONTRACT
 
 TWO-FIGURE SUFFICIENCY
 
-TWO-TABLE SUFFICIENCY.
+TWO-TABLE SUFFICIENCY
 
-Classify issues:
+JOURNAL FIT when a target is known.
+
+Classify every discovered issue:
 
 CRITICAL
 MAJOR
 MINOR.
 
-Resolve all critical scientific/methodological problems before
-releasing final experimental code.
+Resolve ALL critical issues before code generation.
 
-Do not simplify scientific requirements merely to make coding easier.
+Resolve all scientifically feasible major issues.
+
+If recent literature invalidates the novelty, redesign the study
+BEFORE coding rather than hiding the conflict.
 
 ============================================================
 MANDATORY STOP AFTER STAGES 1–11
 ============================================================
 
-After completing and locking Stages 1–11, tell me exactly:
+After the verified literature base, Research Contract, mathematics,
+experiment protocol, complete pre-results manuscript, figures/tables
+plan, reference ledger, and paper-to-code contract are locked, tell me:
 
-"Research design and pre-results Short Communication are locked.
-Stages 1–11 are complete.
+"Stages 1–11 are complete.
 
-We can now begin code generation.
+The research question, verified 2024–present literature base, novelty,
+mathematical formulation, experimental protocol, complete pre-results
+Short Communication, maximum-two-figure / maximum-two-table design,
+reference-integrity audit, and paper-to-code/output contract are locked.
 
-I will guide you step-by-step rather than giving you a ZIP file."
+We can now start code generation.
 
-Then ASK:
+I will guide you ONE STEP AT A TIME through GitHub, terminal setup,
+code creation, sanity testing, development/freeze, and RunPod.
 
-"Ready to start Code Step 1?"
+I will provide the code in readable text/terminal form and will NOT
+send a ZIP archive."
 
-Do NOT dump the complete coding workflow before I confirm.
+Then ask ONLY:
+
+"Ready for Code Step 1: create or provide the public GitHub repository?"
+
+STOP.
+
+Do not generate the code until I confirm.
 
 ============================================================
 CODE STEP 1 — PUBLIC GITHUB REPOSITORY
@@ -582,38 +1022,62 @@ Use a second Python file only when separating analysis/visualization
 materially improves clarity.
 
 ============================================================
-CODE STEP 4 — EXHAUSTIVE PAPER ↔ CODE VERIFICATION
+CODE STEP 4 — EXACT PAPER ↔ CODE IMPLEMENTATION AUDIT
 ============================================================
 
-Before showing me production/final experiment code, perform a rigorous
-multi-pass internal verification.
+The code must implement the LOCKED paper rather than creating a
+different methodology after writing.
 
-Verify:
+Where applicable, prefer one executable supporting:
 
-- every equation is correctly implemented
-- every constraint is correctly implemented
-- every algorithm step matches the manuscript
-- objective minimization/maximization is correct
-- all baselines are evaluated fairly
-- identical scenarios/data are used where required
-- all random seeds are controlled
-- metrics are consistently calculated
-- no train/test leakage exists
-- no development/final leakage exists
-- no hard-coded favorable result exists
-- no expected output is embedded in the algorithm
-- statistics use raw run-level observations
-- intermediate results are safely stored
-- errors/exceptions are handled
-- output values are finite and validated
-- GPU usage is appropriate where required
-- CPU usage/fallback is sensible where applicable
-- final tables and figures can be recreated from stored outputs.
+python main.py --mode sanity
+python main.py --mode dev
+python main.py --mode final
 
-Do NOT claim a literal fixed number such as "100 reasoning passes."
+SANITY MODE:
+tiny correctness test.
 
-Instead perform as much rigorous verification as required to reach
-publication-grade consistency.
+DEV MODE:
+development-only tuning/debugging.
+
+FINAL MODE:
+frozen parameters + untouched final evaluation.
+
+Before releasing the code, verify:
+
+- every equation
+- every constraint
+- every algorithm step
+- every baseline
+- objective direction
+- parameter definitions
+- metric formulas
+- seed handling
+- data/scenario generation
+- development/final separation
+- no leakage
+- no hard-coded favorable outcome
+- no expected paper number embedded in the algorithm
+- correct statistical raw-data collection
+- finite-value checks
+- exception handling
+- failure logging
+- timing
+- hardware/environment recording
+- Table 1 data generation
+- Table 2 data generation
+- Figure 2 data generation
+- final Results data generation.
+
+Expected performance from the manuscript is a HYPOTHESIS.
+
+The code must be free to disprove that hypothesis.
+
+Perform rigorous multi-pass scientific consistency checking before
+showing the code.
+
+Do not claim a literal fixed number of private reasoning passes.
+Quality must be demonstrated through explicit validation checks.
 
 ============================================================
 CODE STEP 5 — CODE MUST BE GIVEN IN TEXT / TERMINAL FORM
@@ -779,27 +1243,32 @@ Tell me:
 here and use MASTER PROMPT 2."
 
 ============================================================
-FINAL SCIENTIFIC RULES
+FINAL NON-NEGOTIABLE SCIENTIFIC RULES
 ============================================================
 
-Never invent favorable outcomes.
-
-Never alter frozen methodology after seeing final results merely to
-make the proposed method win.
-
-If the proposed method loses on a metric, preserve and analyze the
-result.
-
-Credible trade-offs are acceptable.
-
-Negative findings are preferable to manipulated evidence.
-
-Keep:
-
-- code concise
-- experimental evidence reproducible
-- methodology transparent
-- manuscript technically accurate
-- figures limited to 2
-- tables limited to 2
-- claims proportional to evidence.
+- Maximum 2 main-paper figures.
+- Maximum 2 main-paper tables.
+- Literature search is mandatory for every topic.
+- Manuscript references must be 2024–present under this workflow.
+- Manuscript references must come from IEEE Xplore,
+  Elsevier/ScienceDirect, or MDPI unless I explicitly change the rule.
+- Prefer the strongest and most directly relevant recent journal work.
+- Zero fabricated references.
+- Zero fabricated authors.
+- Zero fabricated DOIs.
+- Zero unsupported claim-to-citation mappings.
+- Reference Integrity Gate must score 100/100.
+- Zero fabricated experimental results.
+- Zero hard-coded expected paper results.
+- Zero retrospective tuning on frozen final evaluation data.
+- Every major literature claim must map to a verified source.
+- Every original contribution must map to executable code and an
+  experimentally measurable output.
+- Every strong performance claim must have a fair baseline.
+- Negative findings and trade-offs must be retained.
+- Scientific correctness takes priority over making our method look
+  superior.
+- Keep the codebase conceptually simple — ideally 1 main Python file,
+  maximum 2 main Python files unless technically unavoidable.
+- Give code as readable text/terminal instructions, never as a ZIP
+  unless I explicitly request one.
