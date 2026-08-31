@@ -1,9 +1,24 @@
 # MASTER PROMPT 2
 ## Final Results → Verification → Statistics → Up to 2 Figures + Up to 2 Tables → Final Short Communication
 
-The FINAL frozen experiment has now been completed.
+The FINAL frozen evidence package has now been completed.
 
 This project was developed using MASTER PROMPT 1.
+
+Depending on the research type, the final evidence may consist of:
+
+- computational experiments
+- simulations
+- statistical analyses
+- mathematical proofs
+- theorem verification
+- benchmark results
+- engineering measurements
+- validated empirical evidence
+- or another evidence form defined and locked by MASTER PROMPT 1.
+
+Do not force computational-experiment language onto a study whose
+research type does not require it.
 
 I am providing, as applicable:
 
@@ -865,26 +880,26 @@ Provide:
    - maximum = 2 tables
    - never create filler merely to reach two.
 
-9. FINAL LIMITATIONS
+7. FINAL LIMITATIONS
 
-10. FINAL CONCLUSION
+8. FINAL CONCLUSION
 
-11. VERIFIED REFERENCE LIST — current state-of-the-art + justified foundational sources
+9. VERIFIED REFERENCE LIST — current state-of-the-art + justified foundational sources
 
-12. REFERENCE INTEGRITY SUMMARY
+10. REFERENCE INTEGRITY SUMMARY
     - five-pass status
     - 100-point score
-    - confirmation of allowed-source compliance.
+    - confirmation of source-quality compliance.
 
-13. SUPPLEMENTARY-MATERIAL recommendations only when genuinely needed
+11. SUPPLEMENTARY-MATERIAL recommendations only when genuinely needed
 
-14. FINAL CODE AVAILABILITY statement
+12. FINAL CODE AVAILABILITY statement, when applicable
 
-15. FINAL DATA AVAILABILITY statement
+13. FINAL DATA AVAILABILITY statement
 
-16. REVIEWER-AUDIT SUMMARY
+14. REVIEWER-AUDIT SUMMARY
 
-17. FINAL VERDICT:
+15. FINAL VERDICT:
 
 NOT READY
 

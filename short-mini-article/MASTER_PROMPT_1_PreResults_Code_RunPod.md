@@ -38,7 +38,7 @@ P6 — DEFAULT ≤2-HOUR CLOUD-COMPUTE BUDGET
 
 P7 — MAXIMUM 2 MAIN FIGURES / 2 MAIN TABLES
 
-P8 — 1–2 MAIN PYTHON-FILE SIMPLICITY
+P8 — 1–2 MAIN SOURCE-FILE / EXECUTABLE-FILE SIMPLICITY
 
 P9 — CONVENIENCE AND AESTHETICS.
 
@@ -1871,7 +1871,15 @@ send a ZIP archive."
 
 Then ask ONLY:
 
-"Ready for Code Step 1: create or provide the public GitHub repository?"
+If COMPUTE PATH = REQUIRED or USEFUL, ask:
+
+"Ready for Code Step 1: create or provide the appropriate GitHub repository?"
+
+If COMPUTE PATH = NOT REQUIRED:
+
+do not require a repository merely to satisfy the workflow.
+Proceed through the scientifically appropriate non-computational
+evidence/finalization path.
 
 STOP.
 
@@ -1945,41 +1953,49 @@ Do NOT force Python when the methodology is materially better served by:
 
 Repository simplicity is the requirement; Python itself is not.
 
-Preferred structures:
+Preferred conceptual structures:
 
 OPTION A:
 
 repository/
-├── main.py
-├── requirements.txt
+├── main.<language>
+├── dependency/environment file if needed
 └── README.md
 
 OPTION B, only when scientifically clearer:
 
 repository/
-├── experiment.py
-├── analysis.py
-├── requirements.txt
+├── experiment.<language>
+├── analysis.<language>
+├── dependency/environment file if needed
 └── README.md
 
-Do NOT create unnecessary:
+Examples:
 
-src/
-utils/
-helpers/
-models/
-configs/
-modules/
+Python:
+main.py + requirements.txt
 
-unless genuinely required by the scientific method.
+R:
+main.R + renv.lock if needed
+
+Julia:
+main.jl + Project.toml
+
+MATLAB:
+main.m
+
+Other scientifically justified toolchains are allowed.
+
+Do NOT create unnecessary directory hierarchies unless required by the
+methodology.
 
 Conceptual clarity is a priority.
 
-Try to keep the complete experimental workflow understandable
-inside one primary Python file.
+Try to keep the complete experimental workflow understandable inside
+one primary executable source file.
 
-Use a second Python file only when separating analysis/visualization
-materially improves clarity.
+Use a second source file only when separation materially improves
+scientific clarity.
 
 ============================================================
 CODE STEP 4 — EXACT PAPER ↔ CODE IMPLEMENTATION AUDIT
@@ -2195,24 +2211,36 @@ experimental version.
 CODE STEP 10 — PREPARE RUNPOD EXECUTION
 ============================================================
 
-After methodology/configuration freeze, prepare exact RunPod
-instructions.
+After methodology/configuration freeze:
 
-Tell me:
+IF COMPUTE PATH = REQUIRED or USEFUL:
 
-- suitable GPU/CPU
+prepare the scientifically appropriate execution environment.
+
+Use RunPod only when cloud computation is genuinely beneficial.
+
+Tell me, as applicable:
+
+- local vs cloud execution choice
+- suitable CPU/GPU
 - approximate VRAM/RAM
 - approximate storage
-- recommended Python version
+- required language/runtime version
 - Git clone command
 - dependency installation command
 - final execution command.
 
-Prefer ONE simple final command such as:
+Prefer ONE simple final command.
+
+For Python this may be:
 
 python main.py --mode final
 
-where possible.
+For another language/toolchain, provide its appropriate equivalent.
+
+IF COMPUTE PATH = NOT REQUIRED:
+
+skip RunPod-specific execution steps entirely.
 
 ============================================================
 CODE STEP 11 — FINAL RUNPOD HANDOFF
