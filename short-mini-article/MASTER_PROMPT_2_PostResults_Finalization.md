@@ -99,41 +99,62 @@ known.
 Do not assume the pre-results reference set remains sufficient.
 
 ============================================================
-STEP 1 — VERIFY FINAL EXPERIMENT OUTPUTS
+STEP 1 — VERIFY THE FINAL FROZEN EVIDENCE PACKAGE
 ============================================================
 
-Before manuscript editing, inspect all provided final outputs.
+Before manuscript editing, inspect the complete final evidence package.
 
-Determine:
+First verify for EVERY research type:
 
-- whether every expected experiment completed
+- whether all evidence required by the locked Research Contract exists
+- whether the evidence matches the frozen methodology/protocol
+- whether any expected evidence is missing
+- whether any evidence is duplicated, corrupted, contradictory, or
+  unverifiable
+- whether the primary research question can actually be answered
+- whether all central claims remain traceable to evidence.
+
+IF THE STUDY IS COMPUTATIONAL / EXPERIMENTAL, additionally verify:
+
 - exact sample/scenario count
 - exact number of runs/seeds
-- missing runs
-- failed runs
+- missing/failed runs
 - duplicated runs
-- NaNs
-- infinities
-- corrupted output
+- NaNs/infinities
 - incomplete baselines
-- unexpected configuration differences
 - runtime/hardware metadata
-- whether execution matches the frozen protocol
-- total RunPod wall-clock runtime
-- GPU/CPU actually used
-- peak memory/VRAM where available
-- whether the final execution stayed within the locked two-hour budget
-- whether any planned experiment was skipped because of compute limits
-- whether early termination affected scientific completeness
-- Git commit SHA from the final freeze fingerprint
+- Git commit SHA / freeze fingerprint
 - code/configuration version
 - dataset/split fingerprint
 - frozen random seeds
 - baseline versions
 - primary metric
-- Python/package environment
-- whether the returned outputs correspond to the exact frozen
-  experiment fingerprint.
+- language/runtime/package environment
+- local/cloud execution platform
+- compute time
+- whether compute limits affected scientific completeness.
+
+IF THE STUDY IS THEORETICAL / MATHEMATICAL, verify as applicable:
+
+- theorem/proposition definitions
+- assumptions
+- proof completeness
+- logical validity
+- counterexamples
+- boundary conditions
+- complexity claims
+- numerical verification if used.
+
+IF THE STUDY IS EMPIRICAL / ENGINEERING / NON-COMPUTATIONAL, verify the
+appropriate locked evidence such as:
+
+- measurement protocol
+- instrument/calibration information
+- sample provenance
+- uncertainty
+- repeated measurements
+- observational evidence
+- domain-specific validity checks.
 
 Create a concise PASS/FAIL verification report.
 
@@ -189,11 +210,19 @@ LOWER IS BETTER.
 Do not blindly trust precomputed summary files.
 
 ============================================================
-STEP 3 — PERFORM APPROPRIATE STATISTICAL ANALYSIS
+STEP 3 — PERFORM THE APPROPRIATE EVIDENCE ANALYSIS
 ============================================================
 
-Select statistical methods appropriate to the actual experimental
-design rather than mechanically using one test.
+Select the analysis appropriate to the actual research design.
+
+For quantitative empirical/computational studies, use appropriate
+statistical analysis rather than mechanically using one test.
+
+For theoretical/mathematical studies, prioritize proof validity,
+logical consistency, bounds, counterexamples, and complexity evidence.
+
+Do not manufacture statistical tests for evidence types where they are
+scientifically irrelevant.
 
 Where relevant evaluate:
 
@@ -278,10 +307,13 @@ that they describe the observed evidence rather than the original
 expectation.
 
 ============================================================
-STEP 6 — VERIFY NOVEL COMPONENTS THROUGH ABLATION
+STEP 6 — VERIFY THE CLAIMED NOVEL CONTRIBUTION
 ============================================================
 
-For each claimed innovative component determine:
+For each claimed innovative component determine the strongest
+appropriate evidence.
+
+When ablation is scientifically applicable, determine:
 
 - outcome when removed
 - absolute performance change
@@ -290,6 +322,18 @@ For each claimed innovative component determine:
 - practical significance
 - interaction with other components
 - computational cost.
+
+When ablation is NOT scientifically applicable, use the correct
+alternative evidence such as:
+
+- proof
+- theorem/corollary
+- counterexample
+- sensitivity result
+- controlled comparison
+- physical measurement
+- analytical derivation
+- domain-specific validation.
 
 Classify every component:
 
@@ -911,7 +955,7 @@ SUBMISSION READY.
 
 SUBMISSION READY is forbidden unless:
 
-- the frozen experiment is valid
+- the frozen evidence package and methodology are valid
 - all central hypotheses have honest verdicts
 - statistics are correct
 - code and manuscript agree
@@ -940,7 +984,7 @@ VERIFIED LITERATURE
 → DEFENSIBLE GAP
 → LOCKED METHOD
 → REPRODUCIBLE CODE
-→ FROZEN EXPERIMENT
+→ FROZEN EVIDENCE PROTOCOL
 → VERIFIED FINDINGS
 → ACCURATE CLAIMS
 → SUBMISSION.

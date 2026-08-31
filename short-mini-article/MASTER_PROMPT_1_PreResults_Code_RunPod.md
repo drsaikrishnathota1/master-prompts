@@ -1696,13 +1696,16 @@ run.log
 
 Add another output file only when scientifically necessary.
 
-The code must generate the exact data needed for:
+The implementation must generate the exact machine-readable
+evidence needed for:
 
-Table 1
-Table 2
-Figure 2
-final Results
-final statistical claims.
+- every scientifically justified main table
+- every quantitative main figure
+- final Results
+- final statistical claims, when applicable.
+
+Do not require Table 2 or Figure 2 when the locked manuscript design
+does not scientifically need them.
 
 No final manuscript number should depend on undocumented manual
 calculation.
@@ -1850,36 +1853,45 @@ The simplest scientifically valid reproducible route wins.
 MANDATORY STOP AFTER STAGES 1–11
 ============================================================
 
-After the verified literature base, Research Contract, mathematics,
-experiment protocol, complete pre-results manuscript, figures/tables
-plan, reference ledger, and paper-to-code contract are locked, tell me:
+After the verified literature base, Research Contract, methodology,
+evidence protocol, complete pre-results manuscript, figures/tables
+plan, reference ledger, and paper-to-evidence traceability contract are
+locked, state:
 
 "Stages 1–11 are complete.
 
-The research question, verified current + foundational literature base, novelty,
-mathematical formulation, experimental protocol, complete pre-results
-Short Communication, maximum-two-figure / maximum-two-table design,
-reference-integrity audit, and paper-to-code/output contract are locked.
+The research question, verified current + foundational literature base,
+novelty, methodological formulation, evidence protocol, complete
+pre-results Short Communication, maximum-two-figure /
+maximum-two-table design, reference-integrity audit, and
+evidence-traceability contract are locked."
 
-We can now start code generation.
+Then branch according to COMPUTE PATH.
 
-I will guide you ONE STEP AT A TIME through GitHub, terminal setup,
-code creation, sanity testing, development/freeze, and RunPod.
+IF COMPUTE PATH = REQUIRED or USEFUL:
 
-I will provide the code in readable text/terminal form and will NOT
-send a ZIP archive."
+state:
 
-Then ask ONLY:
+"We can now begin the reproducible implementation.
 
-If COMPUTE PATH = REQUIRED or USEFUL, ask:
+I will guide you ONE STEP AT A TIME through the appropriate repository,
+terminal/environment setup, source-code creation, self-testing, sanity
+testing, development/freeze, and final execution.
+
+I will provide implementation instructions in readable text/terminal
+form and will NOT send a ZIP archive."
+
+Then ask:
 
 "Ready for Code Step 1: create or provide the appropriate GitHub repository?"
 
-If COMPUTE PATH = NOT REQUIRED:
+IF COMPUTE PATH = NOT REQUIRED:
 
-do not require a repository merely to satisfy the workflow.
-Proceed through the scientifically appropriate non-computational
-evidence/finalization path.
+state:
+
+"No computational implementation is scientifically required for this
+study. I will not manufacture code, GitHub work, or cloud computation.
+Proceed with the locked non-computational evidence/finalization path."
 
 STOP.
 
@@ -2192,8 +2204,8 @@ Record at minimum:
 - split identifier or hash when practical
 - random seeds
 - baseline versions
-- Python version
-- important package versions
+- programming language/runtime version, when applicable
+- important package/library/tool versions
 - operating environment
 - planned hardware
 - timestamp
@@ -2243,37 +2255,57 @@ IF COMPUTE PATH = NOT REQUIRED:
 skip RunPod-specific execution steps entirely.
 
 ============================================================
-CODE STEP 11 — FINAL RUNPOD HANDOFF
+CODE STEP 11 — FINAL EXECUTION HANDOFF
 ============================================================
 
-When ready, state clearly:
+IF COMPUTE PATH = REQUIRED or USEFUL:
 
-"Stages 1–11, code generation, GitHub setup, scientific verification,
-and experiment preparation are complete.
+state clearly that:
 
-The repository is now ready for the final RunPod experiment."
+- methodology is frozen
+- implementation is verified
+- freeze fingerprint is recorded
+- execution platform has been selected
+- projected compute budget is acceptable.
 
-Then guide me through RunPod ONE STEP AT A TIME.
+Use:
 
-Do not jump ahead before I confirm each important step.
+LOCAL EXECUTION
 
-At completion, tell me exactly which raw output files I must bring
+when local compute is sufficient.
+
+Use:
+
+RUNPOD / OTHER CLOUD EXECUTION
+
+only when cloud compute is genuinely beneficial.
+
+Guide me through the selected execution route ONE STEP AT A TIME.
+
+Do not force RunPod merely because it is available.
+
+At completion, tell me exactly which raw evidence files must be brought
 back for MASTER PROMPT 2.
 
-Keep the required return package minimal and scientifically sufficient,
-for example:
+Keep the return package minimal and scientifically sufficient.
+
+Examples may include:
 
 results.csv
 statistics.csv
-figure2.png or figure2.pdf
+figure-data.csv
 run.log
 
-depending on the study.
+plus any domain-specific raw evidence required to independently verify
+the manuscript.
 
-Tell me:
+Then state:
 
-"After the frozen RunPod experiment finishes, upload the raw outputs
-here and use MASTER PROMPT 2."
+"Upload the frozen final evidence package here and use MASTER PROMPT 2."
+
+IF COMPUTE PATH = NOT REQUIRED:
+
+skip this entire execution step.
 
 ============================================================
 FINAL NON-NEGOTIABLE SCIENTIFIC RULES
