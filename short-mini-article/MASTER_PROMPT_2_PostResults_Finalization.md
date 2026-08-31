@@ -1,5 +1,5 @@
 # MASTER PROMPT 2
-## Final Results → Verification → Statistics → Up to 2 Figures + Up to 2 Tables → Final Short Communication
+## Final Evidence → Verification → Evidence Analysis → Up to 2 Figures + Up to 2 Tables → Final Short Communication
 
 The FINAL frozen evidence package has now been completed.
 
@@ -93,8 +93,8 @@ reference policy:
 - every citation must support the exact manuscript claim.
 
 Because final findings may change the scientific story, the literature
-and citation mapping MUST be revalidated after the RunPod results are
-known.
+and citation mapping MUST be revalidated after the frozen final
+evidence is known.
 
 Do not assume the pre-results reference set remains sufficient.
 
@@ -158,7 +158,9 @@ appropriate locked evidence such as:
 
 Create a concise PASS/FAIL verification report.
 
-Never silently discard failed runs.
+FOR STUDIES INVOLVING REPEATED RUNS:
+
+never silently discard failed runs.
 
 Explicitly report:
 
@@ -169,6 +171,9 @@ Explicitly report:
 - whether failure rate differs by method
 - whether exclusions could bias the comparison.
 
+For research types without repeated runs, mark this check NOT
+APPLICABLE rather than manufacturing run statistics.
+
 If critical evidence is missing:
 
 STOP.
@@ -178,8 +183,13 @@ Tell me exactly what must be rerun.
 Never infer or invent missing outputs.
 
 ============================================================
-STEP 2 — RECOMPUTE / VERIFY ALL IMPORTANT METRICS
+STEP 2 — RECOMPUTE / VERIFY ALL APPLICABLE QUANTITATIVE EVIDENCE
 ============================================================
+
+Apply this step only where quantitative metrics exist.
+
+For theoretical or qualitative evidence without numerical metrics,
+mark non-applicable metric checks accordingly.
 
 Use raw results whenever possible.
 
@@ -262,7 +272,7 @@ NOT SUPPORTED
 
 INCONCLUSIVE.
 
-For each classification give the exact experimental evidence.
+For each classification give the exact supporting evidence.
 
 Do not rewrite hypotheses after seeing the outcomes.
 
@@ -270,7 +280,7 @@ Do not rewrite hypotheses after seeing the outcomes.
 STEP 5 — DETERMINE THE REAL SCIENTIFIC STORY
 ============================================================
 
-Identify what the final experiment actually discovered.
+Identify what the final frozen evidence actually demonstrates.
 
 Explicitly identify:
 
@@ -282,7 +292,8 @@ Explicitly identify:
 - boundary conditions
 - failure scenarios.
 
-Do not force the proposed model to appear best everywhere.
+Do not force the proposed method, model, theory, or framework to
+appear best or universally successful.
 
 A valid scientific finding may be:
 
@@ -348,10 +359,12 @@ NOT SUPPORTED.
 Remove or weaken unsupported novelty claims.
 
 ============================================================
-STEP 7 — FAILURE / STRESS ANALYSIS
+STEP 7 — FAILURE / STRESS / BOUNDARY ANALYSIS
 ============================================================
 
-Analyze:
+Use the failure-analysis form appropriate to the research type.
+
+For computational/empirical studies, analyze:
 
 - worst cases
 - unsuccessful runs
@@ -649,10 +662,18 @@ Remove:
 Prefer approximately 2–4 concise contribution statements.
 
 ============================================================
-STEP 13 — FORENSIC METHOD ↔ CODE CHECK
+STEP 13 — FORENSIC METHOD ↔ EVIDENCE / IMPLEMENTATION CHECK
 ============================================================
 
-Cross-check manuscript Methodology against final executable code.
+Cross-check the manuscript Methodology against the final evidence
+mechanism.
+
+For computational work, cross-check against executable code.
+
+For theoretical work, cross-check against proofs/derivations.
+
+For empirical/engineering work, cross-check against the locked
+measurement or evidence protocol.
 
 Verify:
 
@@ -667,21 +688,26 @@ Verify:
 - metrics
 - runtime protocol.
 
-No important manuscript method should exist only on paper.
+No important claimed method should exist only as unsupported prose.
 
-No important implemented component should be missing from the
-manuscript.
+Every important implemented, derived, measured, or validated component
+must be represented accurately in the manuscript.
 
 ============================================================
 STEP 14 — WRITE FINAL RESULTS
 ============================================================
 
-Write Results from verified outputs using:
+Write Results from verified evidence.
+
+For quantitative studies, prefer:
 
 OBSERVATION
 → QUANTITATIVE EVIDENCE
-→ STATISTICAL EVIDENCE
+→ STATISTICAL / UNCERTAINTY EVIDENCE
 → INTERPRETATION.
+
+For theoretical or non-quantitative studies, use the logically
+appropriate evidence chain rather than manufacturing statistics.
 
 Do not duplicate every table value in prose.
 
@@ -778,9 +804,9 @@ INTRODUCTION ↔ VERIFIED LITERATURE + RESULTS
 
 RELATED WORK ↔ VERIFIED PUBLISHER SOURCES
 
-METHOD ↔ CODE
+METHOD ↔ EVIDENCE / IMPLEMENTATION
 
-EQUATIONS ↔ CODE
+EQUATIONS ↔ CODE / DERIVATION / PROOF, as applicable
 
 TABLES ↔ RAW OUTPUTS
 
@@ -957,8 +983,8 @@ SUBMISSION READY is forbidden unless:
 
 - the frozen evidence package and methodology are valid
 - all central hypotheses have honest verdicts
-- statistics are correct
-- code and manuscript agree
+- statistical/evidence analysis is correct when applicable
+- implementation/evidence and manuscript agree
 - no critical reviewer issue remains
 - maximum 2 figures / 2 tables is satisfied
 - final Reference Integrity Gate = 100/100.
@@ -967,13 +993,14 @@ SUBMISSION READY is forbidden unless:
 MOST IMPORTANT RULE
 ============================================================
 
-The final paper must describe what the frozen experiment ACTUALLY
-discovered.
+The final paper must describe what the frozen evidence ACTUALLY
+demonstrates.
 
 The literature must describe what the VERIFIED sources ACTUALLY
 reported.
 
-Never alter experimental evidence to match the original expectation.
+Never alter, omit, or manipulate evidence to match the original
+expectation.
 
 Never alter or misattribute a citation to make a novelty argument
 appear stronger.
@@ -983,7 +1010,7 @@ FINAL PRINCIPLE:
 VERIFIED LITERATURE
 → DEFENSIBLE GAP
 → LOCKED METHOD
-→ REPRODUCIBLE CODE
+→ REPRODUCIBLE EVIDENCE GENERATION
 → FROZEN EVIDENCE PROTOCOL
 → VERIFIED FINDINGS
 → ACCURATE CLAIMS

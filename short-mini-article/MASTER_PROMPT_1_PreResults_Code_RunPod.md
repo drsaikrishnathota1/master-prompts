@@ -1,5 +1,5 @@
 # MASTER PROMPT 1
-## Short/Mini Research Article: Research Design → Pre-Results Manuscript → Code → GitHub → RunPod
+## Universal Short/Mini Research Article: Research Design → Pre-Results Manuscript → Evidence/Implementation → Final Execution
 
 I am starting a NEW research Short Communication / Mini Research Article.
 
@@ -781,13 +781,13 @@ the implementation to reproduce them.
 Use:
 
 RESEARCH QUESTION
-→ METHOD DESIGN
-→ EXPERIMENT DESIGN
-→ CODE
-→ DEVELOPMENT TESTING
-→ METHOD FREEZE
-→ FINAL EXPERIMENT
-→ OBSERVED RESULTS
+→ METHOD / EVIDENCE DESIGN
+→ VALIDATION DESIGN
+→ IMPLEMENTATION WHEN REQUIRED
+→ DEVELOPMENT / INTERNAL VALIDATION
+→ METHOD + EVIDENCE-PROTOCOL FREEZE
+→ FINAL EVIDENCE GENERATION
+→ VERIFIED FINDINGS
 → CLAIMS
 
 Never:
@@ -1257,6 +1257,10 @@ strong enough to distinguish:
 STAGE 6A — STRICT ≤2-HOUR COMPUTE-BUDGET CONTRACT
 ============================================================
 
+THIS STAGE APPLIES ONLY WHEN COMPUTE PATH = REQUIRED OR USEFUL.
+
+For COMPUTE PATH = NOT REQUIRED, skip this stage.
+
 The default final cloud-compute budget for this Short/Mini Article is:
 
 ABSOLUTE MAXIMUM CUMULATIVE PAID RUNPOD WALL-CLOCK TIME = 120 MINUTES.
@@ -1516,7 +1520,8 @@ strongest scientifically defensible PRE-RESULTS Short Communication
 possible.
 
 The document must be polished enough that MASTER PROMPT 2 can finalize
-it after RunPod without reconstructing the entire paper.
+it after the frozen final evidence package is produced, without
+reconstructing the entire paper.
 
 Required manuscript:
 
@@ -1667,7 +1672,14 @@ MANUSCRIPT CLAIM
 → METRIC
 → FIGURE/TABLE.
 
-Every original methodological statement must be implementable.
+Every original methodological statement must be operationally
+verifiable.
+
+For computational work, it must map to implementation.
+
+For theoretical/non-computational work, it must map to the appropriate
+proof, derivation, measurement, observation, protocol, or other locked
+evidence.
 
 Every future numerical claim must be reproducible from a stored
 machine-readable result.
@@ -2211,7 +2223,9 @@ Record at minimum:
 - timestamp
 - frozen experiment protocol.
 
-The final RunPod results must be traceable to this exact fingerprint.
+The final computational results must be traceable to this exact
+fingerprint, regardless of whether execution is local, on RunPod, or
+on another approved platform.
 
 If scientific code, parameters, dataset splits, baseline definitions,
 or primary metrics change after fingerprint creation:
@@ -2332,8 +2346,9 @@ FINAL NON-NEGOTIABLE SCIENTIFIC RULES
 - Zero hard-coded expected paper results.
 - Zero retrospective tuning on frozen final evaluation data.
 - Every major literature claim must map to a verified source.
-- Every original contribution must map to executable code and an
-  experimentally measurable output.
+- Every original contribution must map to independently verifiable
+  evidence; executable code and measurable outputs are required when
+  the research type is computational.
 - Every strong performance claim must have a fair baseline.
 - Negative findings and trade-offs must be retained.
 - Scientific correctness takes priority over making our method look
