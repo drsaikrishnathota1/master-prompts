@@ -1,34 +1,146 @@
 # Master Prompts
 
-A curated repository of advanced research and academic master prompts.
+A curated repository of advanced research and academic master prompts for rigorous, reproducible, publication-oriented research workflows.
 
-## IEEE Conference Papers
+The repository currently contains dedicated workflows for:
 
-The `ieee-conference` directory contains a universal master prompt for generating rigorous IEEE conference papers from a paper title and an attached IEEE conference template.
+- IEEE Conference Papers
+- Short Communications / Mini Research Articles
 
-### Current Prompt
+---
 
-- `IEEE_Conference_Master_Prompt_vFinal.md`
+## 1. IEEE Conference Papers
 
-### Core Requirements
+Directory:
 
-The IEEE Conference Master Prompt is designed around:
+`ieee-conference/`
 
-- Maximum 3-page IEEE conference papers
-- Maximum 2 figures
-- Maximum 2 tables
-- 20 verified references
-- Research-gap validation
-- Novelty falsification
-- Protocol locking
-- Domain-adaptive research methodology
-- Reproducible experiments
-- Citation verification
-- Data-leakage prevention
-- Statistical and methodological validation
+This directory contains a universal master prompt for developing rigorous IEEE conference papers from a research topic/title and an IEEE conference template.
+
+### Core Design Principles
+
+The IEEE Conference workflow emphasizes:
+
+- concise IEEE paper design
+- maximum 2 figures
+- maximum 2 tables
+- verified references
+- research-gap validation
+- novelty falsification
+- protocol locking
+- domain-adaptive research methodology
+- reproducible experiments
+- citation verification
+- data-leakage prevention
+- statistical and methodological validation
 - IEEE template preservation
 - PDF validation
-- 20 critical pass/fail gates
-- 100-point final quality audit
+- critical pass/fail quality gates
+- final manuscript audit
 
-The prompt is intended to work across AI, data science, finance, engineering, cybersecurity, healthcare, optimization, quantum computing, business analytics, and other research domains while allowing the research question to determine the methodology.
+The framework can be adapted across AI, data science, engineering, cybersecurity, healthcare, optimization, quantum computing, business analytics, autonomous systems, and related research domains.
+
+---
+
+## 2. Short Communications / Mini Research Articles
+
+Directory:
+
+`short-mini-article/`
+
+This directory contains a two-prompt research workflow for developing concise, technically rigorous Short Communications and Mini Research Articles.
+
+### Prompt 1 — Research Design → Code → RunPod
+
+File:
+
+`MASTER_PROMPT_1_PreResults_Code_RunPod.md`
+
+Prompt 1 covers the complete pre-results workflow:
+
+1. Research-problem definition
+2. Novelty and literature audit
+3. Research-gap locking
+4. Research Contract
+5. Mathematical and algorithmic formulation
+6. Experimental design
+7. Two-figure design
+8. Two-table design
+9. Pre-results manuscript preparation
+10. Paper-to-code traceability
+11. Pre-code adversarial audit
+12. Concise publication-grade code generation
+13. Step-by-step GitHub setup
+14. Small scientific sanity testing
+15. Development testing and methodology freeze
+16. Final RunPod preparation and execution
+
+The workflow intentionally keeps research repositories simple, typically using only one or two primary Python files whenever the methodology permits.
+
+Code is designed to be transferred and executed transparently through terminal commands rather than hidden inside ZIP archives.
+
+### Prompt 2 — Final Results → Final Manuscript
+
+File:
+
+`MASTER_PROMPT_2_PostResults_Finalization.md`
+
+Prompt 2 begins only after the frozen final experiment has completed.
+
+It covers:
+
+- raw-output verification
+- metric recomputation
+- statistical analysis
+- hypothesis testing
+- ablation verification
+- practical-significance analysis
+- failure/stress analysis
+- final two-table construction
+- final two-figure construction
+- manuscript rewriting from observed evidence
+- method-to-code consistency checking
+- limitations
+- journal-specific editing
+- Reviewer #2 adversarial review
+- forensic numerical consistency checking
+- final submission-readiness verdict
+
+### Short/Mini Article Main-Manuscript Limits
+
+The default workflow enforces:
+
+- **Maximum 2 figures**
+- **Maximum 2 tables**
+- concise Short Communication structure
+- no fabricated experimental outcomes
+- no retrospective tuning using final test results
+- reproducible code and experiments
+- statistically justified claims
+- transparent reporting of negative results and trade-offs
+
+The central research principle is:
+
+**Research Question → Method → Experiment → Evidence → Claim**
+
+and never:
+
+**Desired Claim → Manipulated Experiment → Desired Result**
+
+---
+
+## Repository Philosophy
+
+These prompts are designed to help transform a research idea into a technically defensible, reproducible publication workflow.
+
+The methodology may vary by domain, but the scientific principles remain consistent:
+
+- verify novelty before implementation
+- define experiments before final coding
+- separate development from final evaluation
+- freeze methodology before observing final test outcomes
+- generate claims from evidence
+- preserve negative results and trade-offs
+- maintain direct traceability between manuscript equations, code, raw results, tables, and figures
+- never fabricate citations, results, datasets, benchmarks, or journal requirements
+
