@@ -69,7 +69,6 @@ SUPPORTED BY THE AVAILABLE EVIDENCE.
 
 ## USER INPUT
 
-
 PAPER TITLE:
 
 [INSERT TITLE]
@@ -82,24 +81,21 @@ Normally these are the only required inputs.
 
 ## MANDATORY STAGED EXECUTION CONTROLLER
 
-
 DEFAULT EXECUTION MODE: STAGED MODE.
 
 ## INSTRUCTION PRIORITY AND CONFLICT RESOLUTION
-
 
 When two instructions appear to conflict, apply this priority order:
 
 1. scientific integrity, safety, law, ethics, privacy, and no-fabrication requirements;
 2. verified target-conference and IEEE requirements;
-3. the user's explicit current instructions and verified facts that do not conflict with priorities 1-2;
-4. approved and LOCKED protocol decisions;
-5. verified evidence and frozen results;
-6. ethics, privacy, legal, licensing, and safety requirements;
-7. template integrity and the official page limit;
-8. the eight-stage execution controller;
-9. writing, figure, table, packaging, and style preferences;
-10. optional recommendations and approximate planning targets.
+3. verified evidence controls factual statements, numerical results, and manuscript claims;
+4. approved and LOCKED protocol decisions control experimental procedure;
+5. the user's explicit current instructions and verified facts that do not conflict with priorities 1-4;
+6. the official template controls formatting within the verified page limit;
+7. the eight-stage controller governs execution order and checkpoints;
+8. writing, figure, table, packaging, and style preferences;
+9. optional recommendations and approximate planning targets.
 
 A lower-priority instruction MUST NOT override a higher-priority requirement.
 
@@ -115,7 +111,6 @@ The attached official conference template overrides generic formatting preferenc
 
 ## SINGLE-SHOT DEFINITION
 
-
 “Single-shot prompt” means that this ONE authoritative master-prompt file governs the complete project.
 
 It does NOT require all eight stages to finish within one assistant response, one context window, or one uninterrupted execution.
@@ -123,7 +118,6 @@ It does NOT require all eight stages to finish within one assistant response, on
 Scientific completeness, verified evidence, and checkpoint integrity take priority over single-response completion.
 
 ## CONTEXT-BUDGET AND FOCUS RULE
-
 
 Do not load every detailed rule, source, raw output, and manuscript version into active context simultaneously.
 
@@ -168,7 +162,9 @@ FILES UPDATED: [...]
 
 RESUME COMMAND: RESUME ACTIVE STAGE [NUMBER]
 
-FULL AUTONOMOUS MODE constitutes advance user authorization to proceed through all eight stages without additional approval messages. It does not waive scientific gates, checkpoint creation, protocol locking, validation, rollback, or the requirement to record an approval-equivalent authorization in 00_project_state.md.
+FULL AUTONOMOUS MODE constitutes advance user authorization to proceed through all eight stages without additional approval messages.
+
+It does not waive scientific gates, checkpoint creation, protocol locking, validation, rollback, or the requirement to record an approval-equivalent authorization in 00_project_state.md.
 
 Even in FULL AUTONOMOUS MODE, preserve every checkpoint, run every gate, and internally pause for verification between stages.
 
@@ -177,7 +173,6 @@ A PAUSE is a verification boundary, not a fixed waiting period.
 Do not sleep or wait for an arbitrary number of minutes. Time alone does not improve quality. Continue only after the active stage has produced its required artifacts, passed its validation gate, and received user approval where required.
 
 ## STAGE INVOCATION COMMANDS
-
 
 The user may start or resume work with one of these commands:
 
@@ -200,7 +195,6 @@ Do not silently execute all eight stages.
 
 ## CONTEXT RELOAD AND RESUME PROTOCOL
 
-
 At the beginning of every stage or new conversation run:
 
 1. inspect the project directory;
@@ -216,10 +210,11 @@ At the beginning of every stage or new conversation run:
 
 Never silently change an approved research gap, research question, contribution, dataset, split strategy, baseline, primary metric, seed set, experiment result, author identity, or conference requirement.
 
-If a locked decision must change, create PROTOCOL_AMENDMENT_[NUMBER].md stating what changed, why, whether results had already been viewed, which downstream artifacts are invalidated, which stages must be repeated, and whether new user approval is required.
+If a locked decision must change, create PROTOCOL_AMENDMENT_[NUMBER].md.
+
+State what changed, why it changed, whether results had already been viewed, which downstream artifacts are invalidated, which stages must be repeated, and whether new user approval is required.
 
 ## PROJECT STATE FILE
-
 
 Create and continuously maintain 00_project_state.md containing:
 
@@ -273,7 +268,6 @@ At the end of every stage:
 If required checkpoints are unavailable in a later run, do not reconstruct approved decisions from memory. Ask the user to attach the latest checkpoint package or rerun the earliest stage whose authoritative outputs are missing.
 
 ## STAGE 0 — PROJECT CONTRACT AND TEMPLATE AUDIT
-
 
 PURPOSE: Understand the title obligations and exact template before research.
 
@@ -330,7 +324,6 @@ STOP after Stage 0 and report the next permitted command.
 
 ## STAGE 1 — LITERATURE, GAP, AND NOVELTY AUDIT
 
-
 PURPOSE: Establish a defensible literature-supported scientific direction.
 
 ACTIONS:
@@ -365,7 +358,6 @@ MANDATORY USER APPROVAL 1:
 Present the research type, IEEE fit, closest three competitors, measurable gap, novelty level, contribution, and major limitation. Then STOP. Do not begin Stage 2 before approval.
 
 ## STAGE 2 — RESEARCH QUESTION AND PROTOCOL LOCK
-
 
 PURPOSE: Prevent seed, metric, dataset, and specification fishing.
 
@@ -424,7 +416,6 @@ Present the compact protocol and STOP. Do not execute final experiments until Pr
 
 ## STAGE 3 — EXPERIMENT EXECUTION AND RESULT FREEZE
 
-
 PURPOSE: Generate traceable evidence before manuscript claims.
 
 ACTIONS:
@@ -459,7 +450,6 @@ GATE:
 Do not change the question to manufacture a successful result.
 
 ## EVIDENCE SUFFICIENCY GATE
-
 
 Before Stage 4, determine whether the verified evidence supports the title, research question, primary claim, proposed contribution, and planned manuscript length.
 
@@ -509,7 +499,6 @@ EVIDENCE SUFFICIENCY STATUS:
 
 ## STAGE 4 — MANUSCRIPT BLUEPRINT AND PAGE BUDGET
 
-
 PURPOSE: Design the evidence chain and page allocation before prose and Word layout.
 
 ACTIONS:
@@ -543,7 +532,6 @@ Present frozen findings, limitations, proposed visuals, section architecture, an
 
 ## STAGE 5 — ORIGINAL MANUSCRIPT DRAFTING
 
-
 PURPOSE: Write from approved notes and frozen evidence without copying or drift.
 
 ACTIONS:
@@ -576,7 +564,6 @@ GATE:
 Do not begin Word layout until Stage 5 passes.
 
 ## STAGE 6 — TEMPLATE BUILD, RENDER, AND ITERATIVE QA
-
 
 PURPOSE: Produce a readable three-page document through repeated visual verification.
 
@@ -626,7 +613,6 @@ GATE:
 
 ## STAGE 7 — REVIEWER ATTACK, REPRODUCTION, AND DELIVERY
 
-
 PURPOSE: Challenge the rendered paper, reproduce its result, correct defects, and deliver validated outputs.
 
 ACTIONS:
@@ -664,7 +650,6 @@ Only after Stage 7 passes may the response state FINAL STATUS: PASS.
 
 ## MANDATORY APPROVAL AND PAUSE SCHEDULE
 
-
 PAUSE A — AFTER STAGE 1:
 Approve scientific direction, gap, novelty, and contribution.
 Suggested human review window: 5–15 minutes or longer for domain consultation.
@@ -683,7 +668,6 @@ At every pause provide the completed-stage summary, gate results, unresolved ris
 
 ## APPROVAL RECORDING RULE
 
-
 After every mandatory user approval:
 
 1. record the exact approved decision in 00_project_state.md;
@@ -693,10 +677,11 @@ After every mandatory user approval:
 5. identify the next permitted stage;
 6. do not begin the next stage until the approval record is saved.
 
-In FULL AUTONOMOUS MODE, record the user's explicit Full Autonomous Mode instruction as advance authorization. This replaces additional approval messages but does not permit scientific decisions, protocol values, or frozen results to change without the normal amendment and rollback process.
+In FULL AUTONOMOUS MODE, record the user's explicit Full Autonomous Mode instruction as advance authorization.
+
+This replaces additional approval messages but does not permit scientific decisions, protocol values, or frozen results to change without the normal amendment and rollback process.
 
 ## INTERNAL MICRO-CHECKPOINTS
-
 
 Within every stage use:
 
@@ -720,7 +705,6 @@ Do not proceed from an unverified intermediate conclusion.
 
 ## FAILURE, ROLLBACK, AND ESCALATION
 
-
 If a critical gate fails:
 
 1. stop;
@@ -737,7 +721,6 @@ Never repair layout by shrinking required fonts or margins.
 Never repair weak results through undisclosed post-result changes.
 
 ## ACTIVE-STAGE RULE ROUTING MAP
-
 
 The eight execution stages above are the workflow controller.
 
@@ -760,7 +743,6 @@ Do not interpret the Detailed Rule Section numbering as a second execution seque
 
 ## INSTRUCTION CONSOLIDATION AND ANTI-REPETITION RULE
 
-
 The eight-stage controller defines WHEN work occurs.
 
 The Detailed Rule Sections define HOW the active work must be performed.
@@ -782,7 +764,6 @@ If future editing can remove duplicated wording without changing a requirement, 
 
 ## STAGED-MODE RESPONSE CONTRACT
 
-
 During a stage, apply all global integrity requirements plus the detailed rules relevant to that stage.
 
 At the beginning state:
@@ -798,7 +779,6 @@ NEXT PERMITTED STAGE: [NUMBER]
 NEXT COMMAND: [EXACT COMMAND]
 
 ## ABSOLUTE OUTPUT LIMITS
-
 
 FINAL RENDERED PDF:
 
@@ -869,7 +849,6 @@ Prefer ONE code file whenever feasible.
 
 ## CORE SCIENTIFIC STORY
 
-
 Everything must follow ONE coherent evidence chain:
 
 TITLE
@@ -922,7 +901,6 @@ or any other fashionable concept merely because it sounds advanced.
 LET THE RESEARCH QUESTION DETERMINE THE METHOD.
 
 ## CRITICAL PASS/FAIL GATES
-
 
 Before any 100-point quality score is considered, ALL critical gates must PASS.
 
@@ -990,7 +968,6 @@ A score of 99/100 cannot compensate for one critical failure.
 
 ## DETAILED RULE SECTION 1 — INSPECT THE TEMPLATE FIRST
 
-
 Before researching or writing:
 
 OPEN AND INSPECT THE ATTACHED TEMPLATE.
@@ -1042,7 +1019,6 @@ Do not manually redesign the IEEE layout.
 
 ## TEMPLATE CLEANUP
 
-
 Remove ALL unused sample/instructional content from the final manuscript.
 
 Search explicitly for remnants such as:
@@ -1084,7 +1060,6 @@ Do not invent final IEEE:
 Use only verified conference-provided metadata.
 
 ## DETAILED RULE SECTION 2 — CLASSIFY THE RESEARCH TYPE
-
 
 The prompt is UNIVERSAL.
 
@@ -1157,7 +1132,6 @@ Then ask:
 
 ## IEEE TECHNICAL-SCOPE CHECK
 
-
 The topic may be universal, but the output is an IEEE conference paper.
 
 For topics such as:
@@ -1195,7 +1169,6 @@ flag:
 IEEE SCOPE RISK = HIGH.
 
 ## DETAILED RULE SECTION 3 — TITLE-CONTRACT ANALYSIS
-
 
 Treat every substantive word in the title as a scientific obligation.
 
@@ -1251,7 +1224,6 @@ Never retain an untested headline claim.
 
 ## DETAILED RULE SECTION 4 — LITERATURE SEARCH
 
-
 Conduct real literature research BEFORE drafting the final manuscript.
 
 Search broadly enough to understand the field.
@@ -1283,7 +1255,6 @@ For each determine internally:
 * similarity to the proposed work.
 
 ## SOURCE QUALITY
-
 
 Use the strongest discipline-appropriate literature.
 
@@ -1322,7 +1293,6 @@ then obey that constraint.
 
 ## REFERENCE SELECTION
 
-
 FINAL BIBLIOGRAPHY:
 
 Normally 12-20 references; target 15-20 for mature or literature-intensive topics; use exactly 20 when explicitly required.
@@ -1355,7 +1325,6 @@ Do not mechanically force this percentage when the field requires older foundati
 
 ## REFERENCE VERIFICATION
 
-
 Verify where possible:
 
 * authors,
@@ -1385,7 +1354,6 @@ For references central to novelty/methodology, check where feasible for:
 
 ## CITATION ENTAILMENT
 
-
 A reference being real is NOT enough.
 
 For every important cited claim ask:
@@ -1408,7 +1376,6 @@ rewrite the claim or use a better source.
 
 ## CONTRADICTION SEARCH
 
-
 Actively search for research that contradicts the developing argument.
 
 Do not hide contrary evidence.
@@ -1418,7 +1385,6 @@ If the literature disagrees:
 represent the disagreement fairly and use it to sharpen the research question.
 
 ## DETAILED RULE SECTION 5 — NOVELTY FALSIFICATION
-
 
 Do NOT assume novelty.
 
@@ -1450,7 +1416,6 @@ REDESIGN OR NARROW THE CONTRIBUTION.
 
 ## NOVELTY LEVEL
 
-
 Classify internally:
 
 N1 — replication/verification
@@ -1470,7 +1435,6 @@ Write novelty claims consistent with the actual level.
 Never present N2 work as N5.
 
 ## DETAILED RULE SECTION 6 — ESTABLISH THE RESEARCH GAP
-
 
 A valid gap must contain:
 
@@ -1500,7 +1464,6 @@ unless the literature search genuinely supports them.
 
 ## UNIVERSAL GAP TYPES
 
-
 The gap may be:
 
 * technical,
@@ -1528,7 +1491,6 @@ Choose the gap appropriate to the domain.
 
 ## THREE-LAYER GAP TEST
 
-
 The proposed gap must pass:
 
 LAYER 1:
@@ -1545,7 +1507,6 @@ If it fails any layer:
 refine it.
 
 ## DETAILED RULE SECTION 7 — ONE CENTRAL RESEARCH QUESTION
-
 
 Create ONE primary research question.
 
@@ -1569,7 +1530,6 @@ Under assumptions A-B, can property X be established or bounded?
 The whole paper must answer this one question.
 
 ## DETAILED RULE SECTION 8 — CONTRIBUTION DESIGN
-
 
 Create ONE central contribution that can be explained in one sentence.
 
@@ -1595,7 +1555,6 @@ Do NOT assume an algorithm is necessary.
 
 ## CONTRIBUTION TEST
 
-
 The contribution must answer:
 
 WHAT is different?
@@ -1611,7 +1570,6 @@ If these cannot be answered:
 redesign it.
 
 ## DETAILED RULE SECTION 9 — PROTOCOL LOCK
-
 
 BEFORE examining final results, freeze:
 
@@ -1640,7 +1598,6 @@ Scientifically necessary post-hoc changes must be documented and distinguished a
 
 ## STOPPING RULE
 
-
 Define when experimentation stops.
 
 Examples:
@@ -1653,7 +1610,6 @@ Examples:
 Never keep running experiments until significance or a favorable seed appears.
 
 ## ANTI-RESEARCH-FISHING FIREWALL
-
 
 Prevent:
 
@@ -1671,7 +1627,6 @@ Exploration is allowed.
 Do not misrepresent exploratory findings as prespecified confirmatory evidence.
 
 ## DETAILED RULE SECTION 10 — CHOOSE APPROPRIATE EVIDENCE
-
 
 Use the strongest legitimately available evidence.
 
@@ -1695,7 +1650,6 @@ Possible evidence:
 Do not invent evidence unavailable to the project.
 
 ## NO-FABRICATION POLICY
-
 
 NEVER fabricate:
 
@@ -1732,7 +1686,6 @@ D. controlled synthetic experiment;
 E. verified literature and clearly labeled as literature-reported.
 
 ## ORIGINALITY, PLAGIARISM PREVENTION, AND HUMAN-EDITED WRITING
-
 
 The manuscript must be an ORIGINAL SCHOLARLY SYNTHESIS.
 
@@ -1810,7 +1763,6 @@ NATURAL PROFESSIONAL EDITING.
 Where required, follow the current conference and IEEE policy for disclosure of AI-assisted text, code, analysis, figures, or editing.
 
 ## DETAILED RULE SECTION 11 — DOMAIN-APPROPRIATE METHOD
-
 
 Choose methodology based on the research question.
 
@@ -1910,7 +1862,6 @@ Do not label a 3-page focused synthesis a "systematic review" unless it genuinel
 
 ## DETAILED RULE SECTION 12 — EXPERIMENTAL INTEGRITY
 
-
 When empirical/computational work is appropriate:
 
 ACTUALLY RUN THE EXPERIMENT.
@@ -1940,7 +1891,6 @@ WRITE RESULTS
 CREATE CODE TO MATCH THEM.
 
 ## DATA SPLIT INTEGRITY
-
 
 Choose splits according to data structure.
 
@@ -1977,7 +1927,6 @@ fix the design.
 
 ## FEATURE-PROVENANCE CHECK
 
-
 For every important predictor ask:
 
 "Would this feature actually be available at prediction/decision time?"
@@ -1987,7 +1936,6 @@ If NO:
 remove it.
 
 ## TEST-SET FIREWALL
-
 
 Do not:
 
@@ -2003,7 +1951,6 @@ training + validation
 then evaluate ONCE on the final test set where practical.
 
 ## BASELINE FAIRNESS
-
 
 Use approximately 3-4 strong comparators when appropriate.
 
@@ -2027,7 +1974,6 @@ Use fair:
 * tuning effort.
 
 ## DETAILED RULE SECTION 13 — DOMAIN-SPECIFIC INTEGRITY
-
 
 FINANCE:
 
@@ -2097,7 +2043,6 @@ computational performance does NOT establish:
 
 ## DETAILED RULE SECTION 14 — METRICS
 
-
 Choose ONE PRIMARY metric directly tied to the research question.
 
 Use a small number of secondary metrics.
@@ -2157,7 +2102,6 @@ Do not add metrics merely to make the paper look technical.
 
 ## STATISTICAL INTEGRITY
 
-
 Do not impose one universal seed, fold, replication, or sample-size rule across all research types.
 
 Determine the evaluation design from:
@@ -2215,7 +2159,6 @@ PRACTICAL / ECONOMIC / ENGINEERING SIGNIFICANCE.
 
 ## DETAILED RULE SECTION 15 — ROBUSTNESS
 
-
 Perform ONE compact domain-appropriate secondary validation when meaningful.
 
 Examples:
@@ -2260,7 +2203,6 @@ Do not call every validation an "ablation."
 
 ## FAILURE-REGIME ANALYSIS
 
-
 Identify at least ONE condition where the approach:
 
 * fails,
@@ -2273,7 +2215,6 @@ Identify at least ONE condition where the approach:
 A credible method is allowed to have limitations.
 
 ## DETAILED RULE SECTION 16 — COMPLEXITY / COST
-
 
 When relevant evaluate at least one cost:
 
@@ -2298,7 +2239,6 @@ COST.
 
 ## DETAILED RULE SECTION 17 — SOFTWARE SANITY TESTS
 
-
 Before accepting results, test basic invariants where appropriate.
 
 Examples:
@@ -2317,7 +2257,6 @@ If a sanity check fails:
 STOP AND FIX THE PIPELINE.
 
 ## DETAILED RULE SECTION 18 — RESULT PROVENANCE
-
 
 Maintain:
 
@@ -2347,7 +2286,6 @@ Do not manually maintain separate values.
 
 ## ARITHMETIC VALIDATION
 
-
 Programmatically calculate:
 
 * means,
@@ -2363,13 +2301,11 @@ Do not mentally estimate important paper numbers.
 
 ## ROUNDING
 
-
 Use consistent precision.
 
 Ensure raw, table, figure, and prose values reconcile.
 
 ## DETAILED RULE SECTION 19 — CLEAN-ROOM REPRODUCTION
-
 
 After the experiment succeeds:
 
@@ -2389,7 +2325,6 @@ CRITICAL GATE C8 = FAIL.
 
 ## ONE-COMMAND REPRODUCIBILITY
 
-
 Whenever feasible:
 
 python paper_pipeline.py
@@ -2402,7 +2337,6 @@ should reproduce:
 * figures.
 
 ## DATA PROVENANCE
-
 
 Record:
 
@@ -2419,7 +2353,6 @@ Do not redistribute a dataset in the ZIP if its license does not permit redistri
 Provide retrieval instructions instead.
 
 ## DETAILED RULE SECTION 20 — FIGURES
-
 
 MAXIMUM 2.
 
@@ -2461,7 +2394,6 @@ REMOVE IT.
 
 ## FIGURE STYLE
 
-
 Prefer:
 
 * programmatically generated,
@@ -2487,7 +2419,6 @@ Avoid:
 The visual must communicate science, not decoration.
 
 ## DETAILED RULE SECTION 21 — TABLES
-
 
 MAXIMUM 2.
 
@@ -2517,7 +2448,6 @@ Never create Table III.
 
 ## TABLE INTEGRITY
 
-
 Every numeric entry must come from:
 
 * actual experiment,
@@ -2529,7 +2459,6 @@ Use consistent decimal precision.
 Do not highlight meaningless differences.
 
 ## DETAILED RULE SECTION 22 — PAPER STRUCTURE
-
 
 Use this compact structure unless the template requires otherwise:
 
@@ -2559,7 +2488,6 @@ Avoid excessive subsections.
 
 ## ABSTRACT
 
-
 Target approximately:
 
 120-150 words.
@@ -2583,11 +2511,9 @@ Avoid equations/footnotes/special characters when prohibited by the template.
 
 ## KEYWORDS
 
-
 Use approximately 3-5 meaningful searchable terms.
 
 ## INTRODUCTION
-
 
 Use four logical movements:
 
@@ -2608,7 +2534,6 @@ remove or rewrite it.
 
 ## RELATED WORK
 
-
 Do NOT write a paper-by-paper laundry list.
 
 Organize the literature into approximately 2-4 technical families.
@@ -2624,7 +2549,6 @@ Use Table I when it saves space.
 End with the precise gap.
 
 ## PROPOSED METHOD
-
 
 Explain:
 
@@ -2644,7 +2568,6 @@ Every symbol must be defined.
 Do not use decorative mathematics.
 
 ## RESULTS AND DISCUSSION
-
 
 Report only essential experimental details:
 
@@ -2682,7 +2605,6 @@ Avoid:
 
 ## NO OVERCLAIMING
 
-
 Match language to evidence.
 
 Strong:
@@ -2713,7 +2635,6 @@ computational healthcare results into clinical efficacy.
 
 ## LIMITATIONS
 
-
 State at least one SUBSTANTIVE limitation.
 
 Examples:
@@ -2734,7 +2655,6 @@ Do not use meaningless language such as:
 
 ## CONCLUSION
 
-
 Target approximately:
 
 80-120 words.
@@ -2750,7 +2670,6 @@ State:
 Do not introduce new evidence.
 
 ## DETAILED RULE SECTION 23 — NARRATIVE SYNCHRONIZATION
-
 
 Before finalizing verify:
 
@@ -2790,7 +2709,6 @@ No disconnected element is allowed.
 
 ## CLAIM-EVIDENCE LEDGER
 
-
 For every major claim internally record:
 
 CLAIM
@@ -2807,7 +2725,6 @@ Delete unsupported claims.
 
 ## CLAIM BUDGET
 
-
 A 3-page paper cannot prove many major claims.
 
 Prefer:
@@ -2819,7 +2736,6 @@ plus
 TWO OR THREE SUPPORTING CLAIMS.
 
 ## DETAILED RULE SECTION 24 — SCIENTIFIC COPYEDITING
-
 
 Perform a dedicated editing pass.
 
@@ -2851,7 +2767,6 @@ Avoid phrases such as:
 unless genuinely appropriate.
 
 ## PARAGRAPH-LEVEL HUMAN EDITING PASS
-
 
 After removing filler, edit every paragraph for natural scholarly reasoning.
 
@@ -2891,7 +2806,6 @@ The writing should sound like a careful domain researcher explaining executed wo
 
 ## EVIDENCE-DENSITY TEST
 
-
 For every body paragraph classify its primary function as one of:
 
 * PROBLEM;
@@ -2912,7 +2826,6 @@ When additional content is required to create a complete three-page paper, expan
 
 ## SENTENCE UTILITY TEST
 
-
 For every sentence ask:
 
 "If this sentence disappears, does scientific understanding materially decrease?"
@@ -2922,7 +2835,6 @@ If NO:
 remove or merge it.
 
 ## TERMINOLOGY
-
 
 Use one consistent term for one concept.
 
@@ -2937,13 +2849,11 @@ when referring to the same object.
 
 ## ACRONYMS
 
-
 Define acronyms at first use.
 
 Avoid unnecessary acronyms.
 
 ## TENSE
-
 
 Use consistent scientific tense.
 
@@ -2956,7 +2866,6 @@ past tense
 for experiments performed.
 
 ## DETAILED RULE SECTION 25 — IEEE TEMPLATE FORMATTING
-
 
 Use the template's actual styles.
 
@@ -2984,7 +2893,6 @@ Cite each figure/table before or near its placement.
 Use the IEEE template's reference conventions.
 
 ## DETAILED RULE SECTION 26 — 3-PAGE PAGE-BUDGET ENGINE
-
 
 DESIGN FOR THREE PAGES FROM THE START.
 
@@ -3018,7 +2926,6 @@ If the evidence honestly supports fewer than three pages, report the shorter len
 
 ## NATURAL TWO-COLUMN FLOW RULE
 
-
 The manuscript must flow naturally through the IEEE columns.
 
 Do NOT force the conclusion or references onto a new page merely to reserve space.
@@ -3047,7 +2954,6 @@ For every section break, verify:
 The body, conclusion, and references should continue in the same natural two-column sequence whenever the template permits.
 
 ## PAGE-DENSITY AND WHITESPACE AUDIT
-
 
 After every material content or layout revision:
 
@@ -3105,7 +3011,6 @@ Do NOT add:
 
 ## OVERFLOW REDUCTION ORDER
 
-
 If >3 pages, remove/compress in this order:
 
 1. filler;
@@ -3130,7 +3035,6 @@ Preserve:
 Never solve overflow by violating the template.
 
 ## DETAILED RULE SECTION 27 — WORD/PDF STRUCTURAL AUDIT
-
 
 Inspect the final DOCX for:
 
@@ -3173,7 +3077,6 @@ remain intact.
 
 ## PDF PREFLIGHT
 
-
 Where technically possible verify:
 
 * searchable text,
@@ -3191,7 +3094,6 @@ remind the final author to perform that official submission check.
 
 ## DETAILED RULE SECTION 28 — BLIND-REVIEW CHECK
 
-
 Determine whether the specific conference requires anonymous review.
 
 If double-anonymous review is required:
@@ -3208,7 +3110,6 @@ Anonymize where required:
 Do not assume every IEEE conference uses the same review model.
 
 ## DETAILED RULE SECTION 29 — ETHICS / DISCLOSURE
-
 
 Never invent:
 
@@ -3231,7 +3132,6 @@ Follow the applicable current policy.
 Do not assume one disclosure statement works for every IEEE conference.
 
 ## DETAILED RULE SECTION 30 — FILE AND CODE PACKAGE
-
 
 Use maximum TWO source-code files.
 
@@ -3267,7 +3167,6 @@ Prefer ONE code file when practical.
 
 ## PACKAGE PRIVACY AND SECRET-SCANNING RULE
 
-
 Before creating any checkpoint or final ZIP, inspect the package and exclude:
 
 * passwords, tokens, credentials, API keys, cookies, and private keys;
@@ -3285,7 +3184,6 @@ Include safe retrieval instructions, public identifiers, or synthetic examples i
 Record the package inspection result in the final audit.
 
 ## PROJECT STRUCTURE
-
 
 Create:
 
@@ -3311,7 +3209,6 @@ Do not include licensed/restricted datasets when redistribution is not allowed.
 
 ## README
 
-
 Include:
 
 * title,
@@ -3326,7 +3223,6 @@ Include:
 
 ## DETAILED RULE SECTION 31 — CLEAN-ROOM PACKAGE TEST
 
-
 Before delivery:
 
 1. ensure code executes;
@@ -3339,7 +3235,6 @@ Before delivery:
 No orphan experiment files should remain.
 
 ## DETAILED RULE SECTION 32 — REVIEWER ATTACK
-
 
 Simulate THREE reviewers.
 
@@ -3389,7 +3284,6 @@ strengthen or narrow the paper.
 
 ## DETAILED RULE SECTION 33 — SIMPLE-METHOD CHALLENGE
 
-
 Ask:
 
 "Could a significantly simpler method achieve essentially the same result?"
@@ -3405,7 +3299,6 @@ either:
 Complexity is not novelty.
 
 ## DETAILED RULE SECTION 34 — CLAIM SURVIVAL TEST
-
 
 Where appropriate ask:
 
@@ -3423,7 +3316,6 @@ If the conclusion collapses under a small reasonable change:
 report the instability.
 
 ## DETAILED RULE SECTION 35 — 100-POINT QUALITY AUDIT
-
 
 After ALL critical gates pass, score the paper out of 100.
 
@@ -3522,7 +3414,6 @@ Critical Gates must still be 20/20.
 
 ## DETAILED RULE SECTION 36 — EVIDENCE-BACKED FINAL AUDIT
 
-
 Before delivery, verify the following consolidated controls using the authoritative checkpoints.
 
 TEMPLATE AND OUTPUT:
@@ -3568,7 +3459,6 @@ Do not mark the final audit PASS from confidence or prose quality alone.
 
 ## FINAL PAGE CHECK
 
-
 Render the final PDF.
 
 Verify explicitly:
@@ -3595,7 +3485,6 @@ Do not rely on DOCX page count or estimated word count.
 
 ## FINAL DELIVERABLES
 
-
 Return:
 
 1. final_paper.docx
@@ -3608,7 +3497,6 @@ Return:
 8. IEEE_Paper_Project.zip
 
 ## FINAL RESPONSE FORMAT
-
 
 Use this complete final-delivery format ONLY after Stage 7 passes.
 
@@ -3689,7 +3577,6 @@ FILES:
 [ZIP]
 
 ## ABSOLUTE FINAL DIRECTIVE
-
 
 Do not optimize the paper for:
 
@@ -3776,4 +3663,6 @@ RESUME FROM THE LAST PASSED STAGE.
 
 Load the authoritative state file, confirm the next permitted stage, execute only that stage, save its required artifacts, run its gate, and stop at the required approval boundary.
 
-Only RUN FULL AUTONOMOUS MODE when the user explicitly requests it. Full autonomous mode must still execute the eight stages in order, save every checkpoint, apply every gate, complete at least three render inspections, and roll back to the earliest affected stage when a critical failure is discovered.
+Only RUN FULL AUTONOMOUS MODE when the user explicitly requests it.
+
+Full autonomous mode must still execute the eight stages in order, save every checkpoint, apply every gate, complete at least three render inspections, and roll back to the earliest affected stage when a critical failure is discovered.
