@@ -1,6 +1,8 @@
-# MASTER PROMPT vFINAL
+# MASTER PROMPT vFINAL — UPGRADED EDITION
 
 ## UNIVERSAL, STRICT 3-PAGE, REPRODUCIBLE IEEE CONFERENCE PAPER GENERATOR
+
+### Upgrade focus: evidence-first content, original human-edited writing, natural IEEE pagination, and page-by-page visual quality control
 
 ### Input Required: Paper Title + Attached IEEE Conference Template
 
@@ -241,13 +243,13 @@ C15. Exactly 20 verified references.
 
 C16. IEEE template integrity preserved.
 
-C17. No plagiarism or unattributed reuse.
+C17. Originality audit passed: no plagiarism, patchwriting, or unattributed reuse.
 
 C18. Ethical/privacy/disclosure requirements addressed.
 
 C19. No fatal statistical, mathematical, logical, or physical error.
 
-C20. Final PDF remains readable and technically valid.
+C20. Final PDF remains readable, technically valid, naturally flowed, and free of avoidable large gaps.
 
 If ANY critical gate fails:
 
@@ -1021,6 +1023,85 @@ C. explicitly documented reproducible simulation;
 D. controlled synthetic experiment;
 
 E. verified literature and clearly labeled as literature-reported.
+
+==================================================
+ORIGINALITY, PLAGIARISM PREVENTION, AND HUMAN-EDITED WRITING
+============================================================
+
+The manuscript must be an ORIGINAL SCHOLARLY SYNTHESIS.
+
+Do not copy or lightly rewrite sentences from:
+
+* journal articles,
+* conference papers,
+* abstracts,
+* websites,
+* dataset descriptions,
+* documentation,
+* previous manuscripts,
+* or the IEEE template.
+
+Do not use PATCHWRITING.
+
+Patchwriting includes:
+
+* replacing a few words with synonyms while preserving source structure;
+* rearranging clauses from a source sentence;
+* joining lightly modified fragments from multiple sources;
+* reproducing a source paragraph's distinctive sequence of ideas;
+* copying a method description or caption without attribution.
+
+CLEAN-ROOM WRITING PROCEDURE:
+
+1. Read the source to understand its evidence, method, or conclusion.
+2. Record factual notes, result values, and citation metadata rather than reusable source sentences.
+3. Set the original wording aside.
+4. Explain the concept independently in language specific to the present study.
+5. Compare the new passage with the source and revise any suspiciously similar wording or structure.
+6. Cite every borrowed idea, result, definition, dataset, method, or distinctive formulation.
+7. Use quotation marks and a citation for any short wording that must be reproduced exactly.
+
+SELF-PLAGIARISM / TEXT RECYCLING:
+
+Do not reuse the author's previously published wording as if it were new.
+
+If prior work is reused conceptually:
+
+* cite it;
+* explain what is different here;
+* rewrite the discussion for the current research question;
+* check the venue's rules for substantially overlapping submissions.
+
+HUMAN EDITORIAL PASS:
+
+After technical drafting, conduct a separate editorial pass that:
+
+* varies sentence length naturally without reducing precision;
+* uses concrete nouns and active verbs where appropriate;
+* connects paragraphs through reasoning rather than stock transitions;
+* explains why each important methodological choice was made;
+* removes generic AI language, repeated conclusions, and inflated claims;
+* states uncertainty and limitations directly;
+* keeps terminology and authorial voice consistent;
+* avoids mechanical section openings and repetitive sentence patterns.
+
+Do not intentionally add grammar errors, informal wording, fabricated personal experiences, or artificial imperfections to appear human.
+
+Do not optimize for or promise a particular AI-DETECTOR score.
+
+AI detectors are not reliable measures of authorship, originality, or scientific quality.
+
+The correct objective is:
+
+ORIGINAL EXPRESSION
++
+PROPER ATTRIBUTION
++
+TRACEABLE EVIDENCE
++
+NATURAL PROFESSIONAL EDITING.
+
+Where required, follow the current conference and IEEE policy for disclosure of AI-assisted text, code, analysis, figures, or editing.
 
 ==================================================
 STAGE 11 — DOMAIN-APPROPRIATE METHOD
@@ -2072,6 +2153,68 @@ Avoid phrases such as:
 unless genuinely appropriate.
 
 ==================================================
+PARAGRAPH-LEVEL HUMAN EDITING PASS
+==================================
+
+After removing filler, edit every paragraph for natural scholarly reasoning.
+
+Each paragraph should normally contain:
+
+1. one clear purpose or claim;
+2. evidence, method detail, or reasoning that supports it;
+3. an interpretation or consequence;
+4. a logical connection to the next paragraph where needed.
+
+Avoid writing every paragraph with the same length, rhythm, or transition.
+
+Avoid repeatedly beginning sentences with:
+
+* This study,
+* This paper,
+* Furthermore,
+* Moreover,
+* Additionally,
+* However.
+
+Use transitions only when the underlying reasoning requires them.
+
+Replace vague statements with study-specific details.
+
+For example, replace:
+
+"The model performed very well."
+
+with:
+
+"HGB achieved a mean PR-AUC of 0.852 across five fixed held-out splits."
+
+Do not increase apparent sophistication by using unnecessarily complex vocabulary.
+
+The writing should sound like a careful domain researcher explaining executed work, not like marketing copy or a generic paper template.
+
+==================================================
+EVIDENCE-DENSITY TEST
+=====================
+
+For every body paragraph classify its primary function as one of:
+
+* PROBLEM;
+* PRIOR EVIDENCE;
+* GAP;
+* METHOD;
+* REPRODUCIBILITY;
+* RESULT;
+* INTERPRETATION;
+* LIMITATION;
+* DEPLOYMENT / VALIDATION.
+
+If a paragraph has no clear scientific function:
+
+delete it or replace it with evidence-bearing content.
+
+When additional content is required to create a complete three-page paper, expand the weakest scientifically necessary function rather than repeating already adequate material.
+
+==================================================
 SENTENCE UTILITY TEST
 =====================
 
@@ -2177,6 +2320,101 @@ Conclusion:
 
 The rendered PDF, NOT word count, determines compliance.
 
+The preferred outcome is EXACTLY THREE CLEAR, WELL-FILLED, READABLE PAGES when the available evidence supports three pages.
+
+Do not add filler merely to occupy space.
+
+If the evidence honestly supports fewer than three pages, report the shorter length and identify what additional experiment, analysis, or literature evidence would be required to justify expansion.
+
+==================================================
+NATURAL TWO-COLUMN FLOW RULE
+============================
+
+The manuscript must flow naturally through the IEEE columns.
+
+Do NOT force the conclusion or references onto a new page merely to reserve space.
+
+PROHIBITED PAGINATION ACTIONS:
+
+* forced page break before References;
+* unnecessary Next Page, Odd Page, or Even Page section breaks;
+* manual column breaks that leave a preceding column substantially empty;
+* blank paragraphs inserted as vertical spacers;
+* fixed-height text boxes used for body content;
+* broad Keep with next or Keep lines together settings that create large empty areas;
+* oversized figures or captions used to fill a page;
+* hidden, overlapping, clipped, compressed, or out-of-margin text;
+* font, margin, line-spacing, column-spacing, or character-spacing manipulation.
+
+Use a section break only when technically required by the verified template, such as the transition from a one-column title/author block to the two-column manuscript body.
+
+For every section break, verify:
+
+* why it exists;
+* whether it changes columns or page settings;
+* whether it unexpectedly starts a new page;
+* whether removing or changing it improves natural flow without damaging the template.
+
+The body, conclusion, and references should continue in the same natural two-column sequence whenever the template permits.
+
+==================================================
+PAGE-DENSITY AND WHITESPACE AUDIT
+=================================
+
+After every material content or layout revision:
+
+1. render the DOCX to PDF;
+2. render all PDF pages to page images;
+3. inspect PAGE 1, PAGE 2, and PAGE 3 visually at readable resolution;
+4. verify column continuity and reading order;
+5. inspect the top, middle, and bottom of both columns;
+6. check for clipping, overlap, stranded headings, split captions, broken tables, and excessive whitespace;
+7. confirm that figures and tables remain readable at their final placed size.
+
+TARGET PAGE OCCUPANCY:
+
+Aim to use approximately 80-95% of the printable area on each full manuscript page while preserving normal IEEE spacing and readability.
+
+A modest blank region at the bottom of the final reference column is acceptable.
+
+The following are NOT acceptable without a verified template requirement:
+
+* a blank lower half-page;
+* an almost empty column;
+* references isolated on a mostly blank page;
+* a heading left at the bottom of a column without meaningful following text;
+* a figure or table creating an avoidable half-page gap;
+* large vertical gaps caused by paragraph pagination settings.
+
+If a page is sparse, repair it in this order:
+
+1. remove unnecessary page, column, or section breaks;
+2. inspect paragraph pagination properties;
+3. resize figures only within readable and template-compliant limits;
+4. allow references and body text to flow naturally;
+5. add scientifically necessary content supported by evidence.
+
+VALID EVIDENCE-BEARING CONTENT FOR RESPONSIBLE EXPANSION MAY INCLUDE:
+
+* closer related-work comparison;
+* a clearer measurable research gap;
+* leakage-control and reproducibility details;
+* equations, assumptions, or decision rules needed for replication;
+* executed ablation, sensitivity, robustness, or failure analysis;
+* decision-level interpretation of precision, recall, risk, cost, or resource tradeoffs;
+* deployment architecture and operational safeguards;
+* substantive threats to validity;
+* a concrete prospective validation plan.
+
+Do NOT add:
+
+* generic industry background;
+* repeated definitions;
+* restated results;
+* decorative prose;
+* unsupported future benefits;
+* extra citations or paragraphs whose only purpose is filling space.
+
 ==================================================
 OVERFLOW REDUCTION ORDER
 ========================
@@ -2218,6 +2456,17 @@ Inspect the final DOCX for:
 * objects outside margins,
 * template remnants,
 * accidental placeholders.
+
+Also inspect for:
+
+* forced page or column breaks;
+* consecutive empty paragraphs;
+* paragraphs with excessive spacing before/after;
+* inappropriate Keep with next, Keep lines together, Page break before, or widow/orphan behavior;
+* references separated from the preceding text without necessity;
+* figures anchored outside the intended column;
+* tables wider than the column or split illegibly;
+* section breaks that silently change margins, page size, or column count.
 
 Then render PDF.
 
@@ -2686,13 +2935,13 @@ REFERENCES
 
 FINAL QUALITY
 91. Limitations substantive.
-92. No plagiarism.
+92. Originality, clean-room writing, and attribution audit passed.
 93. No fabricated approvals.
 94. Disclosure policy checked.
 95. Clean-room rerun passed.
 96. DOCX↔PDF match.
 97. PDF <=3 pages.
-98. Readability preserved.
+98. Readability, natural column flow, and page-density audit passed.
 99. Reviewer attack addressed.
 100. Critical gates = 20/20.
 
@@ -2711,6 +2960,16 @@ PAGE 2
 PAGE 3
 
 NO PAGE 4.
+
+For EACH page also verify:
+
+* no avoidable blank lower half-page;
+* no almost-empty column;
+* no forced reference page;
+* no orphan heading or stranded caption;
+* no clipping or overlap;
+* natural two-column reading order;
+* approximately 80-95% printable-area use on full manuscript pages when scientifically justified.
 
 Do not rely on DOCX page count or estimated word count.
 
@@ -2781,9 +3040,13 @@ Leakage audit: PASS/FAIL
 Experiment executed: PASS/FAIL/N/A
 Clean-room reproduction: PASS/FAIL/N/A
 Citation entailment: PASS/FAIL
+Originality / plagiarism-prevention audit: PASS/FAIL
+Human editorial pass: PASS/FAIL
 Result synchronization: PASS/FAIL
 Template integrity: PASS/FAIL
 Template cleanup: PASS/FAIL
+Natural column flow: PASS/FAIL
+Page-density / whitespace audit: PASS/FAIL
 PDF preflight: PASS/FAIL
 Disclosure check: PASS/FAIL
 
@@ -2898,12 +3161,13 @@ Now:
 16. select exactly 20 verified references;
 17. synchronize all manuscript claims with evidence;
 18. build the paper directly inside a COPY of the attached IEEE template;
-19. perform scientific and language editing;
-20. render the PDF;
-21. revise until it is strictly three pages or fewer;
-22. run critical gates;
-23. run the 100-point audit;
-24. perform clean-room reproduction;
-25. create the complete reproducibility package and ZIP;
-26. return only the validated final outputs.
-
+19. perform clean-room originality, scientific, and human-style language editing;
+20. render the DOCX to PDF and render every PDF page to an image;
+21. inspect all three pages for column flow, clipping, figure/table readability, and excessive gaps;
+22. remove forced page/column breaks and repair sparse pages using natural flow and evidence-bearing content only;
+23. revise until the manuscript is strictly three pages or fewer, preferably three well-filled pages when supported by evidence;
+24. run critical gates;
+25. run the 100-point audit;
+26. perform clean-room reproduction;
+27. create the complete reproducibility package and ZIP;
+28. return only the validated final outputs.
