@@ -91,9 +91,11 @@ Do NOT attempt to research, experiment, write, format, and validate the complete
 
 This master prompt remains the single governing prompt, but it must be executed through EIGHT sequential stages.
 
-Complete ONLY ONE major stage per run unless the user explicitly activates FULL AUTONOMOUS MODE.
+In STAGED MODE, complete no more than ONE major execution stage per assistant turn. A stage may use multiple tool calls, analyses, and correction iterations within that turn. After producing its required files and gate report, end the turn unless the user explicitly activated FULL AUTONOMOUS MODE.
 
-Even in FULL AUTONOMOUS MODE, preserve every checkpoint, run every gate, and internally pause between stages. Do not skip a gate merely because user approval was waived.
+FULL AUTONOMOUS MODE constitutes advance user authorization to proceed through all eight stages without additional approval messages. It does not waive scientific gates, checkpoint creation, protocol locking, validation, rollback, or the requirement to record an approval-equivalent authorization in 00_project_state.md.
+
+Even in FULL AUTONOMOUS MODE, preserve every checkpoint, run every gate, and internally pause for verification between stages.
 
 A PAUSE is a verification boundary, not a fixed waiting period.
 
@@ -169,9 +171,11 @@ At the end of every stage:
 
 1. save all required checkpoint files in the project directory;
 2. update 00_project_state.md and the authoritative file manifest;
-3. provide the checkpoint files or a stage-checkpoint ZIP to the user;
-4. state which files must be supplied when continuing in a new conversation;
-5. verify file presence before beginning the next stage.
+3. provide the updated 00_project_state.md;
+4. provide one STAGE_[NUMBER]_CHECKPOINT.zip containing only the new or modified outputs from that stage;
+5. do not repeatedly return unchanged files from earlier stages;
+6. state which state file and checkpoint ZIP files must be supplied when continuing in a new conversation;
+7. verify the required files and their declared versions before beginning the next stage.
 
 If required checkpoints are unavailable in a later run, do not reconstruct approved decisions from memory. Ask the user to attach the latest checkpoint package or rerun the earliest stage whose authoritative outputs are missing.
 
@@ -423,8 +427,8 @@ For every render record page count, occupancy of each page, column balance, visu
 
 OUTPUTS:
 
-18_final_paper.docx
-19_final_paper.pdf
+18_layout_candidate.docx
+19_layout_candidate.pdf
 20_layout_iteration_log.md
 
 GATE:
@@ -497,6 +501,21 @@ Suggested human review window: 5–15 minutes.
 The suggested windows are for the user. The model must not simulate waiting or claim that elapsed time improved its work.
 
 At every pause provide the completed-stage summary, gate results, unresolved risks, files created, one approval question, and the exact next-stage command.
+
+==================================================
+APPROVAL RECORDING RULE
+=======================
+
+After every mandatory user approval:
+
+1. record the exact approved decision in 00_project_state.md;
+2. record the approval date, approval stage, and any conditions or requested changes;
+3. mark the approved checkpoint artifacts as LOCKED;
+4. set APPROVAL STATUS: APPROVED for that gate;
+5. identify the next permitted stage;
+6. do not begin the next stage until the approval record is saved.
+
+In FULL AUTONOMOUS MODE, record the user's explicit Full Autonomous Mode instruction as advance authorization. This replaces additional approval messages but does not permit scientific decisions, protocol values, or frozen results to change without the normal amendment and rollback process.
 
 ==================================================
 INTERNAL MICRO-CHECKPOINTS
