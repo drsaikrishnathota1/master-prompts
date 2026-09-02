@@ -82,6 +82,507 @@ ATTACHED FILE:
 Normally these are the only required inputs.
 
 ==================================================
+MANDATORY STAGED EXECUTION CONTROLLER
+=====================================
+
+DEFAULT EXECUTION MODE: STAGED MODE.
+
+Do NOT attempt to research, experiment, write, format, and validate the complete paper in one uninterrupted run.
+
+This master prompt remains the single governing prompt, but it must be executed through EIGHT sequential stages.
+
+Complete ONLY ONE major stage per run unless the user explicitly activates FULL AUTONOMOUS MODE.
+
+Even in FULL AUTONOMOUS MODE, preserve every checkpoint, run every gate, and internally pause between stages. Do not skip a gate merely because user approval was waived.
+
+A PAUSE is a verification boundary, not a fixed waiting period.
+
+Do not sleep or wait for an arbitrary number of minutes. Time alone does not improve quality. Continue only after the active stage has produced its required artifacts, passed its validation gate, and received user approval where required.
+
+==================================================
+STAGE INVOCATION COMMANDS
+=========================
+
+The user may start or resume work with one of these commands:
+
+RUN STAGE 0 ONLY
+RUN STAGE 1 ONLY
+RUN STAGE 2 ONLY
+RUN STAGE 3 ONLY
+RUN STAGE 4 ONLY
+RUN STAGE 5 ONLY
+RUN STAGE 6 ONLY
+RUN STAGE 7 ONLY
+RESUME FROM LAST PASSED STAGE
+RUN FULL AUTONOMOUS MODE
+
+If the user supplies only a title and template without naming a stage:
+
+START WITH STAGE 0 ONLY.
+
+Do not silently execute all eight stages.
+
+==================================================
+CONTEXT RELOAD AND RESUME PROTOCOL
+==================================
+
+At the beginning of every stage or new conversation run:
+
+1. inspect the project directory;
+2. read 00_project_state.md;
+3. read the most recent completed stage report;
+4. read all LOCKED decision files relevant to the active stage;
+5. read Protocol v1.0 and any approved amendments when they exist;
+6. read the frozen-results ledger when it exists;
+7. identify the last completed PASS gate;
+8. confirm the next permitted stage;
+9. list unresolved blockers;
+10. continue from the next incomplete stage without repeating approved work.
+
+Never silently change an approved research gap, research question, contribution, dataset, split strategy, baseline, primary metric, seed set, experiment result, author identity, or conference requirement.
+
+If a locked decision must change, create PROTOCOL_AMENDMENT_[NUMBER].md stating what changed, why, whether results had already been viewed, which downstream artifacts are invalidated, which stages must be repeated, and whether new user approval is required.
+
+==================================================
+PROJECT STATE FILE
+==================
+
+Create and continuously maintain 00_project_state.md containing:
+
+* paper title and template filename;
+* target conference and page limit;
+* author and anonymity status;
+* current stage and last passed gate;
+* approved decisions and locked artifacts;
+* unresolved questions and known limitations;
+* next allowed action;
+* stage-completion timestamps;
+* authoritative file manifest.
+
+This file is the single source of truth for workflow status.
+
+CHECKPOINT PORTABILITY:
+
+Do not assume that a temporary workspace or conversation context will remain available indefinitely.
+
+At the end of every stage:
+
+1. save all required checkpoint files in the project directory;
+2. update 00_project_state.md and the authoritative file manifest;
+3. provide the checkpoint files or a stage-checkpoint ZIP to the user;
+4. state which files must be supplied when continuing in a new conversation;
+5. verify file presence before beginning the next stage.
+
+If required checkpoints are unavailable in a later run, do not reconstruct approved decisions from memory. Ask the user to attach the latest checkpoint package or rerun the earliest stage whose authoritative outputs are missing.
+
+==================================================
+STAGE 0 — PROJECT CONTRACT AND TEMPLATE AUDIT
+=============================================
+
+PURPOSE: Understand the title obligations and exact template before research.
+
+ACTIONS:
+
+1. inspect and render the supplied template;
+2. record page size, margins, columns, spacing, styles, fonts, captions, references, headers, footers, and placeholders;
+3. identify the one-column to two-column transition;
+4. audit every substantive title term and its required evidence;
+5. classify research type and IEEE technical fit;
+6. identify missing author, conference, anonymity, ethics, or disclosure information;
+7. create the project state.
+
+OUTPUTS:
+
+00_project_state.md
+01_template_audit.md
+02_title_contract.md
+
+GATE:
+
+* template visually inspected: PASS/FAIL;
+* template properties recorded: PASS/FAIL;
+* title obligations mapped: PASS/FAIL;
+* IEEE fit classified: PASS/FAIL;
+* blockers identified: PASS/FAIL.
+
+STOP after Stage 0 and report the next permitted command.
+
+==================================================
+STAGE 1 — LITERATURE, GAP, AND NOVELTY AUDIT
+============================================
+
+PURPOSE: Establish a defensible literature-supported scientific direction.
+
+ACTIONS:
+
+1. search title concepts, synonyms, methods, applications, limitations, metrics, and opposing findings;
+2. identify five to eight closest competitors;
+3. verify candidate reference metadata;
+4. test citation entailment for central gap claims;
+5. search contradictory evidence;
+6. attempt to falsify novelty;
+7. classify achievable novelty;
+8. formulate one measurable gap and contribution;
+9. confirm title and IEEE alignment.
+
+OUTPUTS:
+
+03_literature_matrix.csv
+04_reference_verification.md
+05_novelty_gap_report.md
+
+GATE:
+
+* competitors identified: PASS/FAIL;
+* central sources verified: PASS/FAIL;
+* contradiction search completed: PASS/FAIL;
+* novelty falsification completed: PASS/FAIL;
+* measurable gap established: PASS/FAIL;
+* contribution stated in one sentence: PASS/FAIL.
+
+MANDATORY USER APPROVAL 1:
+
+Present the research type, IEEE fit, closest three competitors, measurable gap, novelty level, contribution, and major limitation. Then STOP. Do not begin Stage 2 before approval.
+
+==================================================
+STAGE 2 — RESEARCH QUESTION AND PROTOCOL LOCK
+=============================================
+
+PURPOSE: Prevent seed, metric, dataset, and specification fishing.
+
+ACTIONS:
+
+1. formulate one research question;
+2. define one primary claim and at most three supporting claims;
+3. verify the evidence source;
+4. define inclusion, exclusion, preprocessing, and leakage controls;
+5. define the correct split strategy;
+6. select simple and competitive baselines;
+7. lock primary and secondary metrics;
+8. lock seeds, hyperparameters, statistics, uncertainty, robustness, failure analysis, and stopping rule;
+9. record assumptions and expected limitations before final results.
+
+OUTPUTS:
+
+06_protocol_v1.md
+07_data_and_leakage_audit.md
+
+GATE:
+
+* question testable: PASS/FAIL;
+* evidence verified: PASS/FAIL;
+* metrics locked: PASS/FAIL;
+* baselines fair: PASS/FAIL;
+* split appropriate: PASS/FAIL;
+* leakage controls adequate: PASS/FAIL;
+* seeds and stopping rule locked: PASS/FAIL;
+* robustness plan defined: PASS/FAIL.
+
+MANDATORY USER APPROVAL 2:
+
+Present the compact protocol and STOP. Do not execute final experiments until Protocol v1.0 is approved.
+
+==================================================
+STAGE 3 — EXPERIMENT EXECUTION AND RESULT FREEZE
+===============================================
+
+PURPOSE: Generate traceable evidence before manuscript claims.
+
+ACTIONS:
+
+1. execute the locked experiment, analysis, simulation, or proof;
+2. preserve raw outputs and environment information;
+3. run every prespecified seed, fold, scenario, or replication;
+4. compute uncertainty and comparisons;
+5. run prespecified robustness, sensitivity, ablation, and failure analyses;
+6. verify arithmetic and units;
+7. record negative and mixed results;
+8. freeze manuscript-eligible values.
+
+OUTPUTS:
+
+08_raw_results.csv
+09_final_results.csv
+10_experiment_log.md
+11_result_ledger.md
+
+GATE:
+
+* experiment executed: PASS/FAIL;
+* raw results preserved: PASS/FAIL;
+* protocol followed: PASS/FAIL;
+* arithmetic and units verified: PASS/FAIL;
+* uncertainty reported: PASS/FAIL/N/A;
+* robustness completed: PASS/FAIL/N/A;
+* failure regimes recorded: PASS/FAIL;
+* results frozen: PASS/FAIL.
+
+Do not change the question to manufacture a successful result.
+
+==================================================
+STAGE 4 — MANUSCRIPT BLUEPRINT AND PAGE BUDGET
+==============================================
+
+PURPOSE: Design the evidence chain and page allocation before prose and Word layout.
+
+ACTIONS:
+
+1. map title to gap, question, method, results, limitations, and conclusion;
+2. create the claim-evidence ledger;
+3. assign every reference to a claim;
+4. choose only essential figures and tables;
+5. plan content by page and column using the actual template;
+6. plan the two-column transition and natural reference flow;
+7. identify the strongest limitation and validation plan.
+
+OUTPUTS:
+
+12_claim_evidence_ledger.md
+13_manuscript_blueprint.md
+14_page_budget.md
+
+GATE:
+
+* narrative chain complete: PASS/FAIL;
+* claims mapped to evidence: PASS/FAIL;
+* citations assigned: PASS/FAIL;
+* visuals nonredundant: PASS/FAIL;
+* three-page plan feasible: PASS/FAIL;
+* reference flow natural: PASS/FAIL.
+
+MANDATORY USER APPROVAL 3:
+
+Present frozen findings, limitations, proposed visuals, section architecture, and page plan. Then STOP.
+
+==================================================
+STAGE 5 — ORIGINAL MANUSCRIPT DRAFTING
+======================================
+
+PURPOSE: Write from approved notes and frozen evidence without copying or drift.
+
+ACTIONS:
+
+1. draft Method and Results first;
+2. draft Related Work, Introduction, and Discussion next;
+3. write Abstract and Conclusion last;
+4. perform citation-entailment editing;
+5. perform clean-room originality rewriting;
+6. perform a separate human editorial pass;
+7. run sentence-utility and evidence-density tests;
+8. synchronize all numbers across prose, tables, figures, abstract, and conclusion.
+
+OUTPUTS:
+
+15_manuscript_draft.md
+16_originality_attribution_audit.md
+17_content_synchronization_report.md
+
+GATE:
+
+* no fabricated content: PASS/FAIL;
+* results synchronized: PASS/FAIL;
+* citation entailment: PASS/FAIL;
+* originality and attribution: PASS/FAIL;
+* human editorial pass: PASS/FAIL;
+* substantive limitation included: PASS/FAIL;
+* title claims answered: PASS/FAIL.
+
+Do not begin Word layout until Stage 5 passes.
+
+==================================================
+STAGE 6 — TEMPLATE BUILD, RENDER, AND ITERATIVE QA
+=================================================
+
+PURPOSE: Produce a readable three-page document through repeated visual verification.
+
+ACTIONS:
+
+1. populate a copy of the attached template;
+2. preserve required sections, margins, fonts, columns, and styles;
+3. insert verified figures and tables;
+4. render DOCX to PDF and all PDF pages to images;
+5. inspect every page and record defects by page and column;
+6. repair flow, anchors, captions, tables, spacing, and section breaks;
+7. repeat the render-inspect-repair loop;
+8. perform PDF preflight.
+
+MINIMUM VALIDATION INTERVALS:
+
+RENDER 1 — STRUCTURAL PASS:
+Check page count, sections, columns, missing content, overflow, and broken objects.
+
+RENDER 2 — TYPOGRAPHY AND DENSITY PASS:
+Check fonts, spacing, captions, table text, figure labels, column balance, orphan headings, and blank regions.
+
+RENDER 3 — FINAL CONFIRMATION PASS:
+Re-render after corrections and verify that no repair created a new defect.
+
+These are validation iterations, not time delays. Continue with Render 4, Render 5, and later cycles when any gate still fails. Do not stop merely because the paper has exactly three pages.
+
+For every render record page count, occupancy of each page, column balance, visual readability, orphan headings, clipping, overlap, reference flow, corrections, and PASS/FAIL.
+
+OUTPUTS:
+
+18_final_paper.docx
+19_final_paper.pdf
+20_layout_iteration_log.md
+
+GATE:
+
+* pages within limit: PASS/FAIL;
+* three well-filled pages when supported: PASS/FAIL;
+* no unnecessary breaks: PASS/FAIL;
+* no avoidable blank half-page: PASS/FAIL;
+* natural columns and references: PASS/FAIL;
+* figures and tables readable: PASS/FAIL;
+* no clipping or overlap: PASS/FAIL;
+* template integrity: PASS/FAIL;
+* PDF preflight: PASS/FAIL.
+
+==================================================
+STAGE 7 — REVIEWER ATTACK, REPRODUCTION, AND DELIVERY
+====================================================
+
+PURPOSE: Challenge the rendered paper, reproduce its result, correct defects, and deliver validated outputs.
+
+ACTIONS:
+
+1. conduct separate domain, methods/statistics, and IEEE program-committee reviews;
+2. identify and grade the strongest rejection reasons;
+3. correct every legitimate critical or major issue;
+4. return to the earliest affected stage when a correction invalidates a decision or result;
+5. rerun analysis from a clean output state when practical;
+6. regenerate figures and tables;
+7. compare regenerated values with the manuscript;
+8. verify references, DOCX/PDF synchronization, anonymity, disclosure, and submission readiness;
+9. build the final package.
+
+OUTPUTS:
+
+21_reviewer_attack.md
+22_clean_room_reproduction.md
+23_final_audit.md
+final_paper.docx
+final_paper.pdf
+IEEE_Paper_Project.zip
+
+GATE:
+
+* reviewer attack addressed: PASS/FAIL;
+* clean-room reproduction: PASS/FAIL/N/A;
+* manuscript matches regenerated results: PASS/FAIL;
+* references verified: PASS/FAIL;
+* disclosure/anonymity checked: PASS/FAIL;
+* final pages inspected after the last correction: PASS/FAIL;
+* all critical gates passed: PASS/FAIL.
+
+Only after Stage 7 passes may the response state FINAL STATUS: PASS.
+
+==================================================
+MANDATORY APPROVAL AND PAUSE SCHEDULE
+=====================================
+
+PAUSE A — AFTER STAGE 1:
+Approve scientific direction, gap, novelty, and contribution.
+Suggested human review window: 5–15 minutes or longer for domain consultation.
+
+PAUSE B — AFTER STAGE 2:
+Approve data, baselines, metrics, leakage controls, seeds, and stopping rule.
+Suggested human review window: 5–15 minutes.
+
+PAUSE C — AFTER STAGE 4:
+Approve frozen results, limitations, visuals, and page blueprint.
+Suggested human review window: 5–15 minutes.
+
+The suggested windows are for the user. The model must not simulate waiting or claim that elapsed time improved its work.
+
+At every pause provide the completed-stage summary, gate results, unresolved risks, files created, one approval question, and the exact next-stage command.
+
+==================================================
+INTERNAL MICRO-CHECKPOINTS
+==========================
+
+Within every stage use:
+
+PLAN
+↓
+EXECUTE
+↓
+SAVE EVIDENCE
+↓
+VERIFY
+↓
+ATTACK ASSUMPTIONS
+↓
+CORRECT
+↓
+RE-VERIFY
+↓
+REPORT
+
+Do not proceed from an unverified intermediate conclusion.
+
+==================================================
+FAILURE, ROLLBACK, AND ESCALATION
+================================
+
+If a critical gate fails:
+
+1. stop;
+2. record the failure in 00_project_state.md;
+3. identify the earliest affected stage;
+4. preserve failed outputs for audit;
+5. return to the earliest affected stage;
+6. create a protocol amendment when locked decisions change;
+7. rerun all invalidated downstream stages;
+8. request approval again when an approval-gate decision changed.
+
+Never repair a scientific failure only through wording.
+Never repair layout by shrinking required fonts or margins.
+Never repair weak results through undisclosed post-result changes.
+
+==================================================
+ACTIVE-STAGE RULE ROUTING MAP
+=============================
+
+The eight execution stages above are the workflow controller.
+
+The later DETAILED RULE SECTIONS are the policy library.
+
+For focused execution, load and apply them as follows:
+
+* Stage 0: Detailed Rule Sections 1-3, 25, 27-29;
+* Stage 1: Detailed Rule Sections 4-8;
+* Stage 2: Detailed Rule Sections 9-17;
+* Stage 3: Detailed Rule Sections 12-20 and 33-34;
+* Stage 4: Detailed Rule Sections 20-23 and 26;
+* Stage 5: Detailed Rule Sections 22-24 and the originality rules;
+* Stage 6: Detailed Rule Sections 20-21 and 25-27;
+* Stage 7: Detailed Rule Sections 18-19 and 27-36.
+
+Global critical gates, no-fabrication rules, originality rules, output limits, and final directives apply during every stage.
+
+Do not interpret the Detailed Rule Section numbering as a second execution sequence.
+
+==================================================
+STAGED-MODE RESPONSE CONTRACT
+=============================
+
+During a stage, apply all global integrity requirements plus the detailed rules relevant to that stage.
+
+At the beginning state:
+
+ACTIVE STAGE: [0–7]
+INPUT CHECKPOINTS LOADED: [FILES]
+ALLOWED OUTPUTS THIS RUN: [FILES]
+
+At the end state:
+
+STAGE STATUS: PASS / NEEDS REVISION / WAITING FOR APPROVAL
+NEXT PERMITTED STAGE: [NUMBER]
+NEXT COMMAND: [EXACT COMMAND]
+
+==================================================
 ABSOLUTE OUTPUT LIMITS
 ======================
 
@@ -258,7 +759,7 @@ FINAL STATUS = NEEDS REVISION.
 A score of 99/100 cannot compensate for one critical failure.
 
 ==================================================
-STAGE 1 — INSPECT THE TEMPLATE FIRST
+DETAILED RULE SECTION 1 — INSPECT THE TEMPLATE FIRST
 ====================================
 
 Before researching or writing:
@@ -355,7 +856,7 @@ Do not invent final IEEE:
 Use only verified conference-provided metadata.
 
 ==================================================
-STAGE 2 — CLASSIFY THE RESEARCH TYPE
+DETAILED RULE SECTION 2 — CLASSIFY THE RESEARCH TYPE
 ====================================
 
 The prompt is UNIVERSAL.
@@ -468,7 +969,7 @@ flag:
 IEEE SCOPE RISK = HIGH.
 
 ==================================================
-STAGE 3 — TITLE-CONTRACT ANALYSIS
+DETAILED RULE SECTION 3 — TITLE-CONTRACT ANALYSIS
 =================================
 
 Treat every substantive word in the title as a scientific obligation.
@@ -524,7 +1025,7 @@ If a major title claim cannot be demonstrated:
 Never retain an untested headline claim.
 
 ==================================================
-STAGE 4 — LITERATURE SEARCH
+DETAILED RULE SECTION 4 — LITERATURE SEARCH
 ===========================
 
 Conduct real literature research BEFORE drafting the final manuscript.
@@ -698,7 +1199,7 @@ If the literature disagrees:
 represent the disagreement fairly and use it to sharpen the research question.
 
 ==================================================
-STAGE 5 — NOVELTY FALSIFICATION
+DETAILED RULE SECTION 5 — NOVELTY FALSIFICATION
 ===============================
 
 Do NOT assume novelty.
@@ -752,7 +1253,7 @@ Write novelty claims consistent with the actual level.
 Never present N2 work as N5.
 
 ==================================================
-STAGE 6 — ESTABLISH THE RESEARCH GAP
+DETAILED RULE SECTION 6 — ESTABLISH THE RESEARCH GAP
 ====================================
 
 A valid gap must contain:
@@ -830,7 +1331,7 @@ If it fails any layer:
 refine it.
 
 ==================================================
-STAGE 7 — ONE CENTRAL RESEARCH QUESTION
+DETAILED RULE SECTION 7 — ONE CENTRAL RESEARCH QUESTION
 =======================================
 
 Create ONE primary research question.
@@ -855,7 +1356,7 @@ Under assumptions A-B, can property X be established or bounded?
 The whole paper must answer this one question.
 
 ==================================================
-STAGE 8 — CONTRIBUTION DESIGN
+DETAILED RULE SECTION 8 — CONTRIBUTION DESIGN
 =============================
 
 Create ONE central contribution that can be explained in one sentence.
@@ -899,7 +1400,7 @@ If these cannot be answered:
 redesign it.
 
 ==================================================
-STAGE 9 — PROTOCOL LOCK
+DETAILED RULE SECTION 9 — PROTOCOL LOCK
 =======================
 
 BEFORE examining final results, freeze:
@@ -962,7 +1463,7 @@ Exploration is allowed.
 Do not misrepresent exploratory findings as prespecified confirmatory evidence.
 
 ==================================================
-STAGE 10 — CHOOSE APPROPRIATE EVIDENCE
+DETAILED RULE SECTION 10 — CHOOSE APPROPRIATE EVIDENCE
 ======================================
 
 Use the strongest legitimately available evidence.
@@ -1104,7 +1605,7 @@ NATURAL PROFESSIONAL EDITING.
 Where required, follow the current conference and IEEE policy for disclosure of AI-assisted text, code, analysis, figures, or editing.
 
 ==================================================
-STAGE 11 — DOMAIN-APPROPRIATE METHOD
+DETAILED RULE SECTION 11 — DOMAIN-APPROPRIATE METHOD
 ====================================
 
 Choose methodology based on the research question.
@@ -1204,7 +1705,7 @@ only use review terminology supported by the methodology.
 Do not label a 3-page focused synthesis a "systematic review" unless it genuinely satisfies systematic-review requirements.
 
 ==================================================
-STAGE 12 — EXPERIMENTAL INTEGRITY
+DETAILED RULE SECTION 12 — EXPERIMENTAL INTEGRITY
 =================================
 
 When empirical/computational work is appropriate:
@@ -1327,7 +1828,7 @@ Use fair:
 * tuning effort.
 
 ==================================================
-STAGE 13 — DOMAIN-SPECIFIC INTEGRITY
+DETAILED RULE SECTION 13 — DOMAIN-SPECIFIC INTEGRITY
 ====================================
 
 FINANCE:
@@ -1397,7 +1898,7 @@ computational performance does NOT establish:
 * medical safety.
 
 ==================================================
-STAGE 14 — METRICS
+DETAILED RULE SECTION 14 — METRICS
 ==================
 
 Choose ONE PRIMARY metric directly tied to the research question.
@@ -1488,7 +1989,7 @@ with:
 PRACTICAL / ECONOMIC / ENGINEERING SIGNIFICANCE.
 
 ==================================================
-STAGE 15 — ROBUSTNESS
+DETAILED RULE SECTION 15 — ROBUSTNESS
 =====================
 
 Perform ONE compact domain-appropriate secondary validation when meaningful.
@@ -1549,7 +2050,7 @@ Identify at least ONE condition where the approach:
 A credible method is allowed to have limitations.
 
 ==================================================
-STAGE 16 — COMPLEXITY / COST
+DETAILED RULE SECTION 16 — COMPLEXITY / COST
 ============================
 
 When relevant evaluate at least one cost:
@@ -1574,7 +2075,7 @@ versus
 COST.
 
 ==================================================
-STAGE 17 — SOFTWARE SANITY TESTS
+DETAILED RULE SECTION 17 — SOFTWARE SANITY TESTS
 ================================
 
 Before accepting results, test basic invariants where appropriate.
@@ -1595,7 +2096,7 @@ If a sanity check fails:
 STOP AND FIX THE PIPELINE.
 
 ==================================================
-STAGE 18 — RESULT PROVENANCE
+DETAILED RULE SECTION 18 — RESULT PROVENANCE
 ============================
 
 Maintain:
@@ -1650,7 +2151,7 @@ Use consistent precision.
 Ensure raw, table, figure, and prose values reconcile.
 
 ==================================================
-STAGE 19 — CLEAN-ROOM REPRODUCTION
+DETAILED RULE SECTION 19 — CLEAN-ROOM REPRODUCTION
 ==================================
 
 After the experiment succeeds:
@@ -1703,7 +2204,7 @@ Do not redistribute a dataset in the ZIP if its license does not permit redistri
 Provide retrieval instructions instead.
 
 ==================================================
-STAGE 20 — FIGURES
+DETAILED RULE SECTION 20 — FIGURES
 ==================
 
 MAXIMUM 2.
@@ -1773,7 +2274,7 @@ Avoid:
 The visual must communicate science, not decoration.
 
 ==================================================
-STAGE 21 — TABLES
+DETAILED RULE SECTION 21 — TABLES
 =================
 
 MAXIMUM 2.
@@ -1817,7 +2318,7 @@ Use consistent decimal precision.
 Do not highlight meaningless differences.
 
 ==================================================
-STAGE 22 — PAPER STRUCTURE
+DETAILED RULE SECTION 22 — PAPER STRUCTURE
 ==========================
 
 Use this compact structure unless the template requires otherwise:
@@ -2048,7 +2549,7 @@ State:
 Do not introduce new evidence.
 
 ==================================================
-STAGE 23 — NARRATIVE SYNCHRONIZATION
+DETAILED RULE SECTION 23 — NARRATIVE SYNCHRONIZATION
 ====================================
 
 Before finalizing verify:
@@ -2059,27 +2560,27 @@ ABSTRACT
 
 ABSTRACT
 matches
-TABLE II / RESULTS
+VERIFIED RESULTS AND ANY RESULTS TABLE USED
 
 CONTRIBUTIONS
 match
 METHOD + EVIDENCE
 
-FIG. 1
+FIG. 1, IF USED,
 matches
-METHOD
+METHOD OR SYSTEM DESCRIPTION
 
-FIG. 2
+FIG. 2, IF USED,
 matches
 RESULTS
 
-TABLE I
+TABLE I, IF USED,
 supports
-RESEARCH GAP
+ITS STATED PURPOSE
 
-TABLE II
+TABLE II, IF USED,
 supports
-CENTRAL CLAIM
+ITS STATED PURPOSE OR CENTRAL CLAIM
 
 CONCLUSION
 matches
@@ -2120,7 +2621,7 @@ plus
 TWO OR THREE SUPPORTING CLAIMS.
 
 ==================================================
-STAGE 24 — SCIENTIFIC COPYEDITING
+DETAILED RULE SECTION 24 — SCIENTIFIC COPYEDITING
 =================================
 
 Perform a dedicated editing pass.
@@ -2264,7 +2765,7 @@ past tense
 for experiments performed.
 
 ==================================================
-STAGE 25 — IEEE TEMPLATE FORMATTING
+DETAILED RULE SECTION 25 — IEEE TEMPLATE FORMATTING
 ===================================
 
 Use the template's actual styles.
@@ -2293,7 +2794,7 @@ Cite each figure/table before or near its placement.
 Use the IEEE template's reference conventions.
 
 ==================================================
-STAGE 26 — 3-PAGE PAGE-BUDGET ENGINE
+DETAILED RULE SECTION 26 — 3-PAGE PAGE-BUDGET ENGINE
 ====================================
 
 DESIGN FOR THREE PAGES FROM THE START.
@@ -2443,7 +2944,7 @@ Preserve:
 Never solve overflow by violating the template.
 
 ==================================================
-STAGE 27 — WORD/PDF STRUCTURAL AUDIT
+DETAILED RULE SECTION 27 — WORD/PDF STRUCTURAL AUDIT
 ====================================
 
 Inspect the final DOCX for:
@@ -2505,7 +3006,7 @@ If the target conference uses IEEE PDF eXpress / PDF Checker:
 remind the final author to perform that official submission check.
 
 ==================================================
-STAGE 28 — BLIND-REVIEW CHECK
+DETAILED RULE SECTION 28 — BLIND-REVIEW CHECK
 =============================
 
 Determine whether the specific conference requires anonymous review.
@@ -2524,7 +3025,7 @@ Anonymize where required:
 Do not assume every IEEE conference uses the same review model.
 
 ==================================================
-STAGE 29 — ETHICS / DISCLOSURE
+DETAILED RULE SECTION 29 — ETHICS / DISCLOSURE
 ==============================
 
 Never invent:
@@ -2548,7 +3049,7 @@ Follow the applicable current policy.
 Do not assume one disclosure statement works for every IEEE conference.
 
 ==================================================
-STAGE 30 — FILE AND CODE PACKAGE
+DETAILED RULE SECTION 30 — FILE AND CODE PACKAGE
 ================================
 
 Use maximum TWO source-code files.
@@ -2626,7 +3127,7 @@ Include:
 * reproduction instructions.
 
 ==================================================
-STAGE 31 — CLEAN-ROOM PACKAGE TEST
+DETAILED RULE SECTION 31 — CLEAN-ROOM PACKAGE TEST
 ==================================
 
 Before delivery:
@@ -2641,7 +3142,7 @@ Before delivery:
 No orphan experiment files should remain.
 
 ==================================================
-STAGE 32 — REVIEWER ATTACK
+DETAILED RULE SECTION 32 — REVIEWER ATTACK
 ==========================
 
 Simulate THREE reviewers.
@@ -2691,7 +3192,7 @@ If three defensible acceptance reasons cannot be stated:
 strengthen or narrow the paper.
 
 ==================================================
-STAGE 33 — SIMPLE-METHOD CHALLENGE
+DETAILED RULE SECTION 33 — SIMPLE-METHOD CHALLENGE
 ==================================
 
 Ask:
@@ -2709,7 +3210,7 @@ either:
 Complexity is not novelty.
 
 ==================================================
-STAGE 34 — CLAIM SURVIVAL TEST
+DETAILED RULE SECTION 34 — CLAIM SURVIVAL TEST
 ==============================
 
 Where appropriate ask:
@@ -2728,7 +3229,7 @@ If the conclusion collapses under a small reasonable change:
 report the instability.
 
 ==================================================
-STAGE 35 — 100-POINT QUALITY AUDIT
+DETAILED RULE SECTION 35 — 100-POINT QUALITY AUDIT
 ==================================
 
 After ALL critical gates pass, score the paper out of 100.
@@ -2819,7 +3320,7 @@ BUT:
 Critical Gates must still be 20/20.
 
 ==================================================
-STAGE 36 — FINAL 100-POINT CHECKLIST
+DETAILED RULE SECTION 36 — FINAL 100-POINT CHECKLIST
 ====================================
 
 Before delivery confirm all of the following conceptually:
@@ -2901,7 +3402,7 @@ RESULTS
 61. Result source frozen.
 62. Arithmetic verified.
 63. Percent vs percentage-points correct.
-64. Table II matches raw results.
+64. Every results table used matches frozen raw results.
 65. Figures match results.
 66. Abstract matches results.
 67. Results prose matches table.
@@ -2912,10 +3413,10 @@ RESULTS
 VISUALS
 71. <=2 figures.
 72. <=2 tables.
-73. Fig. 1 scientifically useful.
+73. Fig. 1 scientifically useful if used.
 74. Fig. 2 nonredundant if used.
-75. Table I supports gap.
-76. Table II supports claim.
+75. Table I supports its stated purpose if used.
+76. Table II supports its stated purpose if used.
 77. Captions correctly placed.
 78. Tables correctly titled.
 79. Labels readable.
@@ -2992,7 +3493,11 @@ Return:
 FINAL RESPONSE FORMAT
 =====================
 
-Keep the chat response concise.
+Use this complete final-delivery format ONLY after Stage 7 passes.
+
+During Stages 0-6, use the staged-mode response contract instead and do not imply that the paper is final.
+
+Keep the final chat response concise.
 
 Report:
 
@@ -3105,9 +3610,9 @@ ONE reproducible evaluation,
 
 ONE primary metric,
 
-ONE convincing findings table,
+ONE convincing findings table when scientifically necessary,
 
-ONE useful technical figure,
+ONE useful technical figure when scientifically necessary,
 
 ONE honest limitation,
 
@@ -3141,33 +3646,18 @@ and
 
 HOW to reproduce the central result.
 
-Now:
+Now begin in STAGED MODE.
 
-1. inspect the attached IEEE template;
-2. classify the research type;
-3. confirm IEEE technical fit;
-4. search and verify the literature;
-5. identify closest competing work;
-6. attempt to falsify novelty;
-7. establish a measurable research gap;
-8. formulate one research question;
-9. lock the research protocol;
-10. select the appropriate methodology;
-11. execute the required analysis/experiment/proof;
-12. validate data/statistics/mathematics;
-13. perform robustness/failure analysis;
-14. generate no more than two essential figures;
-15. generate no more than two essential tables;
-16. select exactly 20 verified references;
-17. synchronize all manuscript claims with evidence;
-18. build the paper directly inside a COPY of the attached IEEE template;
-19. perform clean-room originality, scientific, and human-style language editing;
-20. render the DOCX to PDF and render every PDF page to an image;
-21. inspect all three pages for column flow, clipping, figure/table readability, and excessive gaps;
-22. remove forced page/column breaks and repair sparse pages using natural flow and evidence-bearing content only;
-23. revise until the manuscript is strictly three pages or fewer, preferably three well-filled pages when supported by evidence;
-24. run critical gates;
-25. run the 100-point audit;
-26. perform clean-room reproduction;
-27. create the complete reproducibility package and ZIP;
-28. return only the validated final outputs.
+If no valid project checkpoint exists:
+
+RUN STAGE 0 ONLY.
+
+Do not continue automatically to Stage 1.
+
+If checkpoints already exist:
+
+RESUME FROM THE LAST PASSED STAGE.
+
+Load the authoritative state file, confirm the next permitted stage, execute only that stage, save its required artifacts, run its gate, and stop at the required approval boundary.
+
+Only RUN FULL AUTONOMOUS MODE when the user explicitly requests it. Full autonomous mode must still execute the eight stages in order, save every checkpoint, apply every gate, complete at least three render inspections, and roll back to the earliest affected stage when a critical failure is discovered.
