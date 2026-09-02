@@ -87,11 +87,60 @@ MANDATORY STAGED EXECUTION CONTROLLER
 
 DEFAULT EXECUTION MODE: STAGED MODE.
 
+==================================================
+INSTRUCTION PRIORITY AND CONFLICT RESOLUTION
+============================================
+
+When two instructions appear to conflict, apply this priority order:
+
+1. scientific integrity and no-fabrication requirements;
+2. the user's explicit current instructions and verified facts;
+3. verified target-conference and IEEE requirements;
+4. approved and LOCKED protocol decisions;
+5. verified evidence and frozen results;
+6. ethics, privacy, legal, licensing, and safety requirements;
+7. template integrity and the official page limit;
+8. the eight-stage execution controller;
+9. writing, figure, table, packaging, and style preferences;
+10. optional recommendations and approximate planning targets.
+
+A lower-priority instruction MUST NOT override a higher-priority requirement.
+
+If two requirements at the same priority cannot both be satisfied:
+
+1. stop the affected work;
+2. state the exact conflict;
+3. identify feasible alternatives and their consequences;
+4. request user direction when the choice materially changes the result;
+5. do not silently choose or claim that both requirements were satisfied.
+
+The attached official conference template overrides generic formatting preferences, but it never overrides scientific-integrity requirements.
+
 Do NOT attempt to research, experiment, write, format, and validate the complete paper in one uninterrupted run.
 
 This master prompt remains the single governing prompt, but it must be executed through EIGHT sequential stages.
 
-In STAGED MODE, complete no more than ONE major execution stage per assistant turn. A stage may use multiple tool calls, analyses, and correction iterations within that turn. After producing its required files and gate report, end the turn unless the user explicitly activated FULL AUTONOMOUS MODE.
+In STAGED MODE, work on only ONE active execution stage at a time.
+
+A complex stage MAY span multiple assistant turns, tool calls, searches, experiments, or correction cycles.
+
+Do not compress, abbreviate, rush, or prematurely pass a stage merely to finish it in one turn.
+
+Do not advance to the next stage until every required artifact exists, every applicable gate passes, critical issues are cleared, and user approval is recorded when required.
+
+If the active stage remains incomplete at the end of a turn, report:
+
+STAGE STATUS: IN PROGRESS
+
+COMPLETED WORK: [...]
+
+REMAINING WORK: [...]
+
+BLOCKERS: [...]
+
+FILES UPDATED: [...]
+
+RESUME COMMAND: RESUME ACTIVE STAGE [NUMBER]
 
 FULL AUTONOMOUS MODE constitutes advance user authorization to proceed through all eight stages without additional approval messages. It does not waive scientific gates, checkpoint creation, protocol locking, validation, rollback, or the requirement to record an approval-equivalent authorization in 00_project_state.md.
 
@@ -163,6 +212,27 @@ Create and continuously maintain 00_project_state.md containing:
 
 This file is the single source of truth for workflow status.
 
+ARTIFACT IDENTITY AND VERSION CONTROL:
+
+For every checkpoint, dataset, result file, figure, table, manuscript, and final deliverable, record in 00_project_state.md:
+
+* canonical filename;
+* version number;
+* producing stage;
+* creation or modification timestamp;
+* file size;
+* SHA-256 checksum;
+* status: DRAFT / VERIFIED / LOCKED / SUPERSEDED;
+* dependent downstream artifacts.
+
+Before a later stage uses an artifact, verify its filename, version, and checksum against 00_project_state.md.
+
+Never use a SUPERSEDED artifact.
+
+If a LOCKED artifact changes, assign a new version, document the reason, identify affected dependencies, and apply the amendment and rollback rules.
+
+Do not overwrite a frozen result invisibly.
+
 CHECKPOINT PORTABILITY:
 
 Do not assume that a temporary workspace or conversation context will remain available indefinitely.
@@ -193,7 +263,19 @@ ACTIONS:
 4. audit every substantive title term and its required evidence;
 5. classify research type and IEEE technical fit;
 6. identify missing author, conference, anonymity, ethics, or disclosure information;
-7. create the project state.
+7. verify access to the required template bytes, literature search, source verification, executable analysis environment, required packages, DOCX editing, PDF rendering, page-image inspection, persistent storage, and ZIP creation;
+8. create the project state.
+
+CAPABILITY AVAILABILITY RULE:
+
+If a required capability is unavailable:
+
+1. do not simulate the unavailable action;
+2. do not mark its gate PASS;
+3. identify the blocked stage and affected deliverables;
+4. safely complete only unaffected work;
+5. state the exact capability or user action required;
+6. return BLOCKED or NEEDS REVISION as appropriate.
 
 OUTPUTS:
 
@@ -207,6 +289,7 @@ GATE:
 * template properties recorded: PASS/FAIL;
 * title obligations mapped: PASS/FAIL;
 * IEEE fit classified: PASS/FAIL;
+* required capabilities verified: PASS/FAIL;
 * blockers identified: PASS/FAIL.
 
 STOP after Stage 0 and report the next permitted command.
@@ -264,12 +347,32 @@ ACTIONS:
 6. select simple and competitive baselines;
 7. lock primary and secondary metrics;
 8. lock seeds, hyperparameters, statistics, uncertainty, robustness, failure analysis, and stopping rule;
-9. record assumptions and expected limitations before final results.
+9. lock the computational environment before final execution;
+10. record assumptions and expected limitations before final results.
+
+ENVIRONMENT LOCK:
+
+Record, when applicable:
+
+* operating system;
+* programming language and runtime version;
+* exact package versions;
+* CPU, GPU, memory, and accelerator details relevant to reported performance;
+* deterministic-computation settings;
+* random seeds;
+* environment variables that affect results;
+* dataset version and checksum;
+* external service, API, model, or database version.
+
+Create one appropriate environment file, such as requirements.txt, environment.yml, pyproject.toml, or an equivalent lock file.
+
+Do not silently upgrade packages, models, APIs, or datasets between frozen results and clean-room reproduction.
 
 OUTPUTS:
 
 06_protocol_v1.md
 07_data_and_leakage_audit.md
+07b_environment_lock.md
 
 GATE:
 
@@ -280,6 +383,7 @@ GATE:
 * split appropriate: PASS/FAIL;
 * leakage controls adequate: PASS/FAIL;
 * seeds and stopping rule locked: PASS/FAIL;
+* computational environment locked: PASS/FAIL/N/A;
 * robustness plan defined: PASS/FAIL.
 
 MANDATORY USER APPROVAL 2:
@@ -322,6 +426,48 @@ GATE:
 * results frozen: PASS/FAIL.
 
 Do not change the question to manufacture a successful result.
+
+==================================================
+EVIDENCE SUFFICIENCY GATE
+=========================
+
+Before Stage 4, determine whether the verified evidence supports the title, research question, primary claim, proposed contribution, and planned manuscript length.
+
+Classify the achieved evidence level:
+
+E0 — no executable or independently verifiable evidence;
+
+E1 — conceptual argument or literature-supported proposition only;
+
+E2 — preliminary evidence from one setting, split, simulation, or limited analysis;
+
+E3 — reproducible internal validation with appropriate baselines and uncertainty;
+
+E4 — robust multi-setting, temporal, grouped, cross-dataset, or external validation;
+
+E5 — prospective, field, hardware, clinical, operational, or independently replicated evidence.
+
+Match every claim to the achieved evidence level.
+
+Do not imply E4 or E5 validation from E1-E3 evidence.
+
+If the evidence level is lower than the title or contribution requires:
+
+1. strengthen the evaluation without violating the locked protocol;
+2. narrow the claim;
+3. revise the title accurately;
+4. document an approved protocol amendment when necessary;
+5. or return NEEDS REVISION.
+
+The paper must not be expanded to three pages with generic prose when the evidence is insufficient. Identify the additional experiment, dataset, validation, or analysis required.
+
+EVIDENCE SUFFICIENCY STATUS:
+
+* achieved evidence level: E0/E1/E2/E3/E4/E5;
+* title supported at this level: PASS/FAIL;
+* contribution supported at this level: PASS/FAIL;
+* primary claim supported: PASS/FAIL;
+* Stage 4 authorized: PASS/FAIL.
 
 ==================================================
 STAGE 4 — MANUSCRIPT BLUEPRINT AND PAGE BUDGET
@@ -582,6 +728,29 @@ For focused execution, load and apply them as follows:
 Global critical gates, no-fabrication rules, originality rules, output limits, and final directives apply during every stage.
 
 Do not interpret the Detailed Rule Section numbering as a second execution sequence.
+
+==================================================
+INSTRUCTION CONSOLIDATION AND ANTI-REPETITION RULE
+==================================================
+
+The eight-stage controller defines WHEN work occurs.
+
+The Detailed Rule Sections define HOW the active work must be performed.
+
+The Critical Pass/Fail Gates define WHETHER the output is acceptable.
+
+When the same requirement appears in more than one location:
+
+1. treat it as one requirement, not multiple separate tasks;
+2. perform the action once at the scientifically correct stage;
+3. reuse its verified artifact or gate result downstream;
+4. do not repeat searches, experiments, calculations, or file generation without a documented reason;
+5. apply the highest-priority and most specific version of the rule;
+6. record completion in 00_project_state.md.
+
+Do not lengthen the manuscript, workflow, or final response by restating already verified material.
+
+If future editing can remove duplicated wording without changing a requirement, prefer the shorter authoritative formulation.
 
 ==================================================
 STAGED-MODE RESPONSE CONTRACT
@@ -1981,15 +2150,40 @@ Do not add metrics merely to make the paper look technical.
 STATISTICAL INTEGRITY
 =====================
 
-For stochastic experiments where practical:
+Do not impose one universal seed, fold, replication, or sample-size rule across all research types.
 
-use approximately 3-5 independent seeds.
+Determine the evaluation design from:
 
-Report:
+* outcome variability;
+* dataset size and dependence structure;
+* computational or experimental cost;
+* model stochasticity;
+* expected effect magnitude;
+* decision consequences;
+* accepted standards in the relevant field.
 
-mean ± standard deviation
+For inexpensive stochastic machine-learning experiments, prefer at least 5-10 independent seeds when feasible.
 
-where meaningful.
+For expensive experiments with fewer replications, justify the number and report the resulting uncertainty as a limitation.
+
+For human-subject, econometric, survey, clinical, or controlled experimental work, conduct an appropriate sample-size, precision, minimum-detectable-effect, or statistical-power assessment when applicable.
+
+When model or hyperparameter selection is performed, use nested cross-validation, a separate validation partition, or another leakage-free selection procedure appropriate to the data structure.
+
+For temporal, grouped, subject-level, machine-level, institutional, or geographic data, preserve the relevant dependence structure in validation.
+
+For probabilistic predictions that support risk thresholds or decisions, assess probability calibration using an appropriate method and metric.
+
+Report a defensible uncertainty summary, such as:
+
+* mean and standard deviation across prespecified replications;
+* confidence intervals;
+* bootstrap intervals;
+* posterior intervals;
+* robust standard errors;
+* sensitivity ranges.
+
+Select the uncertainty method before inspecting final results where practical.
 
 Do not claim:
 
@@ -1997,7 +2191,11 @@ Do not claim:
 
 unless an appropriate statistical test was actually performed.
 
-If many tests are performed, consider appropriate multiple-testing control.
+If many tests are performed, use and report an appropriate multiple-testing control when confirmatory inference depends on those tests.
+
+Report effect magnitude and practical relevance, not only p-values.
+
+Do not interpret a non-significant result as proof of equivalence or absence of effect. Use an appropriate equivalence or non-inferiority design when making such a claim.
 
 Do not confuse:
 
