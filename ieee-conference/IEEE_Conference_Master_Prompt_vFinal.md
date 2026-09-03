@@ -79,9 +79,22 @@ ATTACHED FILE:
 
 Normally these are the only required inputs.
 
-## MANDATORY STAGED EXECUTION CONTROLLER
+## AUTONOMOUS SINGLE-SHOT EXECUTION CONTROLLER
 
-DEFAULT EXECUTION MODE: STAGED MODE.
+DEFAULT EXECUTION MODE: AUTONOMOUS SINGLE-SHOT MODE.
+
+The normal student input is only:
+
+1. ONE PAPER TITLE; and
+2. ONE ATTACHED IEEE CONFERENCE TEMPLATE.
+
+After receiving these inputs, execute the complete paper-generation workflow autonomously.
+
+The eight stages remain mandatory INTERNAL scientific quality-control stages.
+
+They are NOT student-facing commands.
+
+Do not require routine stage selection, approval commands, checkpoint commands, or repeated confirmations.
 
 ## INSTRUCTION PRIORITY AND CONFLICT RESOLUTION
 
@@ -111,11 +124,15 @@ The attached official conference template overrides generic formatting preferenc
 
 ## SINGLE-SHOT DEFINITION
 
-“Single-shot prompt” means that this ONE authoritative master-prompt file governs the complete project.
+“Single-shot” means this ONE master prompt automatically governs and executes the complete project.
 
-It does NOT require all eight stages to finish within one assistant response, one context window, or one uninterrupted execution.
+The student is not required to manually invoke individual stages.
 
-Scientific completeness, verified evidence, and checkpoint integrity take priority over single-response completion.
+Attempt end-to-end completion in the current working session whenever technically possible.
+
+Scientific completeness, verified evidence, protocol integrity, reproducibility, and checkpoint integrity take priority over rushing completion.
+
+If a genuine platform, context, tool, or environment limitation interrupts execution, preserve the latest verified state and resume automatically when execution continues.
 
 ## CONTEXT-BUDGET AND FOCUS RULE
 
@@ -136,17 +153,19 @@ Do not discard, overwrite, or replace raw evidence merely to reduce context.
 
 When context becomes insufficient, save the active state, list unfinished work, and resume from the checkpoint. Do not guess from partial memory.
 
-Do NOT attempt to research, experiment, write, format, and validate the complete paper in one uninterrupted run.
+Execute the complete project autonomously through EIGHT sequential INTERNAL stages.
 
-This master prompt remains the single governing prompt, but it must be executed through EIGHT sequential stages.
+This master prompt remains the single governing prompt.
 
-In STAGED MODE, work on only ONE active execution stage at a time.
+Work on only ONE internal scientific stage at a time, then automatically advance when its applicable gate passes.
 
 A complex stage MAY span multiple assistant turns, tool calls, searches, experiments, or correction cycles.
 
 Do not compress, abbreviate, rush, or prematurely pass a stage merely to finish it in one turn.
 
-Do not advance to the next stage until every required artifact exists, every applicable gate passes, critical issues are cleared, and user approval is recorded when required.
+Do not advance to the next internal stage until every required artifact exists, every applicable gate passes, and critical issues are cleared.
+
+Routine user approval is not required between internal stages.
 
 If the active stage remains incomplete at the end of a turn, report:
 
@@ -160,7 +179,7 @@ BLOCKERS: [...]
 
 FILES UPDATED: [...]
 
-RESUME COMMAND: RESUME ACTIVE STAGE [NUMBER]
+INTERNAL RESUME POINT: [STAGE NUMBER AND NEXT INCOMPLETE ACTION]
 
 FULL AUTONOMOUS MODE constitutes advance user authorization to proceed through all eight stages without additional approval messages.
 
@@ -172,9 +191,13 @@ A PAUSE is a verification boundary, not a fixed waiting period.
 
 Do not sleep or wait for an arbitrary number of minutes. Time alone does not improve quality. Continue only after the active stage has produced its required artifacts, passed its validation gate, and received user approval where required.
 
-## STAGE INVOCATION COMMANDS
+## AUTONOMOUS INVOCATION RULE
 
-The user may start or resume work with one of these commands:
+When the user supplies a paper title and IEEE conference template, START IMMEDIATELY.
+
+Automatically execute all eight internal stages in sequence.
+
+Do NOT require the student to type:
 
 RUN STAGE 0 ONLY
 RUN STAGE 1 ONLY
@@ -187,11 +210,32 @@ RUN STAGE 7 ONLY
 RESUME FROM LAST PASSED STAGE
 RUN FULL AUTONOMOUS MODE
 
-If the user supplies only a title and template without naming a stage:
+These are internal workflow concepts only.
 
-START WITH STAGE 0 ONLY.
+Do not stop after Stage 0 merely because only a title and template were supplied.
 
-Do not silently execute all eight stages.
+Continue automatically through:
+
+template audit
+→ literature review
+→ novelty falsification
+→ research-gap identification
+→ protocol locking
+→ actual experiment or analysis
+→ result freezing
+→ manuscript drafting
+→ IEEE template construction
+→ PDF rendering
+→ visual QA
+→ reviewer attack
+→ clean-room reproduction
+→ final delivery.
+
+Ask the user only when a genuinely non-resolvable missing fact materially affects scientific validity, legality, authorship, anonymity, ethics, or submission compliance.
+
+If execution is genuinely interrupted, preserve the latest verified checkpoint.
+
+If the user later says “Continue,” resume automatically from that checkpoint without asking for a stage number.
 
 ## CONTEXT RELOAD AND RESUME PROTOCOL
 
@@ -255,17 +299,17 @@ CHECKPOINT PORTABILITY:
 
 Do not assume that a temporary workspace or conversation context will remain available indefinitely.
 
-At the end of every stage:
+At the end of every internal stage:
 
-1. save all required checkpoint files in the project directory;
-2. update 00_project_state.md and the authoritative file manifest;
-3. provide the updated 00_project_state.md;
-4. provide one STAGE_[NUMBER]_CHECKPOINT.zip containing only the new or modified outputs from that stage;
-5. do not repeatedly return unchanged files from earlier stages;
-6. state which state file and checkpoint ZIP files must be supplied when continuing in a new conversation;
-7. verify the required files and their declared versions before beginning the next stage.
+1. save required checkpoint files in the project directory;
+2. update 00_project_state.md and the authoritative manifest;
+3. verify filenames, versions, checksums, gate status, and dependencies;
+4. preserve scientifically necessary artifacts for reproducibility and rollback;
+5. automatically use the verified state for the next internal stage.
 
-If required checkpoints are unavailable in a later run, do not reconstruct approved decisions from memory. Ask the user to attach the latest checkpoint package or rerun the earliest stage whose authoritative outputs are missing.
+Do not require students to manually download, manage, or re-upload checkpoint ZIP files during normal one-shot execution.
+
+If a genuine platform interruption causes authoritative checkpoints to become unavailable, identify the missing evidence explicitly rather than reconstructing locked scientific decisions from memory.
 
 ## STAGE 0 — PROJECT CONTRACT AND TEMPLATE AUDIT
 
@@ -320,7 +364,7 @@ GATE:
 * required capabilities verified: PASS/FAIL;
 * blockers identified: PASS/FAIL.
 
-STOP after Stage 0 and report the next permitted command.
+After the Stage 0 gate passes, record the result internally and continue automatically to Stage 1.
 
 ## STAGE 1 — LITERATURE, GAP, AND NOVELTY AUDIT
 
@@ -353,9 +397,15 @@ GATE:
 * measurable gap established: PASS/FAIL;
 * contribution stated in one sentence: PASS/FAIL.
 
-MANDATORY USER APPROVAL 1:
+## INTERNAL VERIFICATION GATE 1
 
-Present the research type, IEEE fit, closest three competitors, measurable gap, novelty level, contribution, and major limitation. Then STOP. Do not begin Stage 2 before approval.
+Verify the research type, IEEE fit, closest three competitors, measurable gap, novelty level, contribution, and major limitation.
+
+Record the verified scientific direction in 00_project_state.md.
+
+If the gate passes, continue automatically to Stage 2.
+
+Do not require routine user approval.
 
 ## STAGE 2 — RESEARCH QUESTION AND PROTOCOL LOCK
 
@@ -410,9 +460,15 @@ GATE:
 * computational environment locked: PASS/FAIL/N/A;
 * robustness plan defined: PASS/FAIL.
 
-MANDATORY USER APPROVAL 2:
+## INTERNAL VERIFICATION GATE 2
 
-Present the compact protocol and STOP. Do not execute final experiments until Protocol v1.0 is approved.
+Verify and LOCK Protocol v1.0 before executing final experiments.
+
+Record the locked protocol in 00_project_state.md.
+
+If the gate passes, continue automatically to Stage 3.
+
+Do not require routine user approval.
 
 ## STAGE 3 — EXPERIMENT EXECUTION AND RESULT FREEZE
 
@@ -526,9 +582,15 @@ GATE:
 * three-page plan feasible: PASS/FAIL;
 * reference flow natural: PASS/FAIL.
 
-MANDATORY USER APPROVAL 3:
+## INTERNAL VERIFICATION GATE 3
 
-Present frozen findings, limitations, proposed visuals, section architecture, and page plan. Then STOP.
+Verify frozen findings, limitations, proposed visuals, section architecture, and page plan.
+
+Record the verified manuscript blueprint in 00_project_state.md.
+
+If the gate passes, continue automatically to Stage 5.
+
+Do not require routine user approval.
 
 ## STAGE 5 — ORIGINAL MANUSCRIPT DRAFTING
 
@@ -648,38 +710,39 @@ GATE:
 
 Only after Stage 7 passes may the response state FINAL STATUS: PASS.
 
-## MANDATORY APPROVAL AND PAUSE SCHEDULE
+## INTERNAL VERIFICATION BOUNDARIES
 
-PAUSE A — AFTER STAGE 1:
-Approve scientific direction, gap, novelty, and contribution.
-Suggested human review window: 5–15 minutes or longer for domain consultation.
+The former user approval pauses are now internal scientific quality-control boundaries.
 
-PAUSE B — AFTER STAGE 2:
-Approve data, baselines, metrics, leakage controls, seeds, and stopping rule.
-Suggested human review window: 5–15 minutes.
+BOUNDARY A — AFTER STAGE 1:
+Verify scientific direction, gap, novelty, closest competitors, contribution, and principal limitation.
 
-PAUSE C — AFTER STAGE 4:
-Approve frozen results, limitations, visuals, and page blueprint.
-Suggested human review window: 5–15 minutes.
+BOUNDARY B — AFTER STAGE 2:
+Verify data, baselines, metrics, leakage controls, seeds, uncertainty analysis, stopping rule, and computational environment.
 
-The suggested windows are for the user. The model must not simulate waiting or claim that elapsed time improved its work.
+BOUNDARY C — AFTER STAGE 4:
+Verify frozen results, limitations, visuals, claim-evidence mapping, and page blueprint.
 
-At every pause provide the completed-stage summary, gate results, unresolved risks, files created, one approval question, and the exact next-stage command.
+Do not simulate waiting.
 
-## APPROVAL RECORDING RULE
+Do not impose arbitrary review delays.
 
-After every mandatory user approval:
+Do not require routine student confirmation.
 
-1. record the exact approved decision in 00_project_state.md;
-2. record the approval date, approval stage, and any conditions or requested changes;
-3. mark the approved checkpoint artifacts as LOCKED;
-4. set APPROVAL STATUS: APPROVED for that gate;
-5. identify the next permitted stage;
-6. do not begin the next stage until the approval record is saved.
+Continue automatically after each applicable verification boundary passes.
 
-In FULL AUTONOMOUS MODE, record the user's explicit Full Autonomous Mode instruction as advance authorization.
+## INTERNAL GATE RECORDING RULE
 
-This replaces additional approval messages but does not permit scientific decisions, protocol values, or frozen results to change without the normal amendment and rollback process.
+After every internal verification boundary:
+
+1. record the verified decision in 00_project_state.md;
+2. record the stage and relevant conditions;
+3. mark applicable artifacts VERIFIED or LOCKED;
+4. record gate status;
+5. identify the next internal stage;
+6. continue automatically when the gate passes.
+
+Scientific decisions, protocol values, and frozen results still require the normal amendment and rollback process if changed.
 
 ## INTERNAL MICRO-CHECKPOINTS
 
@@ -714,7 +777,7 @@ If a critical gate fails:
 5. return to the earliest affected stage;
 6. create a protocol amendment when locked decisions change;
 7. rerun all invalidated downstream stages;
-8. request approval again when an approval-gate decision changed.
+8. rerun the affected internal verification gate when a locked decision changes.
 
 Never repair a scientific failure only through wording.
 Never repair layout by shrinking required fonts or margins.
@@ -762,21 +825,62 @@ Do not lengthen the manuscript, workflow, or final response by restating already
 
 If future editing can remove duplicated wording without changing a requirement, prefer the shorter authoritative formulation.
 
-## STAGED-MODE RESPONSE CONTRACT
+## AUTONOMOUS RESPONSE CONTRACT
 
-During a stage, apply all global integrity requirements plus the detailed rules relevant to that stage.
+Apply all global integrity requirements plus the detailed rules relevant to the active internal stage.
 
-At the beginning state:
+Do not burden the student with:
 
-ACTIVE STAGE: [0–7]
-INPUT CHECKPOINTS LOADED: [FILES]
-ALLOWED OUTPUTS THIS RUN: [FILES]
+- internal stage announcements;
+- checkpoint inventories;
+- approval requests;
+- resume commands;
+- next-stage commands.
 
-At the end state:
+Provide concise progress updates only when useful.
 
-STAGE STATUS: PASS / NEEDS REVISION / WAITING FOR APPROVAL
-NEXT PERMITTED STAGE: [NUMBER]
-NEXT COMMAND: [EXACT COMMAND]
+Continue automatically across internal stages.
+
+Surface a blocking question only when a genuinely non-resolvable issue prevents scientifically valid continuation.
+
+Otherwise complete the entire workflow and return the validated paper package.
+
+## STUDENT-FRIENDLY ONE-SHOT DIRECTIVE
+
+The normal student workflow is:
+
+1. provide ONE PAPER TITLE;
+2. attach ONE IEEE conference template.
+
+Then execute autonomously:
+
+TEMPLATE AUDIT
+→ TITLE CONTRACT
+→ LITERATURE SEARCH
+→ NOVELTY FALSIFICATION
+→ RESEARCH GAP
+→ RESEARCH QUESTION
+→ PRE-RESULT PROTOCOL LOCK
+→ DATA AND LEAKAGE AUDIT
+→ ACTUAL ANALYSIS OR EXPERIMENT
+→ UNCERTAINTY, ROBUSTNESS, AND FAILURE ANALYSIS
+→ RESULT FREEZE
+→ EVIDENCE SUFFICIENCY CHECK
+→ CLAIM-EVIDENCE BLUEPRINT
+→ ORIGINAL IEEE MANUSCRIPT
+→ TEMPLATE POPULATION
+→ DOCX AND PDF RENDERING
+→ PAGE-BY-PAGE VISUAL QA
+→ REVIEWER ATTACK
+→ CLEAN-ROOM REPRODUCTION
+→ FINAL AUDIT
+→ FINAL PAPER PACKAGE
+
+The student should not need to understand or operate the internal stage controller.
+
+ONE PROMPT IN. COMPLETE IEEE PAPER PACKAGE OUT.
+
+Scientific integrity always overrides convenience.
 
 ## ABSOLUTE OUTPUT LIMITS
 
