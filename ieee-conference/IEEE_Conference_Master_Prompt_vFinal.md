@@ -226,7 +226,15 @@ Do not advance to the next internal stage until every required artifact exists, 
 
 Routine user approval is not required between internal stages.
 
-If the active stage remains incomplete at the end of a turn, report:
+Only if a genuine platform, context, tool, execution-environment, or capability limitation prevents completion in the current execution, preserve the verified state and report only the minimum information necessary for automatic continuation.
+
+Do not voluntarily stop merely because an internal stage has completed.
+
+Do not expose internal stage-management reports during normal successful execution.
+
+When technically possible, continue automatically from the current internal stage through all remaining stages until final delivery.
+
+If genuine interruption occurs, record internally:
 
 STAGE STATUS: IN PROGRESS
 
@@ -239,6 +247,8 @@ BLOCKERS: [...]
 FILES UPDATED: [...]
 
 INTERNAL RESUME POINT: [STAGE NUMBER AND NEXT INCOMPLETE ACTION]
+
+When execution becomes available again, resume automatically from that verified point without asking the student to choose a stage or approve continuation.
 
 AUTONOMOUS SINGLE-SHOT MODE is active by default as soon as the user supplies the title and IEEE template.
 
@@ -3667,7 +3677,13 @@ Return:
 
 Use this complete final-delivery format ONLY after Stage 7 passes.
 
-During Stages 0-6, use the staged-mode response contract instead and do not imply that the paper is final.
+During internal Stages 0-6, continue execution autonomously without requiring student approval, stage commands, checkpoint commands, continuation commands, or routine intermediate responses.
+
+Do not expose internal stage-management details unless a genuine blocker, platform limitation, tool limitation, or execution failure prevents scientifically valid continuation.
+
+Completion of an internal stage is NOT a reason to stop and return control to the student.
+
+When technically possible, continue directly through Stage 7 and return the final validated paper package.
 
 Keep the final chat response concise.
 
